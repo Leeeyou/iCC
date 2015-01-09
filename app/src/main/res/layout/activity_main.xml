@@ -21,7 +21,7 @@
             style="@style/mainBottomNav"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
-            leeyou:mIcon="@drawable/icon_main_weixin"
+            leeyou:mIcon="@drawable/icon_main_cc"
             leeyou:mText_size="14sp"
             leeyou:mText="自定义控件" />
 
@@ -30,7 +30,7 @@
             style="@style/mainBottomNav"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
-            leeyou:mIcon="@drawable/icon_main_linkman"
+            leeyou:mIcon="@drawable/icon_main_function"
             leeyou:mText_size="14sp"
             leeyou:mText="常用功能" />
 
@@ -39,7 +39,7 @@
             style="@style/mainBottomNav"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
-            leeyou:mIcon="@drawable/icon_main_found"
+            leeyou:mIcon="@drawable/icon_main_framework"
             leeyou:mText_size="14sp"
             leeyou:mText="常用框架" />
 
@@ -48,7 +48,7 @@
             style="@style/mainBottomNav"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
-            leeyou:mIcon="@drawable/icon_main_own"
+            leeyou:mIcon="@drawable/icon_main_sdk"
             leeyou:mText_size="14sp"
             leeyou:mText="第三方SDK" />
     </LinearLayout>
