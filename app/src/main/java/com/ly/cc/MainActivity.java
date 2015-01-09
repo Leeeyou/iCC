@@ -21,6 +21,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.ly.cc.bean.Cheeses;
+import com.ly.cc.bean.CustCollect;
+import com.ly.cc.fragment.custcollect.CCFragment;
 import com.ly.cc.ui.ChangeColorIconWithTextView;
 import com.ly.cc.utils.T;
 
@@ -165,16 +167,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-//                    List<WeiXin> list = new ArrayList<WeiXin>();
-//                    for (int i = 1; i < 101; i++) {
-//                        WeiXin wx = new WeiXin();
-//                        wx.setImgUrl(Portrait.sPortraitStrings[i % 4]);
-//                        wx.setText1(Cheeses.sCheeseStrings[i % 100]);
-//                        wx.setText2(Talks.sTalkStrings[i % 22]);
-//                        wx.setTime("晚上18:39");
-//                        list.add(wx);
-//                    }
-//                    return FragmentWeixin.newInstance(list);
+                    return CCFragment.newInstance(CustCollect.items);
                 default:
                     return ArrayListFragment.newInstance(position);
             }
