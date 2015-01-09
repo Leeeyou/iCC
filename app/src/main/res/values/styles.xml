@@ -5,4 +5,9 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="mainBottomNav">
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">5dip</item>
+    </style>
+
 </resources>
