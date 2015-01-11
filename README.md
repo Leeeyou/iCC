@@ -25,6 +25,9 @@ Custom Collection 综合项目，目的是整合在工作中遇到的知识，�
   
     图形绘制
   
+    Android5.0
+      RecyclerView（已完成） --> http://note.youdao.com/share/?id=c9bd7c5567e54ed40c7891b4bd3c47d3&type=note
+  
   
   2、常用功能
   
