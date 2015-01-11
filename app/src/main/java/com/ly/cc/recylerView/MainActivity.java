@@ -20,7 +20,7 @@ import butterknife.InjectView;
 /**
  * 主界面
  */
-public class MainActivity2 extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity {
     @InjectView(R.id.deleteBar)
     FrameLayout deleteBar;
     @InjectView(R.id.fab_add)

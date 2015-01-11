@@ -12,4 +12,6 @@
     <dimen name="button_elevation">2dp</dimen>
 
     <dimen name="button_press_elevation">4dp</dimen>
+
+    <dimen name="seekbar_label_length">70dp</dimen>
 </resources>
