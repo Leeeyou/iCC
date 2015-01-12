@@ -10,4 +10,21 @@
         <item name="android:padding">5dip</item>
     </style>
 
+    <declare-styleable name="CardView">
+        <attr name="cardBackgroundColor" format="color" />
+        <attr name="cardCornerRadius" format="dimension" />
+    </declare-styleable>
+
+    <style name="CardView">
+        <item name="cardBackgroundColor">@color/cardview_light_background</item>
+    </style>
+
+    <style name="CardView.Dark">
+        <item name="cardBackgroundColor">@color/cardview_dark_background</item>
+    </style>
+
+    <style name="CardView.Light">
+        <item name="cardBackgroundColor">@color/cardview_light_background</item>
+    </style>
+
 </resources>
