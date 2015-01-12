@@ -37,7 +37,7 @@ public abstract class UniversalAdapter<T> extends BaseAdapter {
     public UniversalAdapter(Context context, T [] data, int layoutId) {
         super();
         this.context = context;
-        this.mData = new ArrayList<>();
+        this.mData = new ArrayList<T>();
         for (T t : data) {
             this.mData.add(t);
         }

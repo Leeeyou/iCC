@@ -21,9 +21,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.ly.cc.bean.Cheeses;
-import com.ly.cc.bean.CustCollect;
+import com.ly.cc.bean.custcollect.CustCollect;
 import com.ly.cc.fragment.custcollect.CCFragment;
-import com.ly.cc.ui.ChangeColorIconWithTextView;
+import com.ly.cc.custview.ChangeColorIconWithTextView;
 import com.ly.cc.utils.T;
 
 import java.lang.reflect.Field;
@@ -53,7 +53,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
     @InjectView(R.id.id_indicator_sdk)
     ChangeColorIconWithTextView mSDK;
 
-    private List<ChangeColorIconWithTextView> mTabIndicator = new ArrayList<>();
+    private List<ChangeColorIconWithTextView> mTabIndicator = new ArrayList<ChangeColorIconWithTextView>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -231,7 +231,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
         @Override
         public void onActivityCreated(Bundle savedInstanceState) {
             super.onActivityCreated(savedInstanceState);
-            setListAdapter(new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, Cheeses.sCheeseStrings));
+            setListAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, Cheeses.sCheeseStrings));
         }
 
         @Override

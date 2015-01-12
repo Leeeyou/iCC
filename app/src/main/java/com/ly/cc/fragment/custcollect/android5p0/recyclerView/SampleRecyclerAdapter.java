@@ -1,4 +1,4 @@
-package com.ly.cc.recylerView;
+package com.ly.cc.fragment.custcollect.android5p0.recyclerView;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;

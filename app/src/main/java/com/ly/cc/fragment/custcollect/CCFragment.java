@@ -1,20 +1,17 @@
 package com.ly.cc.fragment.custcollect;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ListFragment;
 import android.view.View;
 import android.widget.ListView;
 
+import com.ly.cc.fragment.custcollect.android5p0.NewControlsActivity;
 import com.ly.cc.manager.UniversalAdapter;
 import com.ly.cc.manager.ViewHolder;
 import com.ly.cc.utils.T;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * Created by xzzz on 2015/1/9.
@@ -22,15 +19,15 @@ import java.util.List;
 public class CCFragment extends ListFragment {
 
     private UniversalAdapter<String> ccAdapter;
-    private static List<String> list;
     private Context ctx;
 
     public static CCFragment newInstance(String[] ccList) {
         CCFragment fw = new CCFragment();
-        list.addAll(Arrays.asList(ccList));
-        Bundle b = new Bundle();
-        b.putStringArray("ccList", ccList);
-        fw.setArguments(b);
+        if (ccList != null && ccList.length > 0) {
+            Bundle b = new Bundle();
+            b.putStringArray("ccList", ccList);
+            fw.setArguments(b);
+        }
         return fw;
     }
 
@@ -44,7 +41,7 @@ public class CCFragment extends ListFragment {
         String[] ccLists = arg.getStringArray("ccList");
         if (ccLists == null || ccLists.length <= 0) return;
 
-        ccAdapter = new UniversalAdapter<String>(getActivity(), list, android.R.layout.simple_list_item_1) {
+        ccAdapter = new UniversalAdapter<String>(getActivity(), ccLists, android.R.layout.simple_list_item_1) {
             @Override
             public void convert(ViewHolder vh, String item, int position) {
                 if (item == null)
@@ -78,6 +75,10 @@ public class CCFragment extends ListFragment {
                 break;
             case 4://图像绘制
                 T.showShort(ctx, "图像绘制");
+                break;
+            case 5://Android 5.0新控件
+                Intent i = new Intent(ctx, NewControlsActivity.class);
+                startActivity(i);
                 break;
             default:
                 break;

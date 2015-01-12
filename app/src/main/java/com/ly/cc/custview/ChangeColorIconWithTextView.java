@@ -1,4 +1,4 @@
-package com.ly.cc.ui;
+package com.ly.cc.custview;
 
 import android.content.Context;
 import android.content.res.TypedArray;

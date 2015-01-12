@@ -1,4 +1,4 @@
-package com.ly.cc.recylerView;
+package com.ly.cc.fragment.custcollect.android5p0.recyclerView;
 
 import android.graphics.Outline;
 import android.os.Bundle;
@@ -20,7 +20,7 @@ import butterknife.InjectView;
 /**
  * 主界面
  */
-public class MainActivity extends ActionBarActivity {
+public class RecyclerViewActivity extends ActionBarActivity {
     @InjectView(R.id.deleteBar)
     FrameLayout deleteBar;
     @InjectView(R.id.fab_add)

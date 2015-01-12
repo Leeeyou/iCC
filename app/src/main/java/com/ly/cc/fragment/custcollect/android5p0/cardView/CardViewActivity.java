@@ -1,4 +1,4 @@
-package com.ly.cc.cardView;
+package com.ly.cc.fragment.custcollect.android5p0.cardView;
 
 import android.app.Activity;
 import android.os.Bundle;

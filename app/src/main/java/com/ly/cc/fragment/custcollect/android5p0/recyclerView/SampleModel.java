@@ -1,4 +1,4 @@
-package com.ly.cc.recylerView;
+package com.ly.cc.fragment.custcollect.android5p0.recyclerView;
 
 /**
  * Created by kongbei on 2015/1/11.
