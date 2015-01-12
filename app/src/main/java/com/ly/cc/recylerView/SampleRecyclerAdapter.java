@@ -43,14 +43,18 @@ public class SampleRecyclerAdapter extends
 
     //  删除指定的Item
     public void removeData(int position) {
-        sampleData.remove(position);
-        //  通知RecyclerView控件某个Item已经被删除
-        notifyItemRemoved(position);
-
+        if (sampleData != null && sampleData.size() > 0) {
+            sampleData.remove(position);
+            //  通知RecyclerView控件某个Item已经被删除
+            notifyItemRemoved(position);
+        }
     }
 
     //  在指定位置添加一个新的Item
     public void addItem(int positionToAdd) {
+        if (positionToAdd < 0)
+            positionToAdd = 0;
+
         sampleData.add(positionToAdd, new SampleModel("新的列表项" + new Random().nextInt(10000)));
         //  通知RecyclerView控件插入了某个Item
         notifyItemInserted(positionToAdd);
