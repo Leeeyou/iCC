@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ListView;
 
 import com.ly.cc.fragment.custcollect.android5p0.NewControlsActivity;
+import com.ly.cc.fragment.custcollect.listview.ListViewActivity;
 import com.ly.cc.manager.UniversalAdapter;
 import com.ly.cc.manager.ViewHolder;
 import com.ly.cc.utils.T;
@@ -60,9 +61,11 @@ public class CCFragment extends ListFragment {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
+        Intent i = new Intent();
         switch (position) {
             case 0://ListView
-                T.showShort(ctx, "ListView");
+                i.setClass(ctx, ListViewActivity.class);
+                startActivity(i);
                 break;
             case 1://ToggleButton
                 T.showShort(ctx, "ToggleButton");
@@ -77,7 +80,8 @@ public class CCFragment extends ListFragment {
                 T.showShort(ctx, "图像绘制");
                 break;
             case 5://Android 5.0新控件
-                Intent i = new Intent(ctx, NewControlsActivity.class);
+                //TODO 判断当前系统的版本号再进行跳转
+                i.setClass(ctx, NewControlsActivity.class);
                 startActivity(i);
                 break;
             default:
