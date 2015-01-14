@@ -33,7 +33,7 @@ Custom Collection 综合项目，目的是整合在工作中遇到的知识，�
 
   
  * Android5.0
-    * **RecyclerView（[已完成](http://note.youdao.com/share/?id=c9bd7c5567e54ed40c7891b4bd3c47d3&type=note)）
+    * **RecyclerView**（[已完成](http://note.youdao.com/share/?id=c9bd7c5567e54ed40c7891b4bd3c47d3&type=note)）
   
 
   
@@ -90,5 +90,6 @@ Custom Collection 综合项目，目的是整合在工作中遇到的知识，�
   
  * 高德地图
 
-日志信息日下：
-Android Studio 中使用git : http://note.youdao.com/share/?id=c14927da51374141922406f8fcb95d1d&type=note
+
+有关AS使用的日志信息日下：
+[Android Studio 中使用git](http://note.youdao.com/share/?id=c14927da51374141922406f8fcb95d1d&type=note) 
