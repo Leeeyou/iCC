@@ -5,31 +5,31 @@ Custom Collection 综合项目，目的是整合在工作中遇到的知识，�
 
 ## 1、自定义控件
   
-    ①微信6.0主界面交互（已完成）--> http://note.youdao.com/share/?id=04dad8074a94c4f955a795e6e4f6161e&type=note
+ * 微信6.0主界面交互（已完成）--> http://note.youdao.com/share/?id=04dad8074a94c4f955a795e6e4f6161e&type=note
   
-    ListView
-      常用的下拉刷新和加载更多
-      带headView的下拉刷新
-      水平的listview
+ * ListView
+    * **常用的下拉刷新和加载更多** 
+    * **带headView的下拉刷新**
+    * **水平的listview**
   
-    toggleBtn
+ * toggleBtn
   
-    时间轴
+ * 时间轴
       水平时间轴
       垂直时间轴
 
-    侧滑菜单
+ * 侧滑菜单
       左侧滑
       左右侧滑
       左内侧滑
   
-    图形绘制
+ * 图形绘制
   
-    Android5.0
+ * Android5.0
       RecyclerView（已完成） --> http://note.youdao.com/share/?id=c9bd7c5567e54ed40c7891b4bd3c47d3&type=note
   
   
-  2、常用功能
+## 2、常用功能
   
     发送邮件
   
@@ -44,7 +44,7 @@ Custom Collection 综合项目，目的是整合在工作中遇到的知识，�
     通用的风险
   
 
-  3、常用框架
+## 3、常用框架
 
     okHttp
   
@@ -56,7 +56,7 @@ Custom Collection 综合项目，目的是整合在工作中遇到的知识，�
   
     Volley
   
-  4、第三方SDK
+## 4、第三方SDK
 
     微信分享
   
