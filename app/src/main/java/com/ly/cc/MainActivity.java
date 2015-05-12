@@ -22,8 +22,10 @@ import android.widget.TextView;
 
 import com.ly.cc.bean.Cheeses;
 import com.ly.cc.bean.custcollect.CustCollect;
+import com.ly.cc.bean.function.FunctionCollect;
 import com.ly.cc.fragment.custcollect.CCFragment;
 import com.ly.cc.custview.ChangeColorIconWithTextView;
+import com.ly.cc.fragment.function.FunctionFragment;
 import com.ly.cc.utils.T;
 
 import java.lang.reflect.Field;
@@ -168,6 +170,8 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
             switch (position) {
                 case 0:
                     return CCFragment.newInstance(CustCollect.items);
+                case 1:
+                    return FunctionFragment.newInstance(FunctionCollect.items);
                 default:
                     return ArrayListFragment.newInstance(position);
             }
