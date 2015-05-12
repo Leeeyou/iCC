@@ -74,25 +74,35 @@ public class FunctionFragment extends ListFragment {
                 sendEmail();
                 break;
             case 1://读取手机联系人
-//                T.showShort(ctx, "ToggleButton");
                 break;
             case 2://跳转到网页
-//                T.showShort(ctx, "时间轴");
+                goToWebsite(getActivity(), "https://github.com/LeeeYou");
                 break;
-            case 3://侧滑菜单
-//                T.showShort(ctx, "侧滑菜单");
+            case 3://通用分享
+                commonShare();
                 break;
-            case 4://通用分享
+            case 4://重力感应
 //                T.showShort(ctx, "图像绘制");
                 break;
             case 5://重力感应
-//                //TODO 判断当前系统的版本号再进行跳转
 //                i.setClass(ctx, NewControlsActivity.class);
 //                startActivity(i);
                 break;
             default:
                 break;
         }
+    }
+
+    /**
+     * 通用的分享功能
+     */
+    private void commonShare() {
+        Intent intent=new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_SUBJECT, "分享");
+        intent.putExtra(Intent.EXTRA_TEXT, "这是我分享给你的一段测试程序");
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(Intent.createChooser(intent, getActivity().getTitle()));
     }
 
     private void sendEmail() {
@@ -123,5 +133,17 @@ public class FunctionFragment extends ListFragment {
         }
 
         T.showShort(ctx, "请先安装邮件客户端");
+    }
+
+    /**
+     * 跳转到网站
+     *
+     * @param context
+     * @param url
+     */
+    public static void goToWebsite(Context context, String url) {
+        Uri uriUrl = Uri.parse(url);
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        context.startActivity(launchBrowser);
     }
 }
