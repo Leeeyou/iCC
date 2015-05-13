@@ -17,9 +17,10 @@
         </activity>
 
         <activity android:name=".fragment.custcollect.android5p0.recyclerView.RecyclerViewActivity"/>
-        <activity android:name=".fragment.custcollect.android5p0.cardView.CardViewActivity"/>
         <activity android:name=".fragment.custcollect.android5p0.NewControlsActivity"/>
         <activity android:name=".fragment.custcollect.listview.ListViewActivity"/>
+        <activity android:name=".fragment.function.GravitySensorActivity"/>
+
     </application>
 
 </manifest>

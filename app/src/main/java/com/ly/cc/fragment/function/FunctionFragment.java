@@ -82,11 +82,8 @@ public class FunctionFragment extends ListFragment {
                 commonShare();
                 break;
             case 4://重力感应
-//                T.showShort(ctx, "图像绘制");
-                break;
-            case 5://重力感应
-//                i.setClass(ctx, NewControlsActivity.class);
-//                startActivity(i);
+                i.setClass(getActivity(),GravitySensorActivity.class);
+                startActivity(i);
                 break;
             default:
                 break;
