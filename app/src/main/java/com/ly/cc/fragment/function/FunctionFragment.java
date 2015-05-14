@@ -12,8 +12,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.ListView;
 
-import com.ly.cc.fragment.custcollect.android5p0.NewControlsActivity;
-import com.ly.cc.fragment.custcollect.listview.ListViewActivity;
+import com.ly.cc.ConstantValue;
 import com.ly.cc.manager.UniversalAdapter;
 import com.ly.cc.manager.ViewHolder;
 import com.ly.cc.utils.AppUtil;
@@ -71,30 +70,57 @@ public class FunctionFragment extends ListFragment {
         Intent i = new Intent();
         switch (position) {
             case 0://发送邮件
-                sendEmail();
+                goToSendEmail();
                 break;
             case 1://读取手机联系人
+                i.setClass(getActivity(), GravitySensorActivity.class);
+                startActivity(i);
                 break;
             case 2://跳转到网页
                 goToWebsite(getActivity(), "https://github.com/LeeeYou");
                 break;
             case 3://通用分享
-                commonShare();
+                goToShare();
                 break;
             case 4://重力感应
-                i.setClass(getActivity(),GravitySensorActivity.class);
+                i.setClass(getActivity(), GravitySensorActivity.class);
                 startActivity(i);
+                break;
+            case 5://跳转到市场
+                goToMarket();
                 break;
             default:
                 break;
         }
     }
 
+    private void goToMarket() {
+        final PackageManager packageManager = ctx.getPackageManager();
+        List<PackageInfo> pinfo = packageManager.getInstalledPackages(0);// 获取所有已安装程序的包信息
+        int packageInfoSize = pinfo.size();
+        for (int i = 0; i < packageInfoSize; i++) {
+            String pkname = pinfo.get(i).packageName;
+            if (!TextUtils.isEmpty(pkname)) {
+                for (int j = 0; j < ConstantValue.appStores.length; j++) {
+                    if (pkname.contains(ConstantValue.appStores[j]) && ctx != null) {
+                        String pkgName = ctx.getPackageName();
+                        Uri uri = Uri.parse("market://details?id=" + pkgName);
+                        Intent mIntent = new Intent(Intent.ACTION_VIEW, uri);
+                        startActivity(mIntent);
+                        return;
+                    }
+                }
+            }
+        }
+
+        T.showShort(ctx, "请先安装市场客户端");
+    }
+
     /**
      * 通用的分享功能
      */
-    private void commonShare() {
-        Intent intent=new Intent(Intent.ACTION_SEND);
+    private void goToShare() {
+        Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(Intent.EXTRA_SUBJECT, "分享");
         intent.putExtra(Intent.EXTRA_TEXT, "这是我分享给你的一段测试程序");
@@ -102,7 +128,7 @@ public class FunctionFragment extends ListFragment {
         startActivity(Intent.createChooser(intent, getActivity().getTitle()));
     }
 
-    private void sendEmail() {
+    private void goToSendEmail() {
         final PackageManager packageManager = ctx.getPackageManager();
         // 获取所有已安装程序的包信息
         List<PackageInfo> pinfo = packageManager.getInstalledPackages(0);
