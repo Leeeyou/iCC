@@ -11,7 +11,7 @@ Custom Collection 综合项目，目的是总结在工作中遇到的常用内�
 
   
  * ListView
-    * **常用的下拉刷新和加载更多** 
+    * **常用的下拉刷新和加载更多** （已完成）
     * **带headView的下拉刷新**
     * **水平的listview**
     * **ListView中item项侧滑**
