@@ -9,5 +9,7 @@
         这个Demo演示了CardView控件的用法。
 
     </string>
+    <string name="title_activity_list_view_both">ListViewBothActivity</string>
+    <string name="title_activity_list_view_activity">ListViewActivity</string>
 
 </resources>
