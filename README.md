@@ -7,12 +7,12 @@ Custom Collection 综合项目，目的是总结在工作中遇到的常用内�
 
 ## 1、自定义控件
   
- * 微信6.0主界面交互（[已完成](http://note.youdao.com/share/?id=04dad8074a94c4f955a795e6e4f6161e&type=note)） 
+ * 微信6.0主界面交互（已完成）（[说明文档](http://note.youdao.com/share/?id=04dad8074a94c4f955a795e6e4f6161e&type=note)） 
 
   
  * ListView
-    * **常用的下拉刷新和加载更多** （已完成）
-    * **带headView的下拉刷新**
+    * **常用的下拉刷新和加载更多** （已完成）参考[PullRefresh](http://www.360doc.com/content/14/1005/18/9200790_414599526.shtml)
+    * **带headView的下拉刷新**（已完成）参考[StickyListHeaders](https://github.com/emilsjolander/StickyListHeaders)
     * **水平的listview**
     * **ListView中item项侧滑**
 
@@ -35,7 +35,7 @@ Custom Collection 综合项目，目的是总结在工作中遇到的常用内�
 
   
  * Android5.0
-    * **RecyclerView**（[已完成](http://note.youdao.com/share/?id=c9bd7c5567e54ed40c7891b4bd3c47d3&type=note)）
+    * **RecyclerView**（已完成）（[说明文档](http://note.youdao.com/share/?id=c9bd7c5567e54ed40c7891b4bd3c47d3&type=note)）
   
 
   
@@ -55,7 +55,7 @@ Custom Collection 综合项目，目的是总结在工作中遇到的常用内�
   
  * 通用的分享（已完成）
  
- * 重力感应（已完成）
+ * 重力感应（已完成）（参考[GravitySensing.VideoPlay](https://github.com/LeeeYou/GravitySensing.VideoPlay)）
   
 
 
