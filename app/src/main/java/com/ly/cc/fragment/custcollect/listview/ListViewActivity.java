@@ -10,7 +10,6 @@ import com.ly.cc.bean.custcollect.listview.ListViewBean;
 import com.ly.cc.manager.UniversalAdapter;
 import com.ly.cc.manager.ViewHolder;
 import com.ly.cc.utils.Jump;
-import com.ly.cc.utils.T;
 
 /**
  * Created by kongbei on 2015/1/14.
@@ -52,7 +51,7 @@ public class ListViewActivity extends ListActivity {
                 Jump.toActivity(ListViewActivity.this,ListViewHeaderActivity.class);
                 break;
             case 2:
-                T.showShort(ctx, "水平ListView");
+                Jump.toActivity(ListViewActivity.this,HorizontalListViewActivity.class);
                 break;
             default:
                 break;

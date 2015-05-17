@@ -7,10 +7,15 @@
     <string name="cardview_contents">
         这是一个CardView控件，CardView控件可以显示阴影和圆角效果。\n\n
         这个Demo演示了CardView控件的用法。
-
     </string>
+
     <string name="title_activity_list_view_both">ListViewBothActivity</string>
     <string name="title_activity_list_view_activity">ListViewActivity</string>
     <string name="title_activity_list_view_header">ListViewHeaderActivity</string>
+    <string name="title_activity_horizontal_list_view">HorizontalListViewActivity</string>
+
+    <string name="simple_string_list">Simple String List</string>
+    <string name="custom_adapter_list">Custom Adapter List</string>
+    <string name="custom_adapter_list_with_dividers">Custom Adapter List with dividers</string>
 
 </resources>
