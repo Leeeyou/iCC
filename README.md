@@ -21,78 +21,78 @@ Custom Collection 综合项目，目的是总结在工作中遇到的常用内�
 
   
  > * 时间轴
-    * **水平时间轴**
-    * **垂直时间轴**
+    1. **水平时间轴**
+    2. **垂直时间轴**
 
 
  > * 侧滑菜单
-    * **左侧滑**
-    * **左右侧滑**
-    * **左内侧滑**
+    1. **左侧滑**
+    2. **左右侧滑**
+    3. **左内侧滑**
  
  
  > * 图形绘制
 
   
  > * Android5.0
-    * **RecyclerView**（已完成）（[说明文档](http://note.youdao.com/share/?id=c9bd7c5567e54ed40c7891b4bd3c47d3&type=note)）
+    1. **RecyclerView**（已完成）（[说明文档](http://note.youdao.com/share/?id=c9bd7c5567e54ed40c7891b4bd3c47d3&type=note)）
   
 
   
 ## 2、常用功能
   
- * 发送邮件（已完成）
+ > * 发送邮件（已完成）
 
   
- * 读取手机联系人（已完成）
+ > * 读取手机联系人（已完成）
     * **发送短信**
     * **打电话**（已完成）
 
   
- * 跳转到市场（已完成）
+ > * 跳转到市场（已完成）
   
- * 跳转到网页（已完成）
+ > * 跳转到网页（已完成）
   
- * 通用的分享（已完成）
+ > * 通用的分享（已完成）
  
- * 重力感应（已完成）（参考[GravitySensing.VideoPlay](https://github.com/LeeeYou/GravitySensing.VideoPlay)）
+ > * 重力感应（已完成）（参考[GravitySensing.VideoPlay](https://github.com/LeeeYou/GravitySensing.VideoPlay)）
   
 
 
 ## 3、常用框架
 
- * okHttp
+ > * okHttp
   
- * ButterKnife
+ > * ButterKnife
   
- * EventBus
+ > * EventBus
   
- * Gson
+ > * Gson
   
- * Volley
+ > * Volley
 
 
 ## 4、第三方SDK
 
- * 微信分享
+ > * 微信分享
   
- * 腾讯接入
+ > * 腾讯接入
   
- * 讯飞语音
+ > * 讯飞语音
   
- * ShareSDK
+ > * ShareSDK
   
- * JPush
+ > * JPush
   
- * 环信
+ > * 环信
   
- * 个推
+ > * 个推
   
- * 二维码扫描
+ > * 二维码扫描
   
- * Vitamio
+ > * Vitamio
   
- * 高德地图
+ > * 高德地图
 
 
 有关AS使用的日志信息日下：
