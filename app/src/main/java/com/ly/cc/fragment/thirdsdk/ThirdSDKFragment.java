@@ -1,7 +1,6 @@
 package com.ly.cc.fragment.thirdsdk;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ListFragment;
@@ -14,13 +13,13 @@ import com.ly.cc.manager.ViewHolder;
 /**
  * Created by xzzz on 2015/1/9.
  */
-public class ThridSDKFragment extends ListFragment {
+public class ThirdSDKFragment extends ListFragment {
 
     private UniversalAdapter<String> ccAdapter;
     private Context ctx;
 
-    public static ThridSDKFragment newInstance(String[] ccList) {
-        ThridSDKFragment fw = new ThridSDKFragment();
+    public static ThirdSDKFragment newInstance(String[] ccList) {
+        ThirdSDKFragment fw = new ThirdSDKFragment();
         if (ccList != null && ccList.length > 0) {
             Bundle b = new Bundle();
             b.putStringArray("ccList", ccList);

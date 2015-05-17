@@ -29,7 +29,7 @@ import com.ly.cc.fragment.custcollect.CCFragment;
 import com.ly.cc.custview.ChangeColorIconWithTextView;
 import com.ly.cc.fragment.framework.FrameworkFragment;
 import com.ly.cc.fragment.function.FunctionFragment;
-import com.ly.cc.fragment.thirdsdk.ThridSDKFragment;
+import com.ly.cc.fragment.thirdsdk.ThirdSDKFragment;
 import com.ly.cc.utils.T;
 
 import java.lang.reflect.Field;
@@ -179,7 +179,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
                 case 2:
                     return FrameworkFragment.newInstance(FramewrokCollect.items);
                 case 3:
-                    return ThridSDKFragment.newInstance(ThridSDKCollect.items);
+                    return ThirdSDKFragment.newInstance(ThridSDKCollect.items);
                 default:
                     return ArrayListFragment.newInstance(position);
             }

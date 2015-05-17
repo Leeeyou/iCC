@@ -49,7 +49,7 @@ public class ListViewActivity extends ListActivity {
                 Jump.toActivity(ListViewActivity.this, ListViewBothActivity.class);
                 break;
             case 1:
-                T.showShort(ctx, "带headView的下拉刷新");
+                Jump.toActivity(ListViewActivity.this,ListViewHeaderActivity.class);
                 break;
             case 2:
                 T.showShort(ctx, "水平ListView");
