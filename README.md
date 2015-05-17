@@ -13,7 +13,7 @@ Custom Collection 综合项目，目的是总结在工作中遇到的常用内�
  > * ListView
     1. **常用的下拉刷新和加载更多** （已完成）参考[PullRefresh](http://www.360doc.com/content/14/1005/18/9200790_414599526.shtml)
     2. **带headView的下拉刷新**（已完成）参考[StickyListHeaders](https://github.com/emilsjolander/StickyListHeaders)
-    3. **水平的listview**
+    3. **水平的listview**（已完成）参考[Android-HorizontalListView](https://github.com/MeetMe/Android-HorizontalListView)
     4. **ListView中item项侧滑**
 
   
