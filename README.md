@@ -7,34 +7,34 @@ Custom Collection 综合项目，目的是总结在工作中遇到的常用内�
 
 ## 1、自定义控件
   
- * 微信6.0主界面交互（已完成）（[说明文档](http://note.youdao.com/share/?id=04dad8074a94c4f955a795e6e4f6161e&type=note)） 
+ > * 微信6.0主界面交互（已完成）（[说明文档](http://note.youdao.com/share/?id=04dad8074a94c4f955a795e6e4f6161e&type=note)） 
 
   
- * ListView
-    * **常用的下拉刷新和加载更多** （已完成）参考[PullRefresh](http://www.360doc.com/content/14/1005/18/9200790_414599526.shtml)
-    * **带headView的下拉刷新**（已完成）参考[StickyListHeaders](https://github.com/emilsjolander/StickyListHeaders)
-    * **水平的listview**
-    * **ListView中item项侧滑**
+ > * ListView
+    1. **常用的下拉刷新和加载更多** （已完成）参考[PullRefresh](http://www.360doc.com/content/14/1005/18/9200790_414599526.shtml)
+    2. **带headView的下拉刷新**（已完成）参考[StickyListHeaders](https://github.com/emilsjolander/StickyListHeaders)
+    3. **水平的listview**
+    4. **ListView中item项侧滑**
 
   
- * toggleBtn
+ > * toggleBtn
 
   
- * 时间轴
+ > * 时间轴
     * **水平时间轴**
     * **垂直时间轴**
 
 
- * 侧滑菜单
+ > * 侧滑菜单
     * **左侧滑**
     * **左右侧滑**
     * **左内侧滑**
  
  
- * 图形绘制
+ > * 图形绘制
 
   
- * Android5.0
+ > * Android5.0
     * **RecyclerView**（已完成）（[说明文档](http://note.youdao.com/share/?id=c9bd7c5567e54ed40c7891b4bd3c47d3&type=note)）
   
 
