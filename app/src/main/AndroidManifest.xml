@@ -24,7 +24,7 @@
         <activity android:name=".fragment.custcollect.android5p0.recyclerView.RecyclerViewActivity" />
         <activity android:name=".fragment.custcollect.android5p0.NewControlsActivity" />
         <activity
-            android:name=".fragment.custcollect.listview.ListViewActivity"
+            android:name=".fragment.custcollect.listview.MainActivity"
             android:label="@string/title_activity_list_view_activity" />
         <activity
             android:name=".fragment.function.GravitySensorActivity"
@@ -39,6 +39,10 @@
         <activity
             android:name=".fragment.custcollect.listview.HorizontalListViewActivity"
             android:label="@string/title_activity_horizontal_list_view" >
+        </activity>
+        <activity
+            android:name=".fragment.custcollect.listview.swipe.activities.SwipeListViewActivity"
+            android:label="@string/title_activity_swipe_list_view" >
         </activity>
     </application>
 
