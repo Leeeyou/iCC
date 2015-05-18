@@ -80,6 +80,11 @@ public class AppUtil {
         return null;
     }
 
+    public static List<PackageInfo> getAllInstallApp(Context ctx) {
+        final PackageManager packageManager = ctx.getPackageManager();
+        return packageManager.getInstalledPackages(0); // 获取所有已安装程序的包信息
+    }
+
     /**
      * [获取应用程序版本名称信息]
      *
@@ -118,9 +123,7 @@ public class AppUtil {
      * @return
      */
     public static boolean isAvilible(Context context, String packageName) {
-        final PackageManager packageManager = context.getPackageManager();
-        // 获取所有已安装程序的包信息
-        List<PackageInfo> pinfo = packageManager.getInstalledPackages(0);
+        List<PackageInfo> pinfo = getAllInstallApp(context);
         int packageInfoSize = pinfo.size();
         for (int i = 0; i < packageInfoSize; i++) {
             if (pinfo.get(i).packageName.equalsIgnoreCase(packageName))
@@ -185,8 +188,8 @@ public class AppUtil {
                     intent.setComponent(cn);
                     ctx.startActivity(intent);
                 }
-            }else{
-                T.showShort(ctx,"打不开邮件客户端");
+            } else {
+                T.showShort(ctx, "打不开邮件客户端");
             }
         } catch (NameNotFoundException e) {
             e.printStackTrace();

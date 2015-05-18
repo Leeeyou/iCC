@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ListView;
 
 import com.ly.cc.bean.custcollect.listview.ListViewBean;
+import com.ly.cc.fragment.custcollect.listview.swipe.activities.SwipeListViewActivity;
 import com.ly.cc.manager.UniversalAdapter;
 import com.ly.cc.manager.ViewHolder;
 import com.ly.cc.utils.Jump;
@@ -14,7 +15,7 @@ import com.ly.cc.utils.Jump;
 /**
  * Created by kongbei on 2015/1/14.
  */
-public class ListViewActivity extends ListActivity {
+public class MainActivity extends ListActivity {
     private UniversalAdapter<String> mListViewAdapter;
     private Context ctx;
 
@@ -45,14 +46,16 @@ public class ListViewActivity extends ListActivity {
         super.onListItemClick(l, v, position, id);
         switch (position) {
             case 0:
-                Jump.toActivity(ListViewActivity.this, ListViewBothActivity.class);
+                Jump.toActivity(MainActivity.this, ListViewBothActivity.class);
                 break;
             case 1:
-                Jump.toActivity(ListViewActivity.this,ListViewHeaderActivity.class);
+                Jump.toActivity(MainActivity.this,ListViewHeaderActivity.class);
                 break;
             case 2:
-                Jump.toActivity(ListViewActivity.this,HorizontalListViewActivity.class);
+                Jump.toActivity(MainActivity.this,HorizontalListViewActivity.class);
                 break;
+            case 3:
+                Jump.toActivity(MainActivity.this,SwipeListViewActivity.class);
             default:
                 break;
         }

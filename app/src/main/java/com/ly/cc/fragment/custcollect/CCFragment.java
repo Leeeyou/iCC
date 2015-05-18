@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.ListView;
 
 import com.ly.cc.fragment.custcollect.android5p0.NewControlsActivity;
-import com.ly.cc.fragment.custcollect.listview.ListViewActivity;
+import com.ly.cc.fragment.custcollect.listview.MainActivity;
 import com.ly.cc.manager.UniversalAdapter;
 import com.ly.cc.manager.ViewHolder;
 import com.ly.cc.utils.T;
@@ -64,7 +64,7 @@ public class CCFragment extends ListFragment {
         Intent i = new Intent();
         switch (position) {
             case 0://ListView
-                i.setClass(ctx, ListViewActivity.class);
+                i.setClass(ctx, MainActivity.class);
                 startActivity(i);
                 break;
             case 1://ToggleButton
