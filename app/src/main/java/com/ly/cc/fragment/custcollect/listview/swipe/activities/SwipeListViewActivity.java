@@ -25,7 +25,7 @@ import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.ActionBarActivity;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.ActionMode;
@@ -48,7 +48,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class SwipeListViewActivity extends FragmentActivity {
+public class SwipeListViewActivity extends ActionBarActivity {
 
     private static final int REQUEST_CODE_SETTINGS = 0;
     private PackageAdapter adapter;
@@ -193,11 +193,11 @@ public class SwipeListViewActivity extends FragmentActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_app, menu);
-        return true;
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
-    public boolean onMenuItemSelected(int featureId, MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item) {
         boolean handled = false;
         switch (item.getItemId()) {
             case android.R.id.home: //Actionbar home/up icon
