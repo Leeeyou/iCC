@@ -18,11 +18,10 @@
   ~  limitations under the License.
   -->
 
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/menu_delete"
         android:icon="@drawable/action_bar_icon_discard"
-        app:showAsAction="ifRoom"
+        android:showAsAction="always"
         android:title="Discard" />
 </menu>
