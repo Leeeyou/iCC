@@ -14,7 +14,7 @@ Custom Collection 综合项目，目的是总结在工作中遇到的常用内�
     1. **常用的下拉刷新和加载更多** （已完成）参考[PullRefresh](http://www.360doc.com/content/14/1005/18/9200790_414599526.shtml)
     2. **带headView的下拉刷新**（已完成）参考[StickyListHeaders](https://github.com/emilsjolander/StickyListHeaders)
     3. **水平的listview**（已完成）参考[Android-HorizontalListView](https://github.com/MeetMe/Android-HorizontalListView)
-    4. **ListView中item项侧滑**（已完成）参考[SwipeListView](https://github.com/47deg/android-swipelistview)
+    4. **ListView中item项侧滑**（已完成）[说明文档](http://note.youdao.com/share/?id=ac0b5de8aaf6d6d9a5485575ef73a8ac&type=note) 源码参考[SwipeListView](https://github.com/47deg/android-swipelistview) 官方demo[android-swipelistview-sample](https://github.com/47deg/android-swipelistview-sample)
 
   
  > * toggleBtn
@@ -35,7 +35,7 @@ Custom Collection 综合项目，目的是总结在工作中遇到的常用内�
 
   
  > * Android5.0
-    1. **RecyclerView**（已完成）（[说明文档](http://note.youdao.com/share/?id=c9bd7c5567e54ed40c7891b4bd3c47d3&type=note)）
+    1. **RecyclerView**(已完成)([说明文档](http://note.youdao.com/share/?id=c9bd7c5567e54ed40c7891b4bd3c47d3&type=note))
   
 
   
@@ -55,7 +55,7 @@ Custom Collection 综合项目，目的是总结在工作中遇到的常用内�
   
  > * 通用的分享（已完成）
  
- > * 重力感应（已完成）（参考[GravitySensing.VideoPlay](https://github.com/LeeeYou/GravitySensing.VideoPlay)）
+ > * 重力感应（已完成）(参考[GravitySensing.VideoPlay](https://github.com/LeeeYou/GravitySensing.VideoPlay))
   
 
 
