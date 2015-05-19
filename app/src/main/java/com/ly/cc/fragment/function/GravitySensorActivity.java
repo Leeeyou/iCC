@@ -36,7 +36,7 @@ public class GravitySensorActivity extends Activity {
 
     private SensorManager mSensorManager;
     private Sensor mSensor;
-    private SensorEventListener mListener = null;
+    private SensorEventListener mSensorListener = null;
 
     private int thresholdValue = 5;
 
@@ -57,9 +57,7 @@ public class GravitySensorActivity extends Activity {
 
         initGravitySensor();
 
-        final List<MyContact> myContact = getMyContact();
-
-        initListview(myContact);
+        initListview(getMyContact());
     }
 
     private void initListview(final List<MyContact> mContactList) {
@@ -82,20 +80,20 @@ public class GravitySensorActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-        mSensorManager.registerListener(mListener, mSensor, SensorManager.SENSOR_DELAY_GAME);
+        mSensorManager.registerListener(mSensorListener, mSensor, SensorManager.SENSOR_DELAY_GAME);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        mSensorManager.unregisterListener(mListener);
+        mSensorManager.unregisterListener(mSensorListener);
     }
 
     private void initGravitySensor() {
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
-        mListener = new SensorEventListener() {
+        mSensorListener = new SensorEventListener() {
             @Override
             public void onSensorChanged(SensorEvent event) {
                 float x = event.values[SensorManager.DATA_X];

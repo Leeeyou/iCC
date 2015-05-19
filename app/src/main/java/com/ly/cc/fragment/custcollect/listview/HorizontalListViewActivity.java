@@ -15,6 +15,8 @@ import com.ly.cc.R;
 import com.ly.cc.custview.horizonListView.HorizontalListView;
 import com.ly.cc.utils.T;
 
+import butterknife.ButterKnife;
+
 public class HorizontalListViewActivity extends ActionBarActivity {
 
     private HorizontalListView mHlvSimpleList;
@@ -69,6 +71,7 @@ public class HorizontalListViewActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_horizontal_list_view);
+        ButterKnife.inject(this);
 
         // Get references to UI widgets
         mHlvSimpleList = (HorizontalListView) findViewById(R.id.hlvSimpleList);
