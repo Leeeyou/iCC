@@ -18,5 +18,6 @@
     <string name="custom_adapter_list">Custom Adapter List</string>
     <string name="custom_adapter_list_with_dividers">Custom Adapter List with dividers</string>
     <string name="title_activity_swipe_list_view">SwipeListViewActivity</string>
+    <string name="title_activity_main">MainActivity</string>
 
 </resources>

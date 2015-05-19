@@ -12,6 +12,7 @@ import com.ly.cc.fragment.custcollect.android5p0.NewControlsActivity;
 import com.ly.cc.fragment.custcollect.listview.MainActivity;
 import com.ly.cc.manager.UniversalAdapter;
 import com.ly.cc.manager.ViewHolder;
+import com.ly.cc.utils.Jump;
 import com.ly.cc.utils.T;
 
 /**
@@ -68,7 +69,7 @@ public class CCFragment extends ListFragment {
                 startActivity(i);
                 break;
             case 1://ToggleButton
-                T.showShort(ctx, "ToggleButton");
+                Jump.toActivity(getActivity(), com.ly.cc.fragment.custcollect.toggleBtn.MainActivity.class);
                 break;
             case 2://时间轴
                 T.showShort(ctx, "时间轴");

@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:toggle="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ly.cc.fragment.custcollect.toggleBtn.MainActivity">
+
+    <com.ly.cc.custview.toggleButton.ToggleButton
+        android:layout_width="54dp"
+        android:id="@+id/toggle_btn"
+        android:layout_height="30dp"
+        toggle:borderWidth="1dp"
+        toggle:offBorderColor="#c0c0c0"
+        toggle:offColor="#ddd"
+        toggle:onColor="#00ff7f"
+        toggle:spotColor="#2e8b57"/>
+
+</RelativeLayout>
