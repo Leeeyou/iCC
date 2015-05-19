@@ -17,7 +17,7 @@ Custom Collection 综合项目，目的是总结在工作中遇到的常用内�
     4. **ListView中item项侧滑**（已完成 [开发说明文档](http://note.youdao.com/share/?id=ac0b5de8aaf6d6d9a5485575ef73a8ac&type=note)）  参考[SwipeListView](https://github.com/47deg/android-swipelistview) , 官方demo [android-swipelistview-sample](https://github.com/47deg/android-swipelistview-sample)
 
   
- > * toggleBtn
+ > * toggleBtn（已完成）参考[ToggleButton](https://github.com/zcweng/ToggleButton)
 
   
  > * 时间轴
