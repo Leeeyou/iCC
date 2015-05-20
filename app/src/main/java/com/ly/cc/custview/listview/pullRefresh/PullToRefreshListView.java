@@ -1,4 +1,5 @@
-package com.ly.cc.custview.pullrefresh;
+package com.ly.cc.custview.listview.pullRefresh;
+
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -6,22 +7,22 @@ import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.Adapter;
-import android.widget.GridView;
+import android.widget.ListView;
 
-import com.ly.cc.custview.pullrefresh.ILoadingLayout.State;
+import com.ly.cc.custview.listview.pullRefresh.ILoadingLayout.State;
 
 /**
- * 这个类实现了GridView下拉刷新，上加载更多和滑到底部自动加载
+ * 这个类实现了ListView下拉刷新，上加载更多和滑到底部自动加载
  * 
  * @author Li Hong
  * @since 2013-8-15
  */
-public class PullToRefreshGridView extends PullToRefreshBase<GridView> implements OnScrollListener {
+public class PullToRefreshListView extends PullToRefreshBase<ListView> implements OnScrollListener {
     
     /**ListView*/
-    private GridView mGridView;
+    private ListView mListView;
     /**用于滑到底部自动加载的Footer*/
-    private LoadingLayout mFooterLayout;
+    private LoadingLayout mLoadMoreFooterLayout;
     /**滚动的监听器*/
     private OnScrollListener mScrollListener;
     
@@ -30,7 +31,7 @@ public class PullToRefreshGridView extends PullToRefreshBase<GridView> implement
      * 
      * @param context context
      */
-    public PullToRefreshGridView(Context context) {
+    public PullToRefreshListView(Context context) {
         this(context, null);
     }
     
@@ -40,7 +41,7 @@ public class PullToRefreshGridView extends PullToRefreshBase<GridView> implement
      * @param context context
      * @param attrs attrs
      */
-    public PullToRefreshGridView(Context context, AttributeSet attrs) {
+    public PullToRefreshListView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
     
@@ -51,19 +52,19 @@ public class PullToRefreshGridView extends PullToRefreshBase<GridView> implement
      * @param attrs attrs
      * @param defStyle defStyle
      */
-    public PullToRefreshGridView(Context context, AttributeSet attrs, int defStyle) {
+    public PullToRefreshListView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         
         setPullLoadEnabled(false);
     }
 
     @Override
-    protected GridView createRefreshableView(Context context, AttributeSet attrs) {
-        GridView gridView = new GridView(context);
-        mGridView = gridView;
-        gridView.setOnScrollListener(this);
+    protected ListView createRefreshableView(Context context, AttributeSet attrs) {
+        ListView listView = new ListView(context);
+        mListView = listView;
+        listView.setOnScrollListener(this);
         
-        return gridView;
+        return listView;
     }
     
     /**
@@ -72,9 +73,14 @@ public class PullToRefreshGridView extends PullToRefreshBase<GridView> implement
      * @param hasMoreData true表示还有更多的数据，false表示没有更多数据了
      */
     public void setHasMoreData(boolean hasMoreData) {
-        if (null != mFooterLayout) {
-            if (!hasMoreData) {
-                mFooterLayout.setState(State.NO_MORE_DATA);
+        if (!hasMoreData) {
+            if (null != mLoadMoreFooterLayout) {
+                mLoadMoreFooterLayout.setState(State.NO_MORE_DATA);
+            }
+            
+            LoadingLayout footerLoadingLayout = getFooterLoadingLayout();
+            if (null != footerLoadingLayout) {
+                footerLoadingLayout.setState(State.NO_MORE_DATA);
             }
         }
     }
@@ -102,9 +108,8 @@ public class PullToRefreshGridView extends PullToRefreshBase<GridView> implement
     protected void startLoading() {
         super.startLoading();
         
-        
-        if (null != mFooterLayout) {
-            mFooterLayout.setState(State.REFRESHING);
+        if (null != mLoadMoreFooterLayout) {
+            mLoadMoreFooterLayout.setState(State.REFRESHING);
         }
     }
     
@@ -112,8 +117,8 @@ public class PullToRefreshGridView extends PullToRefreshBase<GridView> implement
     public void onPullUpRefreshComplete() {
         super.onPullUpRefreshComplete();
         
-        if (null != mFooterLayout) {
-            mFooterLayout.setState(State.RESET);
+        if (null != mLoadMoreFooterLayout) {
+            mLoadMoreFooterLayout.setState(State.RESET);
         }
     }
     
@@ -123,17 +128,28 @@ public class PullToRefreshGridView extends PullToRefreshBase<GridView> implement
         
         if (scrollLoadEnabled) {
             // 设置Footer
-            if (null == mFooterLayout) {
-                mFooterLayout = new FooterLoadingLayout(getContext());
+            if (null == mLoadMoreFooterLayout) {
+                mLoadMoreFooterLayout = new FooterLoadingLayout(getContext());
             }
             
-            //mGridView.removeFooterView(mFooterLayout);
-            //mGridView.addFooterView(mFooterLayout, null, false);
+            if (null == mLoadMoreFooterLayout.getParent()) {
+                mListView.addFooterView(mLoadMoreFooterLayout, null, false);
+            }
+            mLoadMoreFooterLayout.show(true);
         } else {
-            if (null != mFooterLayout) {
-                //mGridView.removeFooterView(mFooterLayout);
+            if (null != mLoadMoreFooterLayout) {
+                mLoadMoreFooterLayout.show(false);
             }
         }
+    }
+    
+    @Override
+    public LoadingLayout getFooterLoadingLayout() {
+        if (isScrollLoadEnabled()) {
+            return mLoadMoreFooterLayout;
+        }
+
+        return super.getFooterLoadingLayout();
     }
 
     @Override
@@ -159,13 +175,18 @@ public class PullToRefreshGridView extends PullToRefreshBase<GridView> implement
         }
     }
     
+    @Override
+    protected LoadingLayout createHeaderLoadingLayout(Context context, AttributeSet attrs) {
+        return new RotateLoadingLayout(context);
+    }
+    
     /**
      * 表示是否还有更多数据
      * 
      * @return true表示还有更多数据
      */
     private boolean hasMoreData() {
-        if ((null != mFooterLayout) && (mFooterLayout.getState() == State.NO_MORE_DATA)) {
+        if ((null != mLoadMoreFooterLayout) && (mLoadMoreFooterLayout.getState() == State.NO_MORE_DATA)) {
             return false;
         }
         
@@ -178,13 +199,13 @@ public class PullToRefreshGridView extends PullToRefreshBase<GridView> implement
      * @return true完全显示出来，否则false
      */
     private boolean isFirstItemVisible() {
-        final Adapter adapter = mGridView.getAdapter();
+        final Adapter adapter = mListView.getAdapter();
 
         if (null == adapter || adapter.isEmpty()) {
             return true;
         }
 
-        int mostTop = (mGridView.getChildCount() > 0) ? mGridView.getChildAt(0).getTop() : 0;
+        int mostTop = (mListView.getChildCount() > 0) ? mListView.getChildAt(0).getTop() : 0;
         if (mostTop >= 0) {
             return true;
         }
@@ -198,14 +219,14 @@ public class PullToRefreshGridView extends PullToRefreshBase<GridView> implement
      * @return true完全显示出来，否则false
      */
     private boolean isLastItemVisible() {
-        final Adapter adapter = mGridView.getAdapter();
+        final Adapter adapter = mListView.getAdapter();
 
         if (null == adapter || adapter.isEmpty()) {
             return true;
         }
 
         final int lastItemPosition = adapter.getCount() - 1;
-        final int lastVisiblePosition = mGridView.getLastVisiblePosition();
+        final int lastVisiblePosition = mListView.getLastVisiblePosition();
 
         /**
          * This check should really just be: lastVisiblePosition == lastItemPosition, but ListView
@@ -213,12 +234,12 @@ public class PullToRefreshGridView extends PullToRefreshBase<GridView> implement
          * one to account for it and rely on the inner condition which checks getBottom().
          */
         if (lastVisiblePosition >= lastItemPosition - 1) {
-            final int childIndex = lastVisiblePosition - mGridView.getFirstVisiblePosition();
-            final int childCount = mGridView.getChildCount();
+            final int childIndex = lastVisiblePosition - mListView.getFirstVisiblePosition();
+            final int childCount = mListView.getChildCount();
             final int index = Math.min(childIndex, childCount - 1);
-            final View lastVisibleChild = mGridView.getChildAt(index);
+            final View lastVisibleChild = mListView.getChildAt(index);
             if (lastVisibleChild != null) {
-                return lastVisibleChild.getBottom() <= mGridView.getBottom();
+                return lastVisibleChild.getBottom() <= mListView.getBottom();
             }
         }
 

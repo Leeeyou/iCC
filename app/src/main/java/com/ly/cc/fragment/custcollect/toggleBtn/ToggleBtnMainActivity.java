@@ -12,7 +12,7 @@ import com.ly.cc.utils.T;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class MainActivity extends ActionBarActivity {
+public class ToggleBtnMainActivity extends ActionBarActivity {
 
     @InjectView(R.id.toggle_btn)
     ToggleButton toggleBtn;
@@ -33,7 +33,7 @@ public class MainActivity extends ActionBarActivity {
         toggleBtn.setOnToggleChanged(new ToggleButton.OnToggleChanged() {
             @Override
             public void onToggle(boolean on) {
-                T.showShort(MainActivity.this, String.valueOf(on));
+                T.showShort(ToggleBtnMainActivity.this, String.valueOf(on));
             }
         });
 

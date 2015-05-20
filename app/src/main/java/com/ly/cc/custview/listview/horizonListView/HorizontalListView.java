@@ -24,7 +24,7 @@
  * It has been substantially rewritten and added to from the original version.
  */
 // @formatter:on
-package com.ly.cc.custview.horizonListView;
+package com.ly.cc.custview.listview.horizonListView;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;

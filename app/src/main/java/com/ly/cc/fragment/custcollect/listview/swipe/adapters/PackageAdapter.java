@@ -34,7 +34,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ly.cc.R;
-import com.ly.cc.custview.swipeListView.SwipeListView;
+import com.ly.cc.custview.listview.swipeListView.SwipeListView;
 
 import java.util.List;
 

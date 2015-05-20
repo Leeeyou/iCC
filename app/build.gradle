@@ -5,7 +5,7 @@ android {
     buildToolsVersion "21.1.2"
     defaultConfig {
         applicationId "com.ly.cc"
-        minSdkVersion 11
+        minSdkVersion 21
         targetSdkVersion 10
         versionCode 1
         versionName "1.0"
@@ -22,7 +22,7 @@ android {
 
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:21.0.2'
     compile 'se.emilsjolander:stickylistheaders:2.5.1'
     compile 'com.jakewharton:butterknife:6.1.0'

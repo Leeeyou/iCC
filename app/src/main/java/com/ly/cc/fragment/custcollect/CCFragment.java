@@ -9,7 +9,9 @@ import android.view.View;
 import android.widget.ListView;
 
 import com.ly.cc.fragment.custcollect.android5p0.NewControlsActivity;
-import com.ly.cc.fragment.custcollect.listview.MainActivity;
+import com.ly.cc.fragment.custcollect.listview.ListViewListActivity;
+import com.ly.cc.fragment.custcollect.timeline.TimelineListActivity;
+import com.ly.cc.fragment.custcollect.toggleBtn.ToggleBtnMainActivity;
 import com.ly.cc.manager.UniversalAdapter;
 import com.ly.cc.manager.ViewHolder;
 import com.ly.cc.utils.Jump;
@@ -65,14 +67,14 @@ public class CCFragment extends ListFragment {
         Intent i = new Intent();
         switch (position) {
             case 0://ListView
-                i.setClass(ctx, MainActivity.class);
+                i.setClass(ctx, ListViewListActivity.class);
                 startActivity(i);
                 break;
             case 1://ToggleButton
-                Jump.toActivity(getActivity(), com.ly.cc.fragment.custcollect.toggleBtn.MainActivity.class);
+                Jump.toActivity(getActivity(), ToggleBtnMainActivity.class);
                 break;
             case 2://时间轴
-                T.showShort(ctx, "时间轴");
+                Jump.toActivity(getActivity(), TimelineListActivity.class);
                 break;
             case 3://侧滑菜单
                 T.showShort(ctx, "侧滑菜单");

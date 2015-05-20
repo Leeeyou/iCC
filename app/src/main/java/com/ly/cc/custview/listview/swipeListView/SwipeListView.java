@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.ly.cc.custview.swipeListView;
+package com.ly.cc.custview.listview.swipeListView;
 
 import android.content.Context;
 import android.content.res.TypedArray;

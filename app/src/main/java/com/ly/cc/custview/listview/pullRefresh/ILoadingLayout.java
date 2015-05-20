@@ -1,4 +1,4 @@
-package com.ly.cc.custview.pullrefresh;
+package com.ly.cc.custview.listview.pullRefresh;
 
 /**
  * 下拉刷新和上拉加载更多的界面接口

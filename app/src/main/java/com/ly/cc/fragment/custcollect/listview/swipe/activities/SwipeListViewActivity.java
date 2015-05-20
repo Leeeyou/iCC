@@ -36,8 +36,8 @@ import android.widget.AbsListView;
 import android.widget.ListView;
 
 import com.ly.cc.R;
-import com.ly.cc.custview.swipeListView.BaseSwipeListViewListener;
-import com.ly.cc.custview.swipeListView.SwipeListView;
+import com.ly.cc.custview.listview.swipeListView.BaseSwipeListViewListener;
+import com.ly.cc.custview.listview.swipeListView.SwipeListView;
 import com.ly.cc.fragment.custcollect.listview.swipe.adapters.PackageAdapter;
 import com.ly.cc.fragment.custcollect.listview.swipe.adapters.PackageItem;
 import com.ly.cc.fragment.custcollect.listview.swipe.dialogs.AboutDialog;

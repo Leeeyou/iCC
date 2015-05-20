@@ -15,7 +15,7 @@ import com.ly.cc.utils.Jump;
 /**
  * Created by kongbei on 2015/1/14.
  */
-public class MainActivity extends ListActivity {
+public class ListViewListActivity extends ListActivity {
     private UniversalAdapter<String> mListViewAdapter;
     private Context ctx;
 
@@ -46,16 +46,16 @@ public class MainActivity extends ListActivity {
         super.onListItemClick(l, v, position, id);
         switch (position) {
             case 0:
-                Jump.toActivity(MainActivity.this, ListViewBothActivity.class);
+                Jump.toActivity(ListViewListActivity.this, ListViewBothActivity.class);
                 break;
             case 1:
-                Jump.toActivity(MainActivity.this,ListViewHeaderActivity.class);
+                Jump.toActivity(ListViewListActivity.this,ListViewHeaderActivity.class);
                 break;
             case 2:
-                Jump.toActivity(MainActivity.this,HorizontalListViewActivity.class);
+                Jump.toActivity(ListViewListActivity.this,HorizontalListViewActivity.class);
                 break;
             case 3:
-                Jump.toActivity(MainActivity.this,SwipeListViewActivity.class);
+                Jump.toActivity(ListViewListActivity.this,SwipeListViewActivity.class);
             default:
                 break;
         }

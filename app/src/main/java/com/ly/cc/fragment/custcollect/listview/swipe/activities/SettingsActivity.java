@@ -31,7 +31,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.ly.cc.R;
-import com.ly.cc.custview.swipeListView.SwipeListView;
+import com.ly.cc.custview.listview.swipeListView.SwipeListView;
 import com.ly.cc.fragment.custcollect.listview.swipe.utils.SettingsManager;
 
 public class SettingsActivity extends Activity {

@@ -12,7 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.ly.cc.R;
-import com.ly.cc.custview.horizonListView.HorizontalListView;
+import com.ly.cc.custview.listview.horizonListView.HorizontalListView;
 import com.ly.cc.utils.T;
 
 import butterknife.ButterKnife;

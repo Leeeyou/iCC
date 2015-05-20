@@ -1,4 +1,4 @@
-package com.ly.cc.custview.listheadview;
+package com.ly.cc.custview.listview.stickyListHeaders;
 
 import android.content.Context;
 import android.content.res.Resources;

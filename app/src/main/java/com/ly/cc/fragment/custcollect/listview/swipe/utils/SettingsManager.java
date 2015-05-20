@@ -19,7 +19,7 @@
 package com.ly.cc.fragment.custcollect.listview.swipe.utils;
 
 
-import com.ly.cc.custview.swipeListView.SwipeListView;
+import com.ly.cc.custview.listview.swipeListView.SwipeListView;
 
 public class SettingsManager {
 
