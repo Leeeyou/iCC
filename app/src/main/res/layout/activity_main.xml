@@ -1,14 +1,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:leeyou="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/id_viewpager"
         android:layout_width="fill_parent"
         android:layout_height="0dip"
-        android:layout_weight="1"/>
+        android:layout_weight="1" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -22,8 +22,8 @@
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             leeyou:mIcon="@drawable/icon_main_cc"
-            leeyou:mText_size="14sp"
-            leeyou:mText="自定义控件" />
+            leeyou:mText="自定义控件"
+            leeyou:mText_size="14sp" />
 
         <com.ly.cc.custview.ChangeColorIconWithTextView
             android:id="@+id/id_indicator_function"
@@ -31,8 +31,8 @@
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             leeyou:mIcon="@drawable/icon_main_function"
-            leeyou:mText_size="14sp"
-            leeyou:mText="常用功能" />
+            leeyou:mText="常用功能"
+            leeyou:mText_size="14sp" />
 
         <com.ly.cc.custview.ChangeColorIconWithTextView
             android:id="@+id/id_indicator_framework"
@@ -40,8 +40,8 @@
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             leeyou:mIcon="@drawable/icon_main_framework"
-            leeyou:mText_size="14sp"
-            leeyou:mText="常用框架" />
+            leeyou:mText="常用框架"
+            leeyou:mText_size="14sp" />
 
         <com.ly.cc.custview.ChangeColorIconWithTextView
             android:id="@+id/id_indicator_sdk"
@@ -49,8 +49,8 @@
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             leeyou:mIcon="@drawable/icon_main_sdk"
-            leeyou:mText_size="14sp"
-            leeyou:mText="第三方SDK" />
+            leeyou:mText="第三方SDK"
+            leeyou:mText_size="14sp" />
     </LinearLayout>
 
 </LinearLayout>

@@ -1,17 +1,29 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:topTitle="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.ly.cc.fragment.custcollect.listview.ListViewBothActivity">
+
+    <com.ly.cc.custview.topview.MyTopTitleView
+        android:id="@+id/mTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        topTitle:centerText="自定义标题"
+        topTitle:centerTextColor="#567321"
+        topTitle:centerTextSize="8sp"
+        topTitle:leftText="left"
+        topTitle:leftTextColor="#898989"
+        topTitle:leftTextSize="10sp"
+        topTitle:rightText="right"
+        topTitle:rightTextColor="#f68a34"
+        topTitle:rightTextSize="10sp" />
 
     <com.ly.cc.custview.listview.pullRefresh.PullToRefreshListView
         android:id="@+id/lv_county"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_world" />
+        android:layout_below="@id/mTopBar" />
+
 
 </RelativeLayout>
