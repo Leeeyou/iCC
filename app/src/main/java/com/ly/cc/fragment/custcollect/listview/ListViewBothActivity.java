@@ -12,7 +12,7 @@ import android.widget.Toast;
 import com.ly.cc.R;
 import com.ly.cc.custview.listview.pullRefresh.PullToRefreshBase;
 import com.ly.cc.custview.listview.pullRefresh.PullToRefreshListView;
-import com.ly.cc.custview.topview.MyTopTitleView;
+import com.ly.cc.custview.topview.TopBarView;
 import com.ly.cc.utils.T;
 
 import java.text.SimpleDateFormat;
@@ -38,7 +38,7 @@ public class ListViewBothActivity extends Activity {
     PullToRefreshListView mPullListView;
 
     @InjectView(R.id.mTopBar)
-    MyTopTitleView mTopBar;
+    TopBarView mTopBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +46,7 @@ public class ListViewBothActivity extends Activity {
         setContentView(R.layout.activity_list_view_both);
         ButterKnife.inject(this);
 
-        mTopBar.setTopBarClickListener(new MyTopTitleView.TopBarOnClickListener() {
+        mTopBar.setTopBarClickListener(new TopBarView.TopBarOnClickListener() {
             @Override
             public void leftClick() {
                 T.showShort(ListViewBothActivity.this, "left click");

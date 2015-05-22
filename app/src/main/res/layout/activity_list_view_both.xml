@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context="com.ly.cc.fragment.custcollect.listview.ListViewBothActivity">
 
-    <com.ly.cc.custview.topview.MyTopTitleView
+    <com.ly.cc.custview.topview.TopBarView
         android:id="@+id/mTopBar"
         android:layout_width="match_parent"
         android:layout_height="48dp"

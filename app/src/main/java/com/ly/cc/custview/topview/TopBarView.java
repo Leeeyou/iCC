@@ -16,7 +16,7 @@ import com.ly.cc.R;
 /**
  * TODO: document your custom view class.
  */
-public class MyTopTitleView extends RelativeLayout {
+public class TopBarView extends RelativeLayout {
 
     private Button leftBtn, rightBtn;
     private TextView centerTV;
@@ -52,7 +52,7 @@ public class MyTopTitleView extends RelativeLayout {
         mClickListener = listener;
     }
 
-    public MyTopTitleView(Context context, AttributeSet attrs) {
+    public TopBarView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.topTitle);
