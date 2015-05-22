@@ -8,7 +8,7 @@
     <com.ly.cc.custview.topview.MyTopTitleView
         android:id="@+id/mTopBar"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="60dp"
         topTitle:centerText="自定义标题"
         topTitle:centerTextColor="#567321"
         topTitle:centerTextSize="8sp"

@@ -84,7 +84,7 @@ public class MyTopTitleView extends RelativeLayout {
         centerTV.setTextColor(centerTextColor);
         centerTV.setGravity(Gravity.CENTER);
 
-        setBackgroundColor(0XFF140DC3);
+        setBackgroundColor(getResources().getColor(R.color.bg_title_bar));
 
         leftLayoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
         leftLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT, TRUE);

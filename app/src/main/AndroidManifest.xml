@@ -28,22 +28,26 @@
         <activity android:name=".fragment.custcollect.android5p0.NewControlsActivity" />
         <activity
             android:name=".fragment.custcollect.listview.ListViewListActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/title_activity_list_view_activity" />
+            android:label="@string/title_activity_list_view_activity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".fragment.function.GravitySensorActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
         <activity
             android:name=".fragment.custcollect.listview.ListViewBothActivity"
-            android:label="@string/title_activity_list_view_both" />
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
         <activity
             android:name=".fragment.custcollect.listview.ListViewHeaderActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:label="@string/title_activity_list_view_header" />
         <activity
             android:name=".fragment.custcollect.listview.HorizontalListViewActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:label="@string/title_activity_horizontal_list_view" />
         <activity
             android:name=".fragment.custcollect.listview.swipe.activities.SwipeListViewActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:label="@string/title_activity_swipe_list_view" />
         <activity android:name=".fragment.custcollect.listview.swipe.activities.SettingsActivity" />
         <activity
@@ -51,12 +55,12 @@
             android:label="ToggleBtnMainActivity" />
         <activity
             android:name=".fragment.custcollect.timeline.TimelineListActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/title_activity_timeline_list" />
+            android:label="@string/title_activity_timeline_list"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".fragment.custcollect.timeline.HorizontalTimelineActivity"
-            android:screenOrientation="landscape"
-            android:label="HorizontalTimelineActivity" />
+            android:label="HorizontalTimelineActivity"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>
