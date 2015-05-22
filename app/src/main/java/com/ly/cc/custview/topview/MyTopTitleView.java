@@ -2,6 +2,8 @@ package com.ly.cc.custview.topview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
@@ -22,25 +24,28 @@ public class MyTopTitleView extends RelativeLayout {
     private String leftText;
     private float leftTextSize;
     private int leftTextColor;
+    private Drawable leftBackground;
+    private boolean leftVisible;
 
     private String rightText;
     private float rightTextSize;
     private int rightTextColor;
+    private Drawable rightBackground;
+    private boolean rightVisible;
 
     private String centerText;
     private float centerTextSize;
     private int centerTextColor;
+    private Drawable centerBackground;
+    private boolean centerVisible;
 
-    private LayoutParams leftLayoutParams;
-    private LayoutParams rightLayoutParams;
-    private LayoutParams centerLayoutParams;
 
     private TopBarOnClickListener mClickListener;
 
     public interface TopBarOnClickListener {
         void leftClick();
 
-        void righClick();
+        void rightClick();
     }
 
     public void setTopBarClickListener(TopBarOnClickListener listener) {
@@ -52,59 +57,98 @@ public class MyTopTitleView extends RelativeLayout {
 
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.topTitle);
 
-        leftText = ta.getString(R.styleable.topTitle_leftText);
-        leftTextSize = ta.getDimension(R.styleable.topTitle_leftTextSize, 0);
-        leftTextColor = ta.getColor(R.styleable.topTitle_leftTextColor, 0);
+        initStyleParams(ta);
 
-        rightText = ta.getString(R.styleable.topTitle_rightText);
-        rightTextSize = ta.getDimension(R.styleable.topTitle_rightTextSize, 0);
-        rightTextColor = ta.getColor(R.styleable.topTitle_rightTextColor, 0);
+        initControls(context);
 
-        centerText = ta.getString(R.styleable.topTitle_centerText);
-        centerTextSize = ta.getDimension(R.styleable.topTitle_centerTextSize, 0);
-        centerTextColor = ta.getColor(R.styleable.topTitle_centerTextColor, 0);
+        initBackground();
 
-        ta.recycle();
+        setLayoutParams();
 
+        setClickListener();
+    }
+
+    private void setLayoutParams() {
+        LayoutParams leftParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
+        leftParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT, TRUE);
+        addView(leftBtn, leftParams);
+
+        LayoutParams rightParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
+        rightParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, TRUE);
+        addView(rightBtn, rightParams);
+
+        LayoutParams centerParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
+        centerParams.addRule(RelativeLayout.CENTER_IN_PARENT, TRUE);
+        addView(centerTV, centerParams);
+    }
+
+    private void initBackground() {
+        setBackgroundColor(getResources().getColor(R.color.bg_title_bar));
+    }
+
+    private void initControls(Context context) {
         leftBtn = new Button(context);
         rightBtn = new Button(context);
         centerTV = new TextView(context);
 
-
-        leftBtn.setText(leftText);
+        if (!TextUtils.isEmpty(leftText)) {
+            leftBtn.setText(leftText);
+        }
+        if (leftBackground != null) {
+            leftBtn.setBackground(leftBackground);
+        }
         leftBtn.setTextSize(leftTextSize);
         leftBtn.setTextColor(leftTextColor);
+        leftBtn.setVisibility(leftVisible ? View.VISIBLE : View.GONE);
 
-        rightBtn.setText(rightText);
+
+        if (!TextUtils.isEmpty(rightText)) {
+            rightBtn.setText(rightText);
+        }
+        if (rightBackground != null) {
+            rightBtn.setBackground(rightBackground);
+        }
         rightBtn.setTextSize(rightTextSize);
         rightBtn.setTextColor(rightTextColor);
+        rightBtn.setVisibility(rightVisible ? View.VISIBLE : View.GONE);
 
-        centerTV.setText(centerText);
+
+        if (!TextUtils.isEmpty(centerText)) {
+            centerTV.setText(centerText);
+        }
+        if (centerBackground != null) {
+            centerTV.setBackground(centerBackground);
+        }
         centerTV.setTextSize(centerTextSize);
         centerTV.setTextColor(centerTextColor);
+        centerTV.setVisibility(centerVisible ? View.VISIBLE : View.GONE);
         centerTV.setGravity(Gravity.CENTER);
+    }
 
-        setBackgroundColor(getResources().getColor(R.color.bg_title_bar));
+    private void initStyleParams(TypedArray ta) {
+        leftText = ta.getString(R.styleable.topTitle_leftText);
+        leftTextSize = ta.getDimension(R.styleable.topTitle_leftTextSize, 10);
+        leftTextColor = ta.getColor(R.styleable.topTitle_leftTextColor, 0);
+        leftBackground = ta.getDrawable(R.styleable.topTitle_leftBackground);
+        leftVisible = ta.getBoolean(R.styleable.topTitle_leftVisible, true);
 
-        leftLayoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
-        leftLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT, TRUE);
-        addView(leftBtn, leftLayoutParams);
+        rightText = ta.getString(R.styleable.topTitle_rightText);
+        rightTextSize = ta.getDimension(R.styleable.topTitle_rightTextSize, 10);
+        rightTextColor = ta.getColor(R.styleable.topTitle_rightTextColor, 0);
+        rightBackground = ta.getDrawable(R.styleable.topTitle_rightBackground);
+        rightVisible = ta.getBoolean(R.styleable.topTitle_rightVisible, true);
 
-        rightLayoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
-        rightLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, TRUE);
-        addView(rightBtn, rightLayoutParams);
+        centerText = ta.getString(R.styleable.topTitle_centerText);
+        centerTextSize = ta.getDimension(R.styleable.topTitle_centerTextSize, 12);
+        centerTextColor = ta.getColor(R.styleable.topTitle_centerTextColor, 0);
+        centerBackground = ta.getDrawable(R.styleable.topTitle_centerBackground);
+        centerVisible = ta.getBoolean(R.styleable.topTitle_centerVisible, true);
 
-        centerLayoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
-        centerLayoutParams.addRule(RelativeLayout.CENTER_IN_PARENT, TRUE);
-//        centerLayoutParams.addRule(RelativeLayout.RIGHT_OF, leftBtn.getId());
-//        centerLayoutParams.addRule(RelativeLayout.LEFT_OF, rightBtn.getId());
-        addView(centerTV, centerLayoutParams);
-
-        setClickListener();
-
+        ta.recycle();
     }
 
     private void setClickListener() {
+
         leftBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -115,8 +159,11 @@ public class MyTopTitleView extends RelativeLayout {
         rightBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                mClickListener.righClick();
+                mClickListener.rightClick();
             }
         });
+
+//        leftBtn.setOnClickListener((v -> mClickListener.leftClick()));
+//        leftBtn.setOnClickListener((v -> mClickListener.rightClick()));
     }
 }

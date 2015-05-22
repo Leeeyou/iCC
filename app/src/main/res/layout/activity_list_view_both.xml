@@ -8,16 +8,16 @@
     <com.ly.cc.custview.topview.MyTopTitleView
         android:id="@+id/mTopBar"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="48dp"
         topTitle:centerText="自定义标题"
-        topTitle:centerTextColor="#567321"
+        topTitle:centerTextColor="@color/white"
         topTitle:centerTextSize="8sp"
-        topTitle:leftText="left"
+        topTitle:leftBackground="@drawable/title_bar_back_style"
         topTitle:leftTextColor="#898989"
-        topTitle:leftTextSize="10sp"
-        topTitle:rightText="right"
-        topTitle:rightTextColor="#f68a34"
-        topTitle:rightTextSize="10sp" />
+        topTitle:rightBackground="@color/transparent"
+        topTitle:rightText="更多"
+        topTitle:rightTextColor="@color/white"
+        topTitle:rightTextSize="6sp" />
 
     <com.ly.cc.custview.listview.pullRefresh.PullToRefreshListView
         android:id="@+id/lv_county"

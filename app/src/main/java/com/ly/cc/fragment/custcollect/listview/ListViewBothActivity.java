@@ -53,7 +53,7 @@ public class ListViewBothActivity extends Activity {
             }
 
             @Override
-            public void righClick() {
+            public void rightClick() {
                 T.showShort(ListViewBothActivity.this, "right click");
             }
         });
@@ -76,11 +76,15 @@ public class ListViewBothActivity extends Activity {
         mListView.setAdapter(mAdapter);
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> arg0, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String text = mListItems.get(position) + ", index = " + (position + 1);
                 Toast.makeText(ListViewBothActivity.this, text, Toast.LENGTH_SHORT).show();
             }
         });
+//        mListView.setOnItemClickListener((arg0, view, position, id) -> {
+//            String text = mListItems.get(position) + ", index = " + (position + 1);
+//            Toast.makeText(ListViewBothActivity.this, text, Toast.LENGTH_SHORT).show();
+//        });
 
         mPullListView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
             @Override
