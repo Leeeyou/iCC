@@ -20,5 +20,6 @@
     <string name="title_activity_swipe_list_view">SwipeListView</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_timeline_list">TimelineListActivity</string>
+    <string name="title_activity_vertical_timeline">VerticalTimelineActivity</string>
 
 </resources>

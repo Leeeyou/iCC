@@ -8,7 +8,6 @@
     <uses-permission android:name="android.permission.READ_CALENDAR" />
     <uses-permission android:name="android.permission.WRITE_CALENDAR" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -35,8 +34,8 @@
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
         <activity
             android:name=".fragment.custcollect.listview.ListViewBothActivity"
-            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
         <activity
             android:name=".fragment.custcollect.listview.ListViewHeaderActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
@@ -61,6 +60,7 @@
             android:name=".fragment.custcollect.timeline.HorizontalTimelineActivity"
             android:label="HorizontalTimelineActivity"
             android:screenOrientation="landscape" />
+        <activity android:name=".fragment.custcollect.timeline.VerticalTimelineActivity" />
     </application>
 
 </manifest>

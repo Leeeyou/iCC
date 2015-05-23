@@ -45,6 +45,7 @@ public class TimelineListActivity extends ListActivity {
                 Jump.toActivity(TimelineListActivity.this, HorizontalTimelineActivity.class);
                 break;
             case 1:
+                Jump.toActivity(TimelineListActivity.this, VerticalTimelineActivity.class);
                 break;
             default:
                 break;
