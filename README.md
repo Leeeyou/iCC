@@ -24,7 +24,7 @@ Custom Collection 综合项目，目的是总结在工作中遇到的常用内�
   
  > * 时间轴
     1. **水平时间轴**（已完成）[参看youtube视频连接](https://www.youtube.com/watch?v=Dm8Zt1ps9P8)
-    2. **垂直时间轴**
+    2. **垂直时间轴**（已完成）[参考简易时间轴](http://www.cnblogs.com/liangstudyhome/p/3938264.html)
 
 
  > * 侧滑菜单
