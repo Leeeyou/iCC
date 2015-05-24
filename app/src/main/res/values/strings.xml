@@ -21,5 +21,6 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_timeline_list">TimelineListActivity</string>
     <string name="title_activity_vertical_timeline">VerticalTimelineActivity</string>
+    <string name="title_activity_slide_menu_qq5">SlideMenuQQ5Activity</string>
 
 </resources>
