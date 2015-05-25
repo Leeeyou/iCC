@@ -28,7 +28,7 @@ Custom Collection 综合项目，目的是总结在工作中遇到的常用内�
 
 
  > * 侧滑菜单
-    1. **仿QQ5.0左侧滑**（已完成）
+    1. **仿QQ5.0左侧滑**（已完成）[总结](http://note.youdao.com/share/?id=3fcdc3448b789582f8f0ab40489f182c&type=note)
     2. **抽屉式侧滑**（已完成）自定义控件继承HorizontalScrollView
  
  
