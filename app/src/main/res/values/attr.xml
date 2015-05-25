@@ -34,4 +34,9 @@
         <attr name="centerVisible" format="boolean" />
 
     </declare-styleable>
+
+    <declare-styleable name="slidingMenu">
+        <attr name="rightPadding" format="dimension"/>
+    </declare-styleable>
+
 </resources>
