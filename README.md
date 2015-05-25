@@ -11,26 +11,25 @@ Custom Collection 综合项目，目的是总结在工作中遇到的常用内�
 
  > * 自定义组合控件TopBar（已完成）[参考](http://www.imooc.com/learn/247)
 
-  
+
  > * ListView
     1. **常用的下拉刷新和加载更多** （已完成）参考[PullRefresh](http://www.360doc.com/content/14/1005/18/9200790_414599526.shtml)
     2. **带headView的下拉刷新**（已完成）参考[StickyListHeaders](https://github.com/emilsjolander/StickyListHeaders)
     3. **水平的listview**（已完成）参考[Android-HorizontalListView](https://github.com/MeetMe/Android-HorizontalListView)
     4. **ListView中item项侧滑**（已完成 [开发说明文档](http://note.youdao.com/share/?id=ac0b5de8aaf6d6d9a5485575ef73a8ac&type=note)）  参考[SwipeListView](https://github.com/47deg/android-swipelistview) , 官方demo [android-swipelistview-sample](https://github.com/47deg/android-swipelistview-sample)
 
-  
+
  > * toggleBtn（已完成）参考[ToggleButton](https://github.com/zcweng/ToggleButton)
 
-  
+
  > * 时间轴
     1. **水平时间轴**（已完成）[参看youtube视频连接](https://www.youtube.com/watch?v=Dm8Zt1ps9P8)
     2. **垂直时间轴**（已完成）[参考简易时间轴](http://www.cnblogs.com/liangstudyhome/p/3938264.html)
 
 
  > * 侧滑菜单
-    1. **左侧滑**
-    2. **左右侧滑**
-    3. **左内侧滑**
+    1. **仿QQ5.0左侧滑**（已完成）
+    2. **抽屉式侧滑**（已完成）自定义控件继承HorizontalScrollView
  
  
  > * 图形绘制
