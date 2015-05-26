@@ -90,6 +90,7 @@ public class ChangeColorIconWithTextView extends View {
         a.recycle();
 
         mTextPaint = new Paint();
+        mTextPaint.setAntiAlias(true);
         mTextPaint.setTextSize(mTextSize);
         mTextPaint.setColor(0xff555555);
         // 得到text绘制范围,存放到mTextBound

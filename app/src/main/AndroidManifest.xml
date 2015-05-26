@@ -64,7 +64,14 @@
         <activity
             android:name=".fragment.custcollect.slidemenu.SlideMenuQQ5Activity"
             android:label="@string/title_activity_slide_menu_qq5"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragment.custcollect.imagePainting.ImagePaintingActivity"
+            android:label="@string/title_activity_image_painting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragment.custcollect.imagePainting.RoundImageByBitmapShaderActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
