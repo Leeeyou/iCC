@@ -163,7 +163,6 @@ public class SlidingMenuQQ5 extends HorizontalScrollView {
         ViewHelper.setScaleX(mContent, rightScale);
         ViewHelper.setScaleY(mContent, rightScale);
 
-
         float leftScale = 1.0f - scale * 0.3f;
         ViewHelper.setScaleX(mMenu, leftScale);
         ViewHelper.setScaleY(mMenu, leftScale);

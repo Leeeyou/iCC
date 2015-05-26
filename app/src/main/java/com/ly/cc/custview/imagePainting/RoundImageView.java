@@ -20,28 +20,28 @@ import android.widget.ImageView;
 import com.ly.cc.R;
 
 /**
+ * http://blog.csdn.net/lmj623565791/article/details/41967509
+ *
  * Created by LeeeYou on 2015/5/26.
  */
 public class RoundImageView extends ImageView {
 
     /**
-     * Í¼Æ¬µÄÀàĞÍ£¬Ô²ĞÎorÔ²½Ç
+     * å›¾ç‰‡çš„ç±»å‹ï¼Œåœ†å½¢oråœ†è§’
      */
     private int type;
     public static final int TYPE_CIRCLE = 0;
     public static final int TYPE_ROUND = 1;
 
-    private static final int BORDER_RADIUS_DEFAULT = 10;// Ô²½Ç´óĞ¡µÄÄ¬ÈÏÖµ
+    private static final int BORDER_RADIUS_DEFAULT = 10;// åœ†è§’å¤§å°çš„é»˜è®¤å€¼
 
-    private int mBorderRadius;//Ô²½ÇµÄ´óĞ¡
+    private int mBorderRadius;//åœ†è§’çš„å¤§å°
 
-    private Paint mBitmapPaint;//»æÍ¼µÄPaint
+    private Paint mBitmapPaint;
 
-    private int mRadius;// Ô²½ÇµÄ°ë¾¶
+    private int mRadius;// åœ†è§’çš„åŠå¾„
 
-    private Matrix matrix;//3x3 ¾ØÕó£¬Ö÷ÒªÓÃÓÚËõĞ¡·Å´ó
-
-    private BitmapShader mBitmapShader;//äÖÈ¾Í¼Ïñ£¬Ê¹ÓÃÍ¼ÏñÎª»æÖÆÍ¼ĞÎ×ÅÉ«
+    private Matrix mMatrix;//3x3 çŸ©é˜µï¼Œä¸»è¦ç”¨äºç¼©å°æ”¾å¤§
 
     private int mWidth;
 
@@ -50,20 +50,16 @@ public class RoundImageView extends ImageView {
     public RoundImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        matrix = new Matrix();
+        mMatrix = new Matrix();
         mBitmapPaint = new Paint();
         mBitmapPaint.setAntiAlias(true);
 
-        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.RoundImageView);
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.RoundImageView);
 
-        ta.getDimensionPixelSize(R.styleable.RoundImageView_borderRadius,
-                (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                        BORDER_RADIUS_DEFAULT,
-                        getResources().getDisplayMetrics()));
+        mBorderRadius = a.getDimensionPixelSize(R.styleable.RoundImageView_borderRadius, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, BORDER_RADIUS_DEFAULT, getResources().getDisplayMetrics()));// é»˜è®¤ä¸º10dp
+        type = a.getInt(R.styleable.RoundImageView_type, TYPE_CIRCLE);// é»˜è®¤ä¸ºCircle
 
-        type = ta.getInt(R.styleable.RoundImageView_type, TYPE_CIRCLE);
-
-        ta.recycle();
+        a.recycle();
     }
 
     public RoundImageView(Context context) {
@@ -75,7 +71,7 @@ public class RoundImageView extends ImageView {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
         /**
-         *  Èç¹ûÀàĞÍÊÇÔ²ĞÎ£¬ÔòÇ¿ÖÆ¸Ä±äviewµÄ¿í¸ßÒ»ÖÂ£¬ÒÔĞ¡ÖµÎª×¼
+         *  å¦‚æœç±»å‹æ˜¯åœ†å½¢ï¼Œåˆ™å¼ºåˆ¶æ”¹å˜viewçš„å®½é«˜ä¸€è‡´ï¼Œä»¥å°å€¼ä¸ºå‡†
          */
         if (type == TYPE_CIRCLE) {
             mWidth = Math.min(getMeasuredWidth(), getMeasuredHeight());
@@ -91,26 +87,26 @@ public class RoundImageView extends ImageView {
         }
 
         Bitmap bmp = drawableToBitmap(drawable);
-
-        mBitmapShader = new BitmapShader(bmp, TileMode.CLAMP, TileMode.CLAMP);
+        //å°†bmpä½œä¸ºç€è‰²å™¨ï¼Œå°±æ˜¯åœ¨æŒ‡å®šåŒºåŸŸå†…ç»˜åˆ¶bmpã€‚æ¸²æŸ“å›¾åƒï¼Œä½¿ç”¨å›¾åƒä¸ºç»˜åˆ¶å›¾å½¢ç€è‰²
+        BitmapShader mBitmapShader = new BitmapShader(bmp, TileMode.CLAMP, TileMode.CLAMP);
         float scale = 1.0f;
-
         if (type == TYPE_CIRCLE) {
+            // æ‹¿åˆ°bitmapå®½æˆ–é«˜çš„å°å€¼
             int bSize = Math.min(bmp.getWidth(), bmp.getHeight());
             scale = mWidth * 1.0f / bSize;
         } else if (type == TYPE_ROUND) {
-            // Èç¹ûÍ¼Æ¬µÄ¿í»òÕß¸ßÓëviewµÄ¿í¸ß²»Æ¥Åä£¬¼ÆËã³öĞèÒªËõ·ÅµÄ±ÈÀı£»Ëõ·ÅºóµÄÍ¼Æ¬µÄ¿í¸ß£¬Ò»¶¨Òª´óÓÚÎÒÃÇviewµÄ¿í¸ß£»ËùÒÔÎÒÃÇÕâÀïÈ¡´óÖµ
+            // å¦‚æœå›¾ç‰‡çš„å®½æˆ–è€…é«˜ä¸viewçš„å®½é«˜ä¸åŒ¹é…ï¼Œè®¡ç®—å‡ºéœ€è¦ç¼©æ”¾çš„æ¯”ä¾‹ï¼›ç¼©æ”¾åçš„å›¾ç‰‡çš„å®½é«˜ï¼Œä¸€å®šè¦å¤§äºæˆ‘ä»¬viewçš„å®½é«˜ï¼›æ‰€ä»¥æˆ‘ä»¬è¿™é‡Œå–å¤§å€¼ï¼›
             if (!(bmp.getWidth() == getWidth()
                     && bmp.getHeight() == getHeight())) {
                 scale = Math.max(getWidth() * 1.0f / bmp.getWidth(), getHeight() * 1.0f / bmp.getHeight());
             }
         }
-
-        matrix.setScale(scale, scale); // shaderµÄ±ä»»¾ØÕó£¬ÎÒÃÇÕâÀïÖ÷ÒªÓÃÓÚ·Å´ó»òÕßËõĞ¡
-
-        mBitmapShader.setLocalMatrix(matrix); // ÉèÖÃ±ä»»¾ØÕó
-
-        mBitmapPaint.setShader(mBitmapShader); // ÉèÖÃshader
+        // shaderçš„å˜æ¢çŸ©é˜µï¼Œæˆ‘ä»¬è¿™é‡Œä¸»è¦ç”¨äºæ”¾å¤§æˆ–è€…ç¼©å°
+        mMatrix.setScale(scale, scale);
+        // è®¾ç½®å˜æ¢çŸ©é˜µ
+        mBitmapShader.setLocalMatrix(mMatrix);
+        // è®¾ç½®shader
+        mBitmapPaint.setShader(mBitmapShader);
     }
 
     private Bitmap drawableToBitmap(Drawable drawable) {
@@ -118,29 +114,27 @@ public class RoundImageView extends ImageView {
             BitmapDrawable bd = (BitmapDrawable) drawable;
             return bd.getBitmap();
         }
-
-        int intrinsicWidth = drawable.getIntrinsicWidth();
-        int intrinsicHeight = drawable.getIntrinsicHeight();
-        Bitmap bitmap = Bitmap.createBitmap(intrinsicWidth, intrinsicHeight, Bitmap.Config.ARGB_8888);
+        int w = drawable.getIntrinsicWidth();
+        int h = drawable.getIntrinsicHeight();
+        Bitmap bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(bitmap);
-        drawable.setBounds(0, 0, intrinsicWidth, intrinsicHeight);
+        drawable.setBounds(0, 0, w, h);
         drawable.draw(canvas);
         return bitmap;
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
+//        super.onDraw(canvas); //ä¸ºä»€ä¹ˆå»æ‰ä¹‹åï¼ŒèƒŒæ™¯è‰²å°±æ²¡æœ‰äº†
 
         if (getDrawable() == null) {
             return;
         }
-
         setUpShader();
 
         if (type == TYPE_ROUND) {
             canvas.drawRoundRect(mRoundRect, mBorderRadius, mBorderRadius, mBitmapPaint);
-        } else if (type == TYPE_CIRCLE) {
+        } else {
             canvas.drawCircle(mRadius, mRadius, mRadius, mBitmapPaint);
         }
     }
