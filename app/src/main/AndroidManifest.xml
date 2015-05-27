@@ -72,6 +72,9 @@
         <activity
             android:name=".fragment.custcollect.imagePainting.RoundImageByBitmapShaderActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragment.custcollect.imagePainting.RoundImageByXfermodeActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
