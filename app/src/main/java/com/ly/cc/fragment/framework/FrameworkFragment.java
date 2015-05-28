@@ -9,6 +9,7 @@ import android.widget.ListView;
 
 import com.ly.cc.manager.UniversalAdapter;
 import com.ly.cc.manager.ViewHolder;
+import com.ly.cc.utils.Jump;
 import com.ly.cc.utils.T;
 
 /**
@@ -69,7 +70,7 @@ public class FrameworkFragment extends ListFragment {
                 T.showShort(ctx, "EventBus");
                 break;
             case 3://Gson
-                T.showShort(ctx, "Gson");
+                Jump.toActivity(getActivity(), GsonActivity.class);
                 break;
             case 4://Volley
                 T.showShort(ctx, "Volley");

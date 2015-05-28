@@ -30,4 +30,5 @@ dependencies {
     compile files('libs/android-support-v7-recyclerview.jar')
     compile 'com.nineoldandroids:library:2.4.0+'
     compile 'com.facebook.rebound:rebound:0.3.+'
+    compile 'com.google.code.gson:gson:2.3.1'
 }
