@@ -70,9 +70,9 @@ Custom Collection 综合项目，目的是总结在工作中遇到的常用内�
   
  > * ButterKnife
   
- > * EventBus
+ > * EventBus（已完成）[参考](http://jakewharton.github.io/butterknife/)
   
- > * Gson（已完成）
+ > * Gson（已完成）[参考](https://sites.google.com/site/gson/gson-user-guide)
   
  > * Volley
 

@@ -9,6 +9,8 @@ import com.ly.cc.utils.L;
 
 import java.util.Arrays;
 
+import butterknife.ButterKnife;
+
 /**
  * https://sites.google.com/site/gson/gson-user-guide
  */
