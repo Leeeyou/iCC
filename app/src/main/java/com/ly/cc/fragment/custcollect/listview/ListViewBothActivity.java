@@ -13,6 +13,7 @@ import com.ly.cc.R;
 import com.ly.cc.custview.listview.pullRefresh.PullToRefreshBase;
 import com.ly.cc.custview.listview.pullRefresh.PullToRefreshListView;
 import com.ly.cc.custview.topview.TopBarView;
+import com.ly.cc.event.GetDataEvent;
 import com.ly.cc.utils.T;
 
 import java.text.SimpleDateFormat;
@@ -22,6 +23,7 @@ import java.util.LinkedList;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import de.greenrobot.event.EventBus;
 
 public class ListViewBothActivity extends Activity {
 
@@ -59,8 +61,6 @@ public class ListViewBothActivity extends Activity {
         });
 
         initPullListView();
-
-
     }
 
     private void initPullListView() {
@@ -90,7 +90,7 @@ public class ListViewBothActivity extends Activity {
             @Override
             public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
                 mIsStart = true;
-                new GetDataTask().execute();
+                EventBus.getDefault().post(new GetDataEvent());
             }
 
             @Override
@@ -102,6 +102,22 @@ public class ListViewBothActivity extends Activity {
         setLastUpdateTime();
 
         mPullListView.doPullRefreshing(true, 500);
+    }
+
+    public void onEventBackgroundThread(GetDataEvent event){
+        new GetDataTask().execute();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
+    }
+
+    @Override
+    public void onStop() {
+        EventBus.getDefault().unregister(this);
+        super.onStop();
     }
 
     private void setLastUpdateTime() {
