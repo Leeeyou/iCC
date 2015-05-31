@@ -1,4 +1,4 @@
-package com.ly.cc.custom_controls.imagePainting;
+package com.ly.cc.custom_controls.image_painting;
 
 import android.content.Context;
 import android.content.res.TypedArray;

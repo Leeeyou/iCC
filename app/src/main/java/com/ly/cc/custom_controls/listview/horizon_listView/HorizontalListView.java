@@ -24,7 +24,7 @@
  * It has been substantially rewritten and added to from the original version.
  */
 // @formatter:on
-package com.ly.cc.custom_controls.listview.horizonListView;
+package com.ly.cc.custom_controls.listview.horizon_listView;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;

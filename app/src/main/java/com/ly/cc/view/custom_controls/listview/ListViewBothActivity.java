@@ -23,7 +23,6 @@ import java.util.LinkedList;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
-import de.greenrobot.event.EventBus;
 
 public class ListViewBothActivity extends Activity {
 
@@ -90,13 +89,13 @@ public class ListViewBothActivity extends Activity {
             @Override
             public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
                 mIsStart = true;
-                EventBus.getDefault().post(new GetDataEvent());
+//                EventBus.getDefault().post(new GetDataEvent());
             }
 
             @Override
             public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
                 mIsStart = false;
-                new GetDataTask().execute();
+//                new GetDataTask().execute();
             }
         });
         setLastUpdateTime();
@@ -108,17 +107,17 @@ public class ListViewBothActivity extends Activity {
         new GetDataTask().execute();
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        EventBus.getDefault().register(this);
-    }
-
-    @Override
-    public void onStop() {
-        EventBus.getDefault().unregister(this);
-        super.onStop();
-    }
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//        EventBus.getDefault().register(this);
+//    }
+//
+//    @Override
+//    public void onStop() {
+//        EventBus.getDefault().unregister(this);
+//        super.onStop();
+//    }
 
     private void setLastUpdateTime() {
         String text = formatDateTime(System.currentTimeMillis());

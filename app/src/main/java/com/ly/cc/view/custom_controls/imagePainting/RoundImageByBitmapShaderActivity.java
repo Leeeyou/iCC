@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 
 import com.ly.cc.R;
-import com.ly.cc.custom_controls.imagePainting.RoundImageView;
+import com.ly.cc.custom_controls.image_painting.RoundImageView;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
