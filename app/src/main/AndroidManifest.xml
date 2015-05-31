@@ -23,60 +23,60 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".fragment.custcollect.android5p0.recyclerView.RecyclerViewActivity" />
-        <activity android:name=".fragment.custcollect.android5p0.NewControlsActivity" />
+        <activity android:name=".view.custcollect.android5p0.recyclerView.RecyclerViewActivity" />
+        <activity android:name=".view.custcollect.android5p0.NewControlsActivity" />
         <activity
-            android:name=".fragment.custcollect.listview.ListViewListActivity"
+            android:name=".view.custcollect.listview.ListViewListActivity"
             android:label="@string/title_activity_list_view_activity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".fragment.function.GravitySensorActivity"
+            android:name=".view.function.GravitySensorActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
         <activity
-            android:name=".fragment.custcollect.listview.ListViewBothActivity"
+            android:name=".view.custcollect.listview.ListViewBothActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
         <activity
-            android:name=".fragment.custcollect.listview.ListViewHeaderActivity"
+            android:name=".view.custcollect.listview.ListViewHeaderActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:label="@string/title_activity_list_view_header" />
         <activity
-            android:name=".fragment.custcollect.listview.HorizontalListViewActivity"
+            android:name=".view.custcollect.listview.HorizontalListViewActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:label="@string/title_activity_horizontal_list_view" />
         <activity
-            android:name=".fragment.custcollect.listview.swipe.activities.SwipeListViewActivity"
+            android:name=".view.custcollect.listview.swipe.activities.SwipeListViewActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:label="@string/title_activity_swipe_list_view" />
-        <activity android:name=".fragment.custcollect.listview.swipe.activities.SettingsActivity" />
+        <activity android:name=".view.custcollect.listview.swipe.activities.SettingsActivity" />
         <activity
-            android:name=".fragment.custcollect.toggleBtn.ToggleBtnMainActivity"
+            android:name=".view.custcollect.toggleBtn.ToggleBtnMainActivity"
             android:label="ToggleBtnMainActivity" />
         <activity
-            android:name=".fragment.custcollect.timeline.TimelineListActivity"
+            android:name=".view.custcollect.timeline.TimelineListActivity"
             android:label="@string/title_activity_timeline_list"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".fragment.custcollect.timeline.HorizontalTimelineActivity"
+            android:name=".view.custcollect.timeline.HorizontalTimelineActivity"
             android:label="HorizontalTimelineActivity"
             android:screenOrientation="landscape" />
-        <activity android:name=".fragment.custcollect.timeline.VerticalTimelineActivity" />
+        <activity android:name=".view.custcollect.timeline.VerticalTimelineActivity" />
         <activity
-            android:name=".fragment.custcollect.slidemenu.SlideMenuQQ5Activity"
+            android:name=".view.custcollect.slidemenu.SlideMenuQQ5Activity"
             android:label="@string/title_activity_slide_menu_qq5"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".fragment.custcollect.imagePainting.ImagePaintingActivity"
+            android:name=".view.custcollect.imagePainting.ImagePaintingActivity"
             android:label="@string/title_activity_image_painting"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".fragment.custcollect.imagePainting.RoundImageByBitmapShaderActivity"
+            android:name=".view.custcollect.imagePainting.RoundImageByBitmapShaderActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".fragment.custcollect.imagePainting.RoundImageByXfermodeActivity"
+            android:name=".view.custcollect.imagePainting.RoundImageByXfermodeActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".fragment.framework.GsonActivity"
+            android:name=".view.framework.GsonActivity"
             android:label="@string/title_activity_gson" >
         </activity>
     </application>

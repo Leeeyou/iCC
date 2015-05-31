@@ -25,11 +25,11 @@ import com.ly.cc.bean.custcollect.CustCollect;
 import com.ly.cc.bean.framework.FramewrokCollect;
 import com.ly.cc.bean.function.FunctionCollect;
 import com.ly.cc.bean.thridsdk.ThridSDKCollect;
-import com.ly.cc.fragment.custcollect.CCFragment;
+import com.ly.cc.view.custcollect.CCFragment;
 import com.ly.cc.custview.ChangeColorIconWithTextView;
-import com.ly.cc.fragment.framework.FrameworkFragment;
-import com.ly.cc.fragment.function.FunctionFragment;
-import com.ly.cc.fragment.thirdsdk.ThirdSDKFragment;
+import com.ly.cc.view.framework.FrameworkFragment;
+import com.ly.cc.view.function.FunctionFragment;
+import com.ly.cc.view.thirdsdk.ThirdSDKFragment;
 import com.ly.cc.utils.T;
 
 import java.lang.reflect.Field;
