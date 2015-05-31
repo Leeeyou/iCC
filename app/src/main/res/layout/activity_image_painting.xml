@@ -8,19 +8,19 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <com.ly.cc.custview.imagePainting.RoundImageView
+        <com.ly.cc.custom_controls.imagePainting.RoundImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:src="@drawable/roundimage1" />
-
-        <com.ly.cc.custview.imagePainting.RoundImageView
+bystander
+        <com.ly.cc.custom_controls.imagePainting.RoundImageView
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:layout_margin="10dp"
             android:src="@drawable/roundimage2" />
 
-        <com.ly.cc.custview.imagePainting.RoundImageView
+        <com.ly.cc.custom_controls.imagePainting.RoundImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -28,7 +28,7 @@
             leeeyou:borderRadius="60dp"
             leeeyou:type="round" />
 
-        <com.ly.cc.custview.imagePainting.RoundImageView
+        <com.ly.cc.custom_controls.imagePainting.RoundImageView
             android:id="@+id/riv_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
             leeeyou:borderRadius="60dp"
             leeeyou:type="round" />
 
-        <com.ly.cc.custview.imagePainting.RoundImageView
+        <com.ly.cc.custom_controls.imagePainting.RoundImageView
             android:id="@+id/riv_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

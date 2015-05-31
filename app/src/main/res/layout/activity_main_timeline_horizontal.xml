@@ -3,7 +3,7 @@
     android:layout_height="match_parent"
     android:background="#0099cc">
 
-    <com.ly.cc.custview.timeline.horizontalTimeline.TLView
+    <com.ly.cc.custom_controls.timeline.horizontalTimeline.TLView
         android:id="@+id/fullscreen_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

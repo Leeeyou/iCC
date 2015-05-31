@@ -8,19 +8,19 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <com.ly.cc.custview.imagePainting.RoundImageViewByXfermode
+        <com.ly.cc.custom_controls.imagePainting.RoundImageViewByXfermode
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:src="@drawable/roundimage1" />
 
-        <com.ly.cc.custview.imagePainting.RoundImageViewByXfermode
+        <com.ly.cc.custom_controls.imagePainting.RoundImageViewByXfermode
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:layout_margin="10dp"
             android:src="@drawable/roundimage2" />
 
-        <com.ly.cc.custview.imagePainting.RoundImageViewByXfermode
+        <com.ly.cc.custom_controls.imagePainting.RoundImageViewByXfermode
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
