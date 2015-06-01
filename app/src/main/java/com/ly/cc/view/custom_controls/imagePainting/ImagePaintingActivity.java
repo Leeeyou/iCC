@@ -47,6 +47,9 @@ public class ImagePaintingActivity extends ListActivity {
             case 1:
                 Jump.toActivity(ImagePaintingActivity.this, RoundImageByXfermodeActivity.class);
                 break;
+            case 2:
+                Jump.toActivity(ImagePaintingActivity.this, ImageColorChangeActivity.class);
+                break;
             default:
                 break;
         }

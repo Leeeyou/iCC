@@ -7,6 +7,7 @@ import android.graphics.Canvas;
 import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Paint;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.GridLayout;
@@ -78,6 +79,7 @@ public class ColorMatrixActivity extends Activity {
         for (int i = 0; i < 20; i++) {
             EditText editText = new EditText(ColorMatrixActivity.this);
             mEts[i] = editText;
+            mEts[i].setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
             mGroup.addView(editText, mEtWidth, mEtHeight);
         }
     }
@@ -91,4 +93,5 @@ public class ColorMatrixActivity extends Activity {
             }
         }
     }
+
 }
