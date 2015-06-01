@@ -1,11 +1,9 @@
 .gradle
 /local.properties
 /.idea/workspace.xml
-/.idea/libraries
 .DS_Store
 /build
 
-.idea/modules.xml
-.idea/misc.xml
-.idea/vcs.xml
 CC.iml
+.idea
+.gitignore
