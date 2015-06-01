@@ -1,4 +1,4 @@
-package com.ly.cc.custom_controls.toggleButton;
+package com.ly.cc.custom_controls.toggle_button;
 
 import android.content.Context;
 import android.content.res.Resources;

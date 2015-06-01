@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.ly.cc.custom_controls.listview.swipeListView;
+package com.ly.cc.custom_controls.listview.swipe;
 
 /**
  * Listener to get callback notifications for the SwipeListView

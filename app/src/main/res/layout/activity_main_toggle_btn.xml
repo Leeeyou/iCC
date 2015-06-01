@@ -9,7 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.ly.cc.view.custom_controls.toggleBtn.ToggleBtnMainActivity">
 
-    <com.ly.cc.custom_controls.toggleButton.ToggleButton
+    <com.ly.cc.custom_controls.toggle_button.ToggleButton
         android:layout_width="54dp"
         android:id="@+id/toggle_btn"
         android:layout_height="30dp"

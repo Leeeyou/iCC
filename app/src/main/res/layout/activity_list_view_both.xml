@@ -19,7 +19,7 @@
         topTitle:rightTextColor="@color/white"
         topTitle:rightTextSize="6sp" />
 
-    <com.ly.cc.custom_controls.listview.pullRefresh.PullToRefreshListView
+    <com.ly.cc.custom_controls.listview.pull_refresh.PullToRefreshListView
         android:id="@+id/lv_county"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

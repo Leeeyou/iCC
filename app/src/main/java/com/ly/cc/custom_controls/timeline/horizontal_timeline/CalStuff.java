@@ -4,7 +4,7 @@
  * Won't do much in emulator, as it needs calendar data and multitouch.
  * email me if you do anything cool with this idea: methodermis@gmail.com
  */
-package com.ly.cc.custom_controls.timeline.horizontalTimeline;
+package com.ly.cc.custom_controls.timeline.horizontal_timeline;
 
 import android.content.ContentUris;
 import android.content.Context;

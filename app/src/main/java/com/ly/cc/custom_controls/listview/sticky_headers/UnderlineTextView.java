@@ -1,4 +1,4 @@
-package com.ly.cc.custom_controls.listview.stickyListHeaders;
+package com.ly.cc.custom_controls.listview.sticky_headers;
 
 import android.content.Context;
 import android.content.res.Resources;

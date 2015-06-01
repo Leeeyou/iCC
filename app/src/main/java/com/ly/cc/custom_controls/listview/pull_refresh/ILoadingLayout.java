@@ -1,4 +1,4 @@
-package com.ly.cc.custom_controls.listview.pullRefresh;
+package com.ly.cc.custom_controls.listview.pull_refresh;
 
 /**
  * 下拉刷新和上拉加载更多的界面接口

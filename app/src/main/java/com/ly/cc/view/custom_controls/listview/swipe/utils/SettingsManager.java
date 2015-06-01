@@ -19,7 +19,7 @@
 package com.ly.cc.view.custom_controls.listview.swipe.utils;
 
 
-import com.ly.cc.custom_controls.listview.swipeListView.SwipeListView;
+import com.ly.cc.custom_controls.listview.swipe.SwipeListView;
 
 public class SettingsManager {
 

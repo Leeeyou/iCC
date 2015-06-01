@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" defaultCharsetForPropertiesFiles="UTF-8">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/.idea" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/ly/cc/custview/imagePainting/RoundImageView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/roundimage1.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/roundimage2.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/build.gradle" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

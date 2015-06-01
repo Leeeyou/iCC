@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.ly.cc.R;
-import com.ly.cc.custom_controls.toggleButton.ToggleButton;
+import com.ly.cc.custom_controls.toggle_button.ToggleButton;
 import com.ly.cc.utils.T;
 
 import butterknife.ButterKnife;

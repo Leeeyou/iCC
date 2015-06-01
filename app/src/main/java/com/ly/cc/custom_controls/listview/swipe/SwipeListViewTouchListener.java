@@ -18,7 +18,7 @@
  * limitations under the License.
  */
 
-package com.ly.cc.custom_controls.listview.swipeListView;
+package com.ly.cc.custom_controls.listview.swipe;
 
 import android.graphics.Rect;
 import android.os.Build;

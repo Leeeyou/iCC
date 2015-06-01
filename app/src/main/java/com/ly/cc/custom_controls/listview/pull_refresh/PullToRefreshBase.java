@@ -1,4 +1,4 @@
-package com.ly.cc.custom_controls.listview.pullRefresh;
+package com.ly.cc.custom_controls.listview.pull_refresh;
 
 
 import android.content.Context;
@@ -13,7 +13,7 @@ import android.view.animation.Interpolator;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
-import com.ly.cc.custom_controls.listview.pullRefresh.ILoadingLayout.State;
+import com.ly.cc.custom_controls.listview.pull_refresh.ILoadingLayout.State;
 
 /**
  * 这个实现了下拉刷新和上拉加载更多的功能

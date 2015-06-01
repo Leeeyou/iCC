@@ -10,8 +10,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.ly.cc.R;
-import com.ly.cc.custom_controls.listview.pullRefresh.PullToRefreshBase;
-import com.ly.cc.custom_controls.listview.pullRefresh.PullToRefreshListView;
+import com.ly.cc.custom_controls.listview.pull_refresh.PullToRefreshBase;
+import com.ly.cc.custom_controls.listview.pull_refresh.PullToRefreshListView;
 import com.ly.cc.custom_controls.topview.TopBarView;
 import com.ly.cc.event.GetDataEvent;
 import com.ly.cc.utils.T;
@@ -23,6 +23,7 @@ import java.util.LinkedList;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import de.greenrobot.event.EventBus;
 
 public class ListViewBothActivity extends Activity {
 
@@ -89,13 +90,13 @@ public class ListViewBothActivity extends Activity {
             @Override
             public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
                 mIsStart = true;
-//                EventBus.getDefault().post(new GetDataEvent());
+                EventBus.getDefault().post(new GetDataEvent());
             }
 
             @Override
             public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
                 mIsStart = false;
-//                new GetDataTask().execute();
+                EventBus.getDefault().post(new GetDataEvent());
             }
         });
         setLastUpdateTime();
@@ -103,21 +104,21 @@ public class ListViewBothActivity extends Activity {
         mPullListView.doPullRefreshing(true, 500);
     }
 
-    public void onEventBackgroundThread(GetDataEvent event){
+    public void onEventBackgroundThread(GetDataEvent event) {
         new GetDataTask().execute();
     }
 
-//    @Override
-//    protected void onStart() {
-//        super.onStart();
-//        EventBus.getDefault().register(this);
-//    }
-//
-//    @Override
-//    public void onStop() {
-//        EventBus.getDefault().unregister(this);
-//        super.onStop();
-//    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
+    }
+
+    @Override
+    public void onStop() {
+        EventBus.getDefault().unregister(this);
+        super.onStop();
+    }
 
     private void setLastUpdateTime() {
         String text = formatDateTime(System.currentTimeMillis());

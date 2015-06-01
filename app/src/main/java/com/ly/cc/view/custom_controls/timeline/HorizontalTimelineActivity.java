@@ -12,8 +12,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 
 import com.ly.cc.R;
-import com.ly.cc.custom_controls.timeline.horizontalTimeline.CalStuff;
-import com.ly.cc.custom_controls.timeline.horizontalTimeline.TLView;
+import com.ly.cc.custom_controls.timeline.horizontal_timeline.CalStuff;
+import com.ly.cc.custom_controls.timeline.horizontal_timeline.TLView;
 
 public class HorizontalTimelineActivity extends ActionBarActivity
 {

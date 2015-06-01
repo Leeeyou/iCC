@@ -1,4 +1,4 @@
-package com.ly.cc.custom_controls.listview.swipeListView;
+package com.ly.cc.custom_controls.listview.swipe;
 
 public class BaseSwipeListViewListener implements SwipeListViewListener {
     @Override

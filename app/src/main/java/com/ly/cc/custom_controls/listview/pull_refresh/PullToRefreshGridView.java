@@ -1,4 +1,4 @@
-package com.ly.cc.custom_controls.listview.pullRefresh;
+package com.ly.cc.custom_controls.listview.pull_refresh;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -8,7 +8,7 @@ import android.widget.AbsListView.OnScrollListener;
 import android.widget.Adapter;
 import android.widget.GridView;
 
-import com.ly.cc.custom_controls.listview.pullRefresh.ILoadingLayout.State;
+import com.ly.cc.custom_controls.listview.pull_refresh.ILoadingLayout.State;
 
 /**
  * 这个类实现了GridView下拉刷新，上加载更多和滑到底部自动加载
