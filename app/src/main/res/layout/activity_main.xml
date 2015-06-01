@@ -16,7 +16,7 @@
         android:background="@drawable/tabbg"
         android:orientation="horizontal">
 
-        <com.ly.cc.custview.ChangeColorIconWithTextView
+        <com.ly.cc.custom_controls.ChangeColorIconWithTextView
             android:id="@+id/id_indicator_cc"
             style="@style/mainBottomNav"
             android:layout_width="0dp"
@@ -25,7 +25,7 @@
             leeyou:mText="自定义控件"
             leeyou:mText_size="14sp" />
 
-        <com.ly.cc.custview.ChangeColorIconWithTextView
+        <com.ly.cc.custom_controls.ChangeColorIconWithTextView
             android:id="@+id/id_indicator_function"
             style="@style/mainBottomNav"
             android:layout_width="0dp"
@@ -34,7 +34,7 @@
             leeyou:mText="常用功能"
             leeyou:mText_size="14sp" />
 
-        <com.ly.cc.custview.ChangeColorIconWithTextView
+        <com.ly.cc.custom_controls.ChangeColorIconWithTextView
             android:id="@+id/id_indicator_framework"
             style="@style/mainBottomNav"
             android:layout_width="0dp"
@@ -43,7 +43,7 @@
             leeyou:mText="常用框架"
             leeyou:mText_size="14sp" />
 
-        <com.ly.cc.custview.ChangeColorIconWithTextView
+        <com.ly.cc.custom_controls.ChangeColorIconWithTextView
             android:id="@+id/id_indicator_sdk"
             style="@style/mainBottomNav"
             android:layout_width="0dp"

@@ -19,7 +19,7 @@ public class ViewHolder {
 //	private ImageLoader imageLoader;
 
 	public ViewHolder(Context context, ViewGroup parent, int resLayoutId, int position) {
-		this.mViews = new SparseArray<View>();
+		this.mViews = new SparseArray<>();
 		mConvertView = LayoutInflater.from(context).inflate(resLayoutId, parent, false);
 		mConvertView.setTag(this);
 //		mQueue = Volley.newRequestQueue(context.getApplicationContext());

@@ -35,6 +35,8 @@ Custom Collection 综合项目，目的是总结在工作中遇到的常用内�
  > * 图形绘制
     1. **圆形圆角绘制 by BitmapShader** （已完成）[参考](http://blog.csdn.net/lmj623565791/article/details/41967509)
     2. **圆形圆角绘制 by Xfermode**（已完成）[参考](http://blog.csdn.net/lmj623565791/article/details/42094215)
+    3. **图像的色彩变化**
+    4. **图像变换**
 
   
  > * Android5.0
@@ -66,11 +68,11 @@ Custom Collection 综合项目，目的是总结在工作中遇到的常用内�
 
  > * okHttp
   
- > * ButterKnife
+ > * ButterKnife（已完成）[参考](http://jakewharton.github.io/butterknife/)
   
- > * EventBus
+ > * EventBus[参考](https://github.com/greenrobot/EventBus/blob/master/HOWTO.md)
   
- > * Gson
+ > * Gson（已完成）[参考](https://sites.google.com/site/gson/gson-user-guide)
   
  > * Volley
 
