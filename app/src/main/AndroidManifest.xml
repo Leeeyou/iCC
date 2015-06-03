@@ -81,6 +81,7 @@
         <activity
             android:name=".view.custom_controls.imagePainting.ImageColorChangeActivity"
             android:label="@string/title_activity_image_color_change" />
+        <activity android:name=".view.custom_controls.imagePainting.ImageMatrixChangeActivity" />
         <activity
             android:name=".view.custom_controls.imagePainting.ColorMatrixActivity"
             android:screenOrientation="portrait" />
@@ -90,6 +91,13 @@
         <activity
             android:name=".view.custom_controls.imagePainting.PrimaryColorActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.custom_controls.imagePainting.ImageMatrixTestActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".view.custom_controls.imagePainting.RoundRectXfermodTestActivity"/>
+        <activity android:name=".view.custom_controls.imagePainting.BitmapShaderTestActivity"/>
+        <activity android:name=".view.custom_controls.imagePainting.ReflectViewTestActivity"/>
+        <activity android:name=".view.custom_controls.imagePainting.MeshViewTestActivity"/>
     </application>
 
 </manifest>
