@@ -25,5 +25,6 @@
     <string name="title_activity_image_painting">ImagePaintingActivity</string>
     <string name="title_activity_gson">GsonActivity</string>
     <string name="title_activity_image_color_change">ImageColorChangeActivity</string>
+    <string name="title_activity_facepp_test_your_face">FaceppTestYourFaceActivity</string>
 
 </resources>
