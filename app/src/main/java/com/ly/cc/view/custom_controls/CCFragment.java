@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ListView;
 
 import com.ly.cc.view.custom_controls.android5p0.NewControlsActivity;
+import com.ly.cc.view.custom_controls.flow_view.FlowActivity;
 import com.ly.cc.view.custom_controls.imagePainting.ImagePaintingActivity;
 import com.ly.cc.view.custom_controls.listview.ListViewListActivity;
 import com.ly.cc.view.custom_controls.slidemenu.SlideMenuQQ5Activity;
@@ -89,7 +90,7 @@ public class CCFragment extends ListFragment {
                 startActivity(i);
                 break;
             case 6://流式布局
-                i.setClass(ctx, NewControlsActivity.class);
+                i.setClass(ctx, FlowActivity.class);
                 startActivity(i);
                 break;
             default:
