@@ -41,7 +41,8 @@ Custom Collection 综合项目，目的是总结在工作中遇到的常用内�
   
  > * Android5.0
     1. **RecyclerView**（已完成）（[说明文档](http://note.youdao.com/share/?id=c9bd7c5567e54ed40c7891b4bd3c47d3&type=note)）
-  
+
+ > * 流式布局（已完成）（[参考](http://www.imooc.com/learn/237)）
 
   
 ## 2、常用功能
