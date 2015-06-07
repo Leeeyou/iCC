@@ -88,6 +88,10 @@ public class CCFragment extends ListFragment {
                 i.setClass(ctx, NewControlsActivity.class);
                 startActivity(i);
                 break;
+            case 6://流式布局
+                i.setClass(ctx, NewControlsActivity.class);
+                startActivity(i);
+                break;
             default:
                 break;
         }
