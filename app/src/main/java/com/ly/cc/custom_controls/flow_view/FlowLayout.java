@@ -13,7 +13,6 @@ public class FlowLayout extends ViewGroup {
 
     public FlowLayout(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        //
     }
 
     public FlowLayout(Context context, AttributeSet attrs) {
