@@ -53,6 +53,9 @@ public class ImagePaintingActivity extends ListActivity {
             case 3:
                 Jump.toActivity(ImagePaintingActivity.this, ImageMatrixChangeActivity.class);
                 break;
+            case 4:
+                Jump.toActivity(ImagePaintingActivity.this, ShapeImageViewActivity.class);
+                break;
             default:
                 break;
         }

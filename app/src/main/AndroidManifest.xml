@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ly.cc">
+    package="com.ly.cc" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -14,11 +14,11 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -103,8 +103,12 @@
         <activity
             android:name=".view.thirdsdk.FaceppTestYourFaceActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
-            android:label="@string/title_activity_facepp_test_your_face"></activity>
+            android:label="@string/title_activity_facepp_test_your_face" />
         <activity android:name=".view.custom_controls.flow_view.FlowActivity" />
+        <activity
+            android:name=".view.custom_controls.imagePainting.ShapeImageViewActivity"
+            android:label="@string/title_activity_shape_image_view" >
+        </activity>
     </application>
 
 </manifest>

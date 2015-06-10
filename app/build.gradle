@@ -37,4 +37,5 @@ dependencies {
     compile 'com.squareup.retrofit:retrofit:1.9.0'
     compile files('libs/faceppsdk.jar')
     compile files('libs/libammsdk.jar')
+    compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
 }
