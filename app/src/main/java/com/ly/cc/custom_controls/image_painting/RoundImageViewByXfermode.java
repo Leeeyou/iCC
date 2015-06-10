@@ -125,25 +125,7 @@ public class RoundImageViewByXfermode extends ImageView {
             canvas.drawRoundRect(new RectF(0, 0, getWidth(), getHeight()), mBorderRadius, mBorderRadius, paint);
         } else {
             final int center = getWidth() / 2;
-
-//            int innerCircle = center - dp2px(16); //设置内圆半径
-//            int ringWidth = dp2px(10); //设置圆环宽度
-
-//            paint.setAntiAlias(true);
-//            paint.setStyle(Paint.Style.STROKE);
-//            paint.setStrokeWidth(5);
-
-//            paint.setARGB(155, 167, 190, 206);
-//            paint.setStrokeWidth(2);
-//            canvas.drawCircle(center, center, innerCircle, paint);
-
-//            paint.setARGB(255, 212, 225, 233);
-//            paint.setStrokeWidth(ringWidth);
             canvas.drawCircle(center, center, center, paint);
-
-//            paint.setColor(Color.argb(155, 0, 0, 0));
-//            paint.setStrokeWidth(20);
-//            canvas.drawCircle(center, center, innerCircle + ringWidth, paint);
         }
 
         return bitmap;

@@ -5,7 +5,7 @@
 
     <com.ly.cc.custom_controls.image_painting.RoundRectXfermodeView
         android:layout_margin="50dp"
-        android:layout_width="300dp"
-        android:layout_height="300dp" />
+        android:layout_width="96dp"
+        android:layout_height="96dp" />
 
-</LinearLayout><!-- From: file:/F:/android_studio_workspace/MyImooc/app/src/main/res/layout/round_rect_xfermode.xml -->
+</LinearLayout>

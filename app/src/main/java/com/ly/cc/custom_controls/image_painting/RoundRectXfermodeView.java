@@ -7,7 +7,6 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
-import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -43,9 +42,13 @@ public class RoundRectXfermodeView extends View {
         Canvas canvas = new Canvas(mOut);
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         // Dst
-//        canvas.drawRoundRect(0, 0, mBitmap.getWidth(), mBitmap.getHeight(),
-//                50, 50, mPaint);
-        canvas.drawRoundRect(new RectF(0, 0, mBitmap.getWidth(), mBitmap.getHeight()),50,50,mPaint);
+        final int min = Math.min(mBitmap.getWidth(), mBitmap.getHeight());
+
+        int radial = min / 2;
+
+        canvas.drawCircle(radial, radial, radial, mPaint);
+
+//        canvas.drawRoundRect(new RectF(0, 0, mBitmap.getWidth(), mBitmap.getHeight()), 50, 50, mPaint);
         mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
         // Src
         canvas.drawBitmap(mBitmap, 0, 0, mPaint);
