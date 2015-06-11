@@ -28,4 +28,47 @@
     <string name="title_activity_facepp_test_your_face">FaceppTestYourFaceActivity</string>
     <string name="title_activity_shape_image_view">ShapeImageViewActivity</string>
 
+
+    <string name="weather_forecast_title">天气预报</string>
+    <string name="weather_forecast_current">实时天气预报</string>
+    <string name="weather_forecast_future">未来天气预报</string>
+    <string name="location_title">定位</string>
+    <string name="location_net_method">网络（基站+WIFI）定位</string>
+    <string name="location_mulity_method">混合定位（GPS+网络）</string>
+    <string name="location_gps_method">GPS定位（建议室外使用）</string>
+    <string name="location_geofence_method">地理围栏（警戒区域提醒）</string>
+    <string name="current_weather_report_title">实时天气</string>
+    <string name="future_weather_report_title">天气预报</string>
+    <string name="net_location_title">网络定位</string>
+    <string name="gps_location_title">GPS定位</string>
+
+    <string name="weather_location">"地      点："</string>
+    <string name="weather_weather">"天      气："</string>
+    <string name="weather_temperature">"气      温："</string>
+    <string name="weather_wind_direction">"风      向："</string>
+    <string name="weather_wind_power">"风      力："</string>
+    <string name="weather_air_humidity">空气湿度：</string>
+    <string name="weather_weather_publish">发布时间：</string>
+
+    <string name="location_latlng">"坐      标："</string>
+    <string name="location_accurancy">"精      度："</string>
+    <string name="location_method">定位方式：</string>
+    <string name="location_time">定位时间：</string>
+    <string name="location_description">位置描述：</string>
+    <string name="location_country">国&#160;&#160;&#160;&#160;&#160;&#160;家 ：</string>
+    <string name="location_province">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;省 ：</string>
+    <string name="location_city">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;市   ：</string>
+    <string name="location_county">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;区 ：</string>
+    <string name="location_road">街&#160;&#160;&#160;&#160;&#160;&#160;道   ：</string>
+    <string name="location_poi">POI名称 ：</string>
+    <string name="location_city_code">城市编码：</string>
+    <string name="location_area_code">区域编码：</string>
+
+    <string name="gpsfollow">追随</string>
+    <string name="gpslocate">定位</string>
+    <string name="gpsrotate">旋转</string>
+    <string name="location_des_open_text">是否打开位置信息描述：</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="geofence_des">点击地图，以点击点为中心建立地理围栏，再次点击地图修改地理围栏位置</string>
 </resources>

@@ -38,4 +38,5 @@ dependencies {
     compile files('libs/faceppsdk.jar')
     compile files('libs/libammsdk.jar')
     compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
+    compile files('libs/Android_Location_V1.3.2.jar')
 }

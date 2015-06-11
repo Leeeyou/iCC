@@ -9,4 +9,5 @@ public interface ConstantValue {
 
     String FACEPP_APIKEY = "a728c3d71affeca67d0e0eaa3ad626c6";
     String FACEPP_APISECRET = "NTEd2XVCe-ASLgI2bz3qOuy8ldHYSIpg";
+
 }

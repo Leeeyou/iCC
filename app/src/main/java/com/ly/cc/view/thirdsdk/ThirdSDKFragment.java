@@ -10,6 +10,7 @@ import android.widget.ListView;
 import com.ly.cc.manager.UniversalAdapter;
 import com.ly.cc.manager.ViewHolder;
 import com.ly.cc.utils.Jump;
+import com.ly.cc.view.thirdsdk.amap.NetLocationActivity;
 
 /**
  * Created by xzzz on 2015/1/9.
@@ -78,6 +79,7 @@ public class ThirdSDKFragment extends ListFragment {
             case 8://Vitamio
                 break;
             case 9://高德地图
+                Jump.toActivity(getActivity(),NetLocationActivity.class);
                 break;
             case 10://刷脸神器
                 Jump.toActivity(getActivity(),FaceppTestYourFaceActivity.class);
