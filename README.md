@@ -37,6 +37,7 @@ Custom Collection 综合项目，目的是总结在工作中遇到的常用内�
     2. **圆形圆角绘制 by Xfermode**（已完成）[参考](http://blog.csdn.net/lmj623565791/article/details/42094215)
     3. **图像的色彩变化**（已完成）[参考](http://www.imooc.com/learn/302)
     4. **图像的矩阵变换**（已完成）[参考](http://www.imooc.com/learn/343)
+    5. **ShapeImageView项目**（已完成）[参考](https://github.com/siyamed/android-shape-imageview)
 
   
  > * Android5.0
