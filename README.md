@@ -102,6 +102,7 @@ Custom Collection 综合项目，目的是总结在工作中遇到的常用内�
  > * Vitamio
   
  > * 高德地图
+    1. **定位功能** （已完成）[参考](http://lbs.amap.com/api/android-location-sdk/down/)
  
  > * 刷脸神器（已完成）[参考](http://www.imooc.com/learn/393)
 
