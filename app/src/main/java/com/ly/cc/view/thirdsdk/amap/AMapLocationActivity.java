@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ListView;
 
 import com.ly.cc.R;
-import com.ly.cc.bean.custom_controls.TimelineCollect;
+import com.ly.cc.bean.thridsdk.AMapCollectCollect;
 import com.ly.cc.manager.UniversalAdapter;
 import com.ly.cc.manager.ViewHolder;
 import com.ly.cc.utils.Jump;
@@ -24,7 +24,7 @@ public class AMapLocationActivity extends ListActivity {
 
         ctx = this;
 
-        mListViewAdapter = new UniversalAdapter<String>(ctx, TimelineCollect.items, android.R.layout.simple_list_item_1) {
+        mListViewAdapter = new UniversalAdapter<String>(ctx, AMapCollectCollect.items, android.R.layout.simple_list_item_1) {
             @Override
             public void convert(ViewHolder vh, String item, int position) {
                 if (item == null || vh == null) {
