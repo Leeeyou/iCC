@@ -20,7 +20,6 @@ package com.ly.cc.view.custom_controls.listview.swipe.dialogs;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -58,29 +57,20 @@ public class AboutDialog extends DialogFragment {
                 .setTitle(R.string.about)
                 .setMessage(R.string.aboutMessage)
                 .setView(checkBox)
-                .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        PreferencesManager.getInstance(getActivity()).setShowAbout(!checkBox.isChecked());
-                    }
+                .setPositiveButton(R.string.ok, (dialog, which) -> {
+                    PreferencesManager.getInstance(getActivity()).setShowAbout(!checkBox.isChecked());
                 })
-                .setNegativeButton(R.string.visit47, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        String url = "http://47deg.com";
-                        Intent i = new Intent(Intent.ACTION_VIEW);
-                        i.setData(Uri.parse(url));
-                        startActivity(i);
-                    }
+                .setNegativeButton(R.string.visit47, (dialog, which) -> {
+                    String url = "http://47deg.com";
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
                 })
-                .setNeutralButton(R.string.goToGitHub, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        String url = "https://github.com/47deg/android-swipelistview";
-                        Intent i = new Intent(Intent.ACTION_VIEW);
-                        i.setData(Uri.parse(url));
-                        startActivity(i);
-                    }
+                .setNeutralButton(R.string.goToGitHub, (dialog, which) -> {
+                    String url = "https://github.com/47deg/android-swipelistview";
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
                 })
                 .create();
 

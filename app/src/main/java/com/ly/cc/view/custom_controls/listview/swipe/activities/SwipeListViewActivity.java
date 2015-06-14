@@ -227,7 +227,7 @@ public class SwipeListViewActivity extends ActionBarActivity {
             List<ApplicationInfo> listInfo = appInfo.getInstalledApplications(0);
             Collections.sort(listInfo, new ApplicationInfo.DisplayNameComparator(appInfo));
 
-            List<PackageItem> data = new ArrayList<PackageItem>();
+            List<PackageItem> data = new ArrayList<>();
 
             for (int index = 0; index < listInfo.size(); index++) {
                 try {
