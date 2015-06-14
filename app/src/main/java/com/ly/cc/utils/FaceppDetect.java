@@ -23,30 +23,33 @@ public class FaceppDetect {
     }
 
     public static void detect(final Bitmap bm, final CallBack callBack) {
-        new Thread(() -> {
-            try {
-                HttpRequests request = new HttpRequests(ConstantValue.FACEPP_APIKEY, ConstantValue.FACEPP_APISECRET, true, true);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    HttpRequests request = new HttpRequests(ConstantValue.FACEPP_APIKEY, ConstantValue.FACEPP_APISECRET, true, true);
 
-                Bitmap mBm = Bitmap.createBitmap(bm, 0, 0, bm.getWidth(), bm.getHeight());
-                ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                mBm.compress(Bitmap.CompressFormat.JPEG, 100, stream);
-                byte[] bytes = stream.toByteArray();
+                    Bitmap mBm = Bitmap.createBitmap(bm, 0, 0, bm.getWidth(), bm.getHeight());
+                    ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                    mBm.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+                    byte[] bytes = stream.toByteArray();
 
-                PostParameters parameter = new PostParameters();
-                parameter.setImg(bytes);
+                    PostParameters parameter = new PostParameters();
+                    parameter.setImg(bytes);
 
 
-                JSONObject jsonObject = request.detectionDetect(parameter);
+                    JSONObject jsonObject = request.detectionDetect(parameter);
 
-                L.i(jsonObject.toString());
+                    L.i(jsonObject.toString());
 
-                if (callBack != null) {
-                    callBack.success(jsonObject);
-                }
-            } catch (FaceppParseException e) {
-                e.printStackTrace();
-                if (callBack != null) {
-                    callBack.error(e);
+                    if (callBack != null) {
+                        callBack.success(jsonObject);
+                    }
+                } catch (FaceppParseException e) {
+                    e.printStackTrace();
+                    if (callBack != null) {
+                        callBack.error(e);
+                    }
                 }
             }
         }).start();

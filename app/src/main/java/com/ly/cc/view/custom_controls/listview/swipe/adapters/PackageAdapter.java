@@ -98,34 +98,43 @@ public class PackageAdapter extends BaseAdapter {
         holder.tvDescription.setText(item.getPackageName());
 
 
-        holder.bAction1.setOnClickListener(v -> {
-            Intent intent = context.getPackageManager().getLaunchIntentForPackage(item.getPackageName());
-            if (intent != null) {
-                context.startActivity(intent);
-            } else {
-                Toast.makeText(context, R.string.cantOpen, Toast.LENGTH_SHORT).show();
+        holder.bAction1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = context.getPackageManager().getLaunchIntentForPackage(item.getPackageName());
+                if (intent != null) {
+                    context.startActivity(intent);
+                } else {
+                    Toast.makeText(context, R.string.cantOpen, Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
-        holder.bAction2.setOnClickListener(v -> {
-            if (isPlayStoreInstalled()) {
-                context.startActivity(new Intent(Intent.ACTION_VIEW,
-                        Uri.parse("market://details?id=" + item.getPackageName())));
-            } else {
-                context.startActivity(new Intent(Intent.ACTION_VIEW,
-                        Uri.parse("http://play.google.com/store/apps/details?id=" + item.getPackageName())));
+        holder.bAction2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (isPlayStoreInstalled()) {
+                    context.startActivity(new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("market://details?id=" + item.getPackageName())));
+                } else {
+                    context.startActivity(new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("http://play.google.com/store/apps/details?id=" + item.getPackageName())));
+                }
             }
         });
 
-        holder.bAction3.setOnClickListener(v -> {
-            Uri packageUri = Uri.parse("package:" + item.getPackageName());
-            Intent uninstallIntent;
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
-                uninstallIntent = new Intent(Intent.ACTION_DELETE, packageUri);
-            } else {
-                uninstallIntent = new Intent(Intent.ACTION_UNINSTALL_PACKAGE, packageUri);
+        holder.bAction3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri packageUri = Uri.parse("package:" + item.getPackageName());
+                Intent uninstallIntent;
+                if (Build.VERSION.SDK_INT < Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+                    uninstallIntent = new Intent(Intent.ACTION_DELETE, packageUri);
+                } else {
+                    uninstallIntent = new Intent(Intent.ACTION_UNINSTALL_PACKAGE, packageUri);
+                }
+                context.startActivity(uninstallIntent);
             }
-            context.startActivity(uninstallIntent);
         });
 
 

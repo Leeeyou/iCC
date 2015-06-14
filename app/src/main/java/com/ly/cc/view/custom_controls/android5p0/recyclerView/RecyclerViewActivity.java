@@ -6,6 +6,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewOutlineProvider;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
@@ -53,14 +54,20 @@ public class RecyclerViewActivity extends ActionBarActivity {
         final SampleRecyclerAdapter adapter = new SampleRecyclerAdapter();
         recycler_view.setAdapter(adapter);
 
-        fab_add.setOnClickListener(v -> {
-            int firstCompletelyVisibleItemPosition = linearLayoutManager.findFirstCompletelyVisibleItemPosition();
-            adapter.addItem(firstCompletelyVisibleItemPosition);
+        fab_add.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int firstCompletelyVisibleItemPosition = linearLayoutManager.findFirstCompletelyVisibleItemPosition();
+                adapter.addItem(firstCompletelyVisibleItemPosition);
+            }
         });
 
-        deleteBar.setOnClickListener(v -> {
-            int firstCompletelyVisibleItemPosition = linearLayoutManager.findFirstCompletelyVisibleItemPosition();
-            adapter.removeData(firstCompletelyVisibleItemPosition);
+        deleteBar.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int firstCompletelyVisibleItemPosition = linearLayoutManager.findFirstCompletelyVisibleItemPosition();
+                adapter.removeData(firstCompletelyVisibleItemPosition);
+            }
         });
 
         recycler_view.setOnScrollListener(new RecyclerView.OnScrollListener() {

@@ -1,6 +1,5 @@
 package com.ly.cc.view.custom_controls.listview;
 
-import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +11,7 @@ import android.widget.Toast;
 import com.ly.cc.R;
 import com.ly.cc.custom_controls.listview.pull_refresh.PullToRefreshBase;
 import com.ly.cc.custom_controls.listview.pull_refresh.PullToRefreshListView;
+import com.ly.cc.custom_controls.swipeback.SwipeBackActivity;
 import com.ly.cc.custom_controls.topview.TopBarView;
 import com.ly.cc.event.GetDataEvent;
 import com.ly.cc.utils.T;
@@ -25,7 +25,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import de.greenrobot.event.EventBus;
 
-public class ListViewBothActivity extends Activity {
+public class ListViewBothActivity extends SwipeBackActivity {
 
     private ArrayAdapter<String> mAdapter;
     private LinkedList<String> mListItems;

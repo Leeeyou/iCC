@@ -7,6 +7,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
@@ -88,7 +89,12 @@ public class HorizontalListViewActivity extends ActionBarActivity {
         // Assign adapter to the HorizontalListView
         mHlvSimpleList.setAdapter(adapter);
 
-        mHlvSimpleList.setOnItemClickListener((adapterView, view, position, l) -> T.showShort(HorizontalListViewActivity.this, mSimpleListValues[position]));
+        mHlvSimpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                T.showShort(HorizontalListViewActivity.this, mSimpleListValues[position]);
+            }
+        });
     }
 
     private void setupCustomLists() {
@@ -99,9 +105,19 @@ public class HorizontalListViewActivity extends ActionBarActivity {
         mHlvCustomList.setAdapter(adapter);
         mHlvCustomListWithDividerAndFadingEdge.setAdapter(adapter);
 
-        mHlvCustomList.setOnItemClickListener((adapterView, view, position, l) -> T.showShort(HorizontalListViewActivity.this, mCustomData[position].getText()));
+        mHlvCustomList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                T.showShort(HorizontalListViewActivity.this, mCustomData[position].getText());
+            }
+        });
 
-        mHlvCustomListWithDividerAndFadingEdge.setOnItemClickListener((adapterView, view, position, l) -> T.showShort(HorizontalListViewActivity.this, mCustomData[position].getText()));
+        mHlvCustomListWithDividerAndFadingEdge.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                T.showShort(HorizontalListViewActivity.this, mCustomData[position].getText());
+            }
+        });
     }
 
 

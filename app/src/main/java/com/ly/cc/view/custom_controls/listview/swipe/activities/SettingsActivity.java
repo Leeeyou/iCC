@@ -208,7 +208,12 @@ public class SettingsActivity extends Activity {
 
         CheckBox cbLongPress = (CheckBox) findViewById(R.id.open_long_press);
         cbLongPress.setChecked(settings.isSwipeOpenOnLongPress());
-        cbLongPress.setOnCheckedChangeListener((buttonView, isChecked) -> settings.setSwipeOpenOnLongPress(isChecked));
+        cbLongPress.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                settings.setSwipeOpenOnLongPress(isChecked);
+            }
+        });
 
     }
 
