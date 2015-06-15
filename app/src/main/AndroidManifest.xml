@@ -137,6 +137,12 @@
         <activity
             android:name=".view.thirdsdk.amap.GPSLocationActivity"
             android:label="GPSLocationActivity" />
+        <activity
+            android:name=".view.custom_controls.android5p0.recyclerView2.HomeActivity"
+            android:label="HomeActivity" />
+        <activity
+            android:name=".view.custom_controls.android5p0.recyclerView2.StaggeredGridLayoutActivity"
+            android:label="StaggeredGridLayoutActivity" />
     </application>
 
 </manifest>

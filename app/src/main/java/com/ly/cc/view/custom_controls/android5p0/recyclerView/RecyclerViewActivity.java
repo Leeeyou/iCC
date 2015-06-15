@@ -23,8 +23,10 @@ import butterknife.InjectView;
 public class RecyclerViewActivity extends ActionBarActivity {
     @InjectView(R.id.deleteBar)
     FrameLayout deleteBar;
+
     @InjectView(R.id.fab_add)
     ImageButton fab_add;
+
     @InjectView(R.id.recycler_view)
     RecyclerView recycler_view;
 
@@ -45,7 +47,7 @@ public class RecyclerViewActivity extends ActionBarActivity {
 
         //  创建线性布局管理器（默认是垂直方向）
         final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        //  linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+//        linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         recycler_view.setLayoutManager(linearLayoutManager);
 
         final RecyclerView.ItemDecoration itemDecoration = new SampleDivider(this);

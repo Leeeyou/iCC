@@ -12,6 +12,7 @@ import com.ly.cc.bean.custom_controls.android5p0.Android5p0Bean;
 import com.ly.cc.view.custom_controls.android5p0.recyclerView.RecyclerViewActivity;
 import com.ly.cc.manager.UniversalAdapter;
 import com.ly.cc.manager.ViewHolder;
+import com.ly.cc.view.custom_controls.android5p0.recyclerView2.HomeActivity;
 
 /**
  * Created by xzzz on 2015/1/12.
@@ -51,6 +52,10 @@ public class NewControlsActivity extends ListActivity {
             case 0:
                 Intent i = new Intent(ctx, RecyclerViewActivity.class);
                 startActivity(i);
+                break;
+            case 2:
+                Intent i2 = new Intent(ctx, HomeActivity.class);
+                startActivity(i2);
                 break;
             default:
                 break;
