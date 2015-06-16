@@ -38,6 +38,14 @@
         <item name="android:windowIsTranslucent">true</item>
     </style>
 
+    <style name="Theme.Timetodo" parent="@android:style/Theme.Holo.Light">
+        <!-- translucent system bars -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
 
+    <style name="ActionBarTheme" parent="Theme.AppCompat.Light">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
 
 </resources>

@@ -1,5 +1,6 @@
 package com.ly.cc;
 
+import android.annotation.TargetApi;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -16,7 +17,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewConfiguration;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -25,12 +29,12 @@ import com.ly.cc.bean.custom_controls.CustCollect;
 import com.ly.cc.bean.framework.FramewrokCollect;
 import com.ly.cc.bean.function.FunctionCollect;
 import com.ly.cc.bean.thridsdk.ThridSDKCollect;
-import com.ly.cc.view.custom_controls.CCFragment;
 import com.ly.cc.custom_controls.ChangeColorIconWithTextView;
+import com.ly.cc.utils.T;
+import com.ly.cc.view.custom_controls.CCFragment;
 import com.ly.cc.view.framework.FrameworkFragment;
 import com.ly.cc.view.function.FunctionFragment;
 import com.ly.cc.view.thirdsdk.ThirdSDKFragment;
-import com.ly.cc.utils.T;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -52,12 +56,18 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 
     @InjectView(R.id.id_indicator_cc)
     ChangeColorIconWithTextView mCC;
+
     @InjectView(R.id.id_indicator_function)
     ChangeColorIconWithTextView mFunction;
+
     @InjectView(R.id.id_indicator_framework)
     ChangeColorIconWithTextView mFramework;
+
     @InjectView(R.id.id_indicator_sdk)
     ChangeColorIconWithTextView mSDK;
+
+    @InjectView(R.id.ll_main_content)
+    LinearLayout ll_main_content;
 
     private List<ChangeColorIconWithTextView> mTabIndicator = new ArrayList<ChangeColorIconWithTextView>();
 
@@ -67,11 +77,32 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
         setContentView(R.layout.activity_main);
         ButterKnife.inject(this);
 
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+//            setTranslucentStatus(true);
+//        }
+//
+//        SystemBarTintManager tintManager = new SystemBarTintManager(this);
+//        tintManager.setStatusBarTintEnabled(true);
+//        tintManager.setStatusBarTintResource(R.color.logo_green);
+
         setOverflowShowingAlways();
 
         initDatas();
 
         //getSupportActionBar().setDisplayShowHomeEnabled(false);
+    }
+
+    @TargetApi(19)
+    private void setTranslucentStatus(boolean on) {
+        Window win = getWindow();
+        WindowManager.LayoutParams winParams = win.getAttributes();
+        final int bits = WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS;
+        if (on) {
+            winParams.flags |= bits;
+        } else {
+            winParams.flags &= ~bits;
+        }
+        win.setAttributes(winParams);
     }
 
     /**
