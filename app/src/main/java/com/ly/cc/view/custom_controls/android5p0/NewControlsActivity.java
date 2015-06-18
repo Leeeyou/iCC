@@ -57,6 +57,10 @@ public class NewControlsActivity extends ListActivity {
                 Intent i2 = new Intent(ctx, HomeActivity.class);
                 startActivity(i2);
                 break;
+            case 3:
+                Intent i3 = new Intent(ctx, ProgressBarActivity.class);
+                startActivity(i3);
+                break;
             default:
                 break;
         }

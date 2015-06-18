@@ -35,7 +35,7 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:21.0.2'
+    compile 'com.android.support:appcompat-v7:22.2.0'
     compile 'se.emilsjolander:stickylistheaders:2.5.1'
     compile 'com.jakewharton:butterknife:6.1.0'
     compile files('libs/android-support-v7-cardview.jar')
@@ -49,4 +49,5 @@ dependencies {
     compile files('libs/libammsdk.jar')
     compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
     compile files('libs/Android_Location_V1.3.2.jar')
+    compile 'me.zhanghai.android.materialprogressbar:library:1.0.2'
 }

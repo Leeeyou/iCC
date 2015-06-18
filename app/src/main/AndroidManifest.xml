@@ -143,6 +143,9 @@
         <activity
             android:name=".view.custom_controls.android5p0.recyclerView2.StaggeredGridLayoutActivity"
             android:label="StaggeredGridLayoutActivity" />
+        <activity
+            android:name=".view.custom_controls.android5p0.ProgressBarActivity"
+            android:label="ProgressBarActivity" />
     </application>
 
 </manifest>

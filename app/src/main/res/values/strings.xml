@@ -71,4 +71,15 @@
     <string name="yes">是</string>
     <string name="no">否</string>
     <string name="geofence_des">点击地图，以点击点为中心建立地理围栏，再次点击地图修改地理围栏位置</string>
+
+
+    <string name="native_implementation">Native implementation</string>
+    <string name="library_implementation">Library implementation</string>
+    <string name="horizontal_progress">Horizontal ProgressBar</string>
+    <string name="indeterminate_horizontal_progress">Indeterminate horizontal ProgressBar</string>
+    <string name="indeterminate_progress">Indeterminate ProgressBar</string>
+    <string name="toolbar_progress">ProgressBar on Toolbar</string>
+    <string name="horizontal_progress_toolbar">Horizontal</string>
+    <string name="indeterminate_horizontal_progress_toolbar">Indeterminate horizontal</string>
+
 </resources>
