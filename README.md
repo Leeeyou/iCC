@@ -45,6 +45,8 @@ Custom Collection 综合项目，目的是总结在工作中遇到的常用内�
 
  > * 流式布局（已完成）（[参考](http://www.imooc.com/learn/237)）
 
+ > * 动画
+
   
 ## 2、常用功能
   
