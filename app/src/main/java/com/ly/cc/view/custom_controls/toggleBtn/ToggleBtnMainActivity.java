@@ -1,9 +1,12 @@
 package com.ly.cc.view.custom_controls.toggleBtn;
 
+import android.animation.ObjectAnimator;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.AccelerateInterpolator;
+import android.widget.RelativeLayout;
 
 import com.ly.cc.R;
 import com.ly.cc.custom_controls.toggle_button.ToggleButton;
@@ -17,11 +20,20 @@ public class ToggleBtnMainActivity extends ActionBarActivity {
     @InjectView(R.id.toggle_btn)
     ToggleButton toggleBtn;
 
+    @InjectView(R.id.root_toggleBtn)
+    RelativeLayout root_toggleBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_toggle_btn);
         ButterKnife.inject(this);
+
+
+        ObjectAnimator animator = ObjectAnimator.ofFloat(root_toggleBtn, "alpha", 0, 1);
+        animator.setDuration(300);
+        animator.setInterpolator(new AccelerateInterpolator());
+        animator.start();
 
         //切换开关
         toggleBtn.toggle();

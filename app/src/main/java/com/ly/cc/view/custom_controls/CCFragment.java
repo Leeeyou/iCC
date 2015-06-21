@@ -8,6 +8,9 @@ import android.support.v4.app.ListFragment;
 import android.view.View;
 import android.widget.ListView;
 
+import com.ly.cc.manager.UniversalAdapter;
+import com.ly.cc.manager.ViewHolder;
+import com.ly.cc.utils.Jump;
 import com.ly.cc.view.custom_controls.android5p0.NewControlsActivity;
 import com.ly.cc.view.custom_controls.flow_view.FlowActivity;
 import com.ly.cc.view.custom_controls.imagePainting.ImagePaintingActivity;
@@ -15,9 +18,6 @@ import com.ly.cc.view.custom_controls.listview.ListViewListActivity;
 import com.ly.cc.view.custom_controls.slidemenu.SlideMenuQQ5Activity;
 import com.ly.cc.view.custom_controls.timeline.TimelineListActivity;
 import com.ly.cc.view.custom_controls.toggleBtn.ToggleBtnMainActivity;
-import com.ly.cc.manager.UniversalAdapter;
-import com.ly.cc.manager.ViewHolder;
-import com.ly.cc.utils.Jump;
 
 /**
  * Created by xzzz on 2015/1/9.
@@ -70,6 +70,9 @@ public class CCFragment extends ListFragment {
         switch (position) {
             case 0://ListView
                 i.setClass(ctx, ListViewListActivity.class);
+
+
+
                 startActivity(i);
                 break;
             case 1://ToggleButton

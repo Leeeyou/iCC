@@ -7,10 +7,10 @@ import android.view.View;
 import android.widget.ListView;
 
 import com.ly.cc.bean.custom_controls.listview.ListViewBean;
-import com.ly.cc.view.custom_controls.listview.swipe.activities.SwipeListViewActivity;
 import com.ly.cc.manager.UniversalAdapter;
 import com.ly.cc.manager.ViewHolder;
 import com.ly.cc.utils.Jump;
+import com.ly.cc.view.custom_controls.listview.swipe.activities.SwipeListViewActivity;
 
 /**
  * Created by kongbei on 2015/1/14.
