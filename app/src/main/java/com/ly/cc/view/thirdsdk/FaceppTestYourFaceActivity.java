@@ -25,27 +25,28 @@ import com.ly.cc.event.ShowAgeEvent;
 import com.ly.cc.utils.FaceppDetect;
 import com.ly.cc.utils.L;
 
+import org.androidannotations.annotations.Click;
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.ViewById;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
-import butterknife.OnClick;
 import de.greenrobot.event.EventBus;
 
+@EActivity(R.layout.activity_facepp_test_your_face)
 public class FaceppTestYourFaceActivity extends ActionBarActivity {
 
-    @InjectView(R.id.iv_photo)
+    @ViewById
     ImageView iv_photo;
 
-    @InjectView(R.id.tv_tip)
+    @ViewById
     TextView tv_tip;
 
-    @InjectView(R.id.id_waiting)
+    @ViewById
     FrameLayout id_waiting;
 
-    @InjectView(R.id.tv_age_gender)
+    @ViewById
     TextView tv_age_gender;
 
     private String mImagePath;
@@ -69,22 +70,20 @@ public class FaceppTestYourFaceActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_facepp_test_your_face);
-        ButterKnife.inject(this);
 
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     }
 
     private final int PICK_IMAGE = 0x110;
 
-    @OnClick(R.id.btn_get_image)
+    @Click(R.id.btn_get_image)
     public void onClickGetImage() {
         Intent i = new Intent(Intent.ACTION_PICK);
         i.setType("image/*");
         startActivityForResult(i, PICK_IMAGE);
     }
 
-    @OnClick(R.id.btn_detect)
+    @Click(R.id.btn_detect)
     public void onClickDetect() {
         id_waiting.setVisibility(View.VISIBLE);
 

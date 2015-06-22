@@ -115,7 +115,7 @@
         <activity android:name=".view.custom_controls.imagePainting.ReflectViewTestActivity" />
         <activity android:name=".view.custom_controls.imagePainting.MeshViewTestActivity" />
         <activity
-            android:name=".view.thirdsdk.FaceppTestYourFaceActivity"
+            android:name=".view.thirdsdk.FaceppTestYourFaceActivity_"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:label="@string/title_activity_facepp_test_your_face" />
         <activity android:name=".view.custom_controls.flow_view.FlowActivity" />
