@@ -40,7 +40,6 @@ import com.ly.cc.custom_controls.listview.swipe.BaseSwipeListViewListener;
 import com.ly.cc.custom_controls.listview.swipe.SwipeListView;
 import com.ly.cc.view.custom_controls.listview.swipe.adapters.PackageAdapter;
 import com.ly.cc.view.custom_controls.listview.swipe.adapters.PackageItem;
-import com.ly.cc.view.custom_controls.listview.swipe.dialogs.AboutDialog;
 import com.ly.cc.view.custom_controls.listview.swipe.utils.PreferencesManager;
 import com.ly.cc.view.custom_controls.listview.swipe.utils.SettingsManager;
 
@@ -258,8 +257,8 @@ public class SwipeListViewActivity extends ActionBarActivity {
                 progressDialog = null;
             }
             if (PreferencesManager.getInstance(SwipeListViewActivity.this).getShowAbout()) {
-                AboutDialog logOutDialog = new AboutDialog();
-                logOutDialog.show(getSupportFragmentManager(), "dialog");
+//                AboutDialog logOutDialog = new AboutDialog();
+//                logOutDialog.show(getSupportFragmentManager(), "dialog");
             }
         }
     }
