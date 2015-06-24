@@ -18,6 +18,7 @@ import com.ly.cc.view.custom_controls.listview.ListViewListActivity;
 import com.ly.cc.view.custom_controls.slidemenu.SlideMenuQQ5Activity;
 import com.ly.cc.view.custom_controls.timeline.TimelineListActivity;
 import com.ly.cc.view.custom_controls.toggleBtn.ToggleBtnMainActivity;
+import com.ly.cc.view.custom_controls.viewpager.JazzyViewPagerTestActivity;
 import com.ly.cc.view.custom_controls.viewpager.ViewPagerWithTranformAnimActivity;
 
 /**
@@ -98,6 +99,10 @@ public class CCFragment extends ListFragment {
                 break;
             case 7://自定义ViewPager
                 i.setClass(ctx, ViewPagerWithTranformAnimActivity.class);
+                startActivity(i);
+                break;
+            case 8://JazzyViewPager
+                i.setClass(ctx, JazzyViewPagerTestActivity.class);
                 startActivity(i);
                 break;
             default:

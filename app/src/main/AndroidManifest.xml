@@ -148,6 +148,11 @@
             android:name=".view.custom_controls.viewpager.ViewPagerWithTranformAnimActivity"
             android:label="@string/title_activity_view_pager_with_tranform_anim" >
         </activity>
+        <activity
+            android:name=".view.custom_controls.viewpager.JazzyViewPagerTestActivity"
+            android:theme="@style/Base.TextAppearance.AppCompat.Title.Inverse"
+            android:label="@string/title_activity_jazzy_view_pager_test" >
+        </activity>
     </application>
 
 </manifest>
