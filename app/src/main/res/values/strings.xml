@@ -81,5 +81,7 @@
     <string name="toolbar_progress">ProgressBar on Toolbar</string>
     <string name="horizontal_progress_toolbar">Horizontal</string>
     <string name="indeterminate_horizontal_progress_toolbar">Indeterminate horizontal</string>
+    <string name="title_activity_view_pager_with_tranform_anim">ViewPagerWithTranformAnimActivity
+    </string>
 
 </resources>

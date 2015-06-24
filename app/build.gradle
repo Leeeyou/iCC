@@ -53,7 +53,6 @@ dependencies {
     compile 'com.squareup.retrofit:retrofit:1.9.0'
     compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
     compile 'me.zhanghai.android.materialprogressbar:library:1.0.2'
-
     apt "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
 }

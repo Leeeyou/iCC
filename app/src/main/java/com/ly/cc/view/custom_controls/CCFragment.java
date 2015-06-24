@@ -18,6 +18,7 @@ import com.ly.cc.view.custom_controls.listview.ListViewListActivity;
 import com.ly.cc.view.custom_controls.slidemenu.SlideMenuQQ5Activity;
 import com.ly.cc.view.custom_controls.timeline.TimelineListActivity;
 import com.ly.cc.view.custom_controls.toggleBtn.ToggleBtnMainActivity;
+import com.ly.cc.view.custom_controls.viewpager.ViewPagerWithTranformAnimActivity;
 
 /**
  * Created by xzzz on 2015/1/9.
@@ -72,7 +73,6 @@ public class CCFragment extends ListFragment {
                 i.setClass(ctx, ListViewListActivity.class);
 
 
-
                 startActivity(i);
                 break;
             case 1://ToggleButton
@@ -94,6 +94,10 @@ public class CCFragment extends ListFragment {
                 break;
             case 6://流式布局
                 i.setClass(ctx, FlowActivity.class);
+                startActivity(i);
+                break;
+            case 7://自定义ViewPager
+                i.setClass(ctx, ViewPagerWithTranformAnimActivity.class);
                 startActivity(i);
                 break;
             default:
