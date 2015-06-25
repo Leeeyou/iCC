@@ -140,7 +140,7 @@ public class ToggleButton extends View {
         spotColor = typedArray.getColor(R.styleable.ToggleButton_spotColor, spotColor);
         offColor = typedArray.getColor(R.styleable.ToggleButton_offColor, offColor);
         borderWidth = typedArray.getDimensionPixelSize(R.styleable.ToggleButton_borderWidth, borderWidth);
-        defaultAnimate = typedArray.getBoolean(R.styleable.ToggleButton_animate, defaultAnimate);
+        defaultAnimate = typedArray.getBoolean(R.styleable.ToggleButton_animateTB, defaultAnimate);
         typedArray.recycle();
 
         borderColor = offBorderColor;

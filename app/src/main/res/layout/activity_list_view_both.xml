@@ -14,9 +14,7 @@
         topTitle:centerTextSize="8sp"
         topTitle:leftBackground="@drawable/title_bar_back_style"
         topTitle:leftTextColor="#898989"
-        topTitle:rightBackground="@color/transparent"
-        topTitle:rightText="更多"
-        topTitle:rightTextColor="@color/white"
+        topTitle:rightBackground="@drawable/title_bar_back_style"
         topTitle:rightTextSize="6sp" />
 
     <com.ly.cc.custom_controls.listview.pull_refresh.PullToRefreshListView
