@@ -61,6 +61,10 @@ public class NewControlsActivity extends ListActivity {
                 Intent i3 = new Intent(ctx, ProgressBarActivity.class);
                 startActivity(i3);
                 break;
+            case 4://MaterialDesign控件
+                Intent i4 = new Intent(ctx, MaterialDesignActivity.class);
+                startActivity(i4);
+                break;
             default:
                 break;
         }

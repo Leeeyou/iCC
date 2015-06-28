@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2015 Zhang Hai <Dreaming.in.Code.ZH@Gmail.com>
+  ~ All Rights Reserved.
+  -->
+
+<com.gc.materialdesign.views.ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <com.gc.materialdesign.views.ProgressBarCircularIndeterminate
+            android:id="@+id/progressBarCircularIndeterminate"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="20dp"
+            android:background="#00ee00"
+            android:gravity="center_horizontal" />
+
+        <com.gc.materialdesign.views.ProgressBarCircularIndeterminate
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="20dp"
+            android:background="#00ee00"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
+</com.gc.materialdesign.views.ScrollView>

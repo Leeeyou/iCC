@@ -153,6 +153,11 @@
             android:theme="@style/Base.TextAppearance.AppCompat.Title.Inverse"
             android:label="@string/title_activity_jazzy_view_pager_test" >
         </activity>
+        <activity
+            android:name=".view.custom_controls.android5p0.MaterialDesignActivity"
+            android:theme="@style/AppTheme"
+            android:label="MaterialDesignActivity" >
+        </activity>
     </application>
 
 </manifest>
