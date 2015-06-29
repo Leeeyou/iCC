@@ -31,5 +31,20 @@
             android:layout_margin="20dp"
             android:background="#00ee00"
             android:gravity="center_horizontal" />
+
+        <com.gc.materialdesign.views.ProgressBarIndeterminateDeterminate
+            android:id="@+id/progressBarIndeterminateDeterminate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="#1E88E5" />
+
+        <com.gc.materialdesign.views.ButtonRectangle
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#1E88E5"
+            android:text="Show Dialog" />
+
     </LinearLayout>
 </com.gc.materialdesign.views.ScrollView>
