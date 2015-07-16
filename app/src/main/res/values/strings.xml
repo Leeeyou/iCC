@@ -100,6 +100,8 @@
         <item>RotateDown</item>
         <item>Accordion</item>
     </string-array>
+    <string name="title_activity_view_pager_test">ViewPagerTestActivity</string>
+    <string name="title_activity_smart_tag_layout">SmartTagLayoutActivity</string>
 
 
 </resources>

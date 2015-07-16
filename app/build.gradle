@@ -59,7 +59,14 @@ dependencies {
     compile 'me.zhanghai.android.materialprogressbar:library:1.0.2'
     apt "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
+
     compile 'com.github.navasmdc:MaterialDesign:1.5@aar'
+
+    compile 'com.ogaclejapan.smarttablayout:library:1.2.1@aar'
+//    //Optional: see how to use the utility.
+    compile 'com.ogaclejapan.smarttablayout:utils-v4:1.2.1@aar'
+//    //Optional: see how to use the utility.
+//    compile 'com.ogaclejapan.smarttablayout:utils-v13:1.2.1@aar'
 }
 
 apt {
