@@ -89,12 +89,7 @@ public class HorizontalListViewActivity extends ActionBarActivity {
         // Assign adapter to the HorizontalListView
         mHlvSimpleList.setAdapter(adapter);
 
-        mHlvSimpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                T.showShort(HorizontalListViewActivity.this, mSimpleListValues[position]);
-            }
-        });
+        mHlvSimpleList.setOnItemClickListener((adapterView, view, position, l) -> T.showShort(HorizontalListViewActivity.this, mSimpleListValues[position]));
     }
 
     private void setupCustomLists() {
@@ -105,19 +100,9 @@ public class HorizontalListViewActivity extends ActionBarActivity {
         mHlvCustomList.setAdapter(adapter);
         mHlvCustomListWithDividerAndFadingEdge.setAdapter(adapter);
 
-        mHlvCustomList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                T.showShort(HorizontalListViewActivity.this, mCustomData[position].getText());
-            }
-        });
+        mHlvCustomList.setOnItemClickListener((adapterView, view, position, l) -> T.showShort(HorizontalListViewActivity.this, mCustomData[position].getText()));
 
-        mHlvCustomListWithDividerAndFadingEdge.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                T.showShort(HorizontalListViewActivity.this, mCustomData[position].getText());
-            }
-        });
+        mHlvCustomListWithDividerAndFadingEdge.setOnItemClickListener((adapterView, view, position, l) -> T.showShort(HorizontalListViewActivity.this, mCustomData[position].getText()));
     }
 
 

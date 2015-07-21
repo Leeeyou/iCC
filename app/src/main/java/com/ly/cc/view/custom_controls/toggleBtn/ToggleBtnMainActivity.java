@@ -42,12 +42,7 @@ public class ToggleBtnMainActivity extends ActionBarActivity {
         toggleBtn.toggle(true);
 
         //开关切换事件
-        toggleBtn.setOnToggleChanged(new ToggleButton.OnToggleChanged() {
-            @Override
-            public void onToggle(boolean on) {
-                T.showShort(ToggleBtnMainActivity.this, String.valueOf(on));
-            }
-        });
+        toggleBtn.setOnToggleChanged(on -> T.showShort(ToggleBtnMainActivity.this, String.valueOf(on)));
 
 //        toggleBtn.setToggleOn();
 //        toggleBtn.setToggleOff();
