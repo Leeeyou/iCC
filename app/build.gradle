@@ -67,6 +67,7 @@ dependencies {
     compile 'com.ogaclejapan.smarttablayout:utils-v4:1.2.1@aar'
 //    //Optional: see how to use the utility.
 //    compile 'com.ogaclejapan.smarttablayout:utils-v13:1.2.1@aar'
+
 }
 
 apt {
@@ -74,5 +75,25 @@ apt {
         //androidManifestFile variant.processResources.manifestFile
         androidManifestFile variant.outputs[0].processResources.manifestFile
         resourcePackageName 'com.ly.cc'
+    }
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'me.tatarka:gradle-retrolambda:3.2.0'
+    }
+}
+
+apply plugin: 'com.android.application' //or apply plugin: 'java'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }

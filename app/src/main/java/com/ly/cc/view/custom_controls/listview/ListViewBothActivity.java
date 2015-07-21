@@ -74,17 +74,11 @@ public class ListViewBothActivity extends SwipeBackActivity {
         mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, mListItems);
         mListView = mPullListView.getRefreshableView();
         mListView.setAdapter(mAdapter);
-        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String text = mListItems.get(position) + ", index = " + (position + 1);
-                Toast.makeText(ListViewBothActivity.this, text, Toast.LENGTH_SHORT).show();
-            }
+
+        mListView.setOnItemClickListener((parent, view, position, id) -> {
+            String text = mListItems.get(position) + ", index = " + (position + 1);
+            Toast.makeText(ListViewBothActivity.this, text, Toast.LENGTH_SHORT).show();
         });
-//        mListView.setOnItemClickListener((arg0, view, position, id) -> {
-//            String text = mListItems.get(position) + ", index = " + (position + 1);
-//            Toast.makeText(ListViewBothActivity.this, text, Toast.LENGTH_SHORT).show();
-//        });
 
         mPullListView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
             @Override
