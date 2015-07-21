@@ -1,6 +1,8 @@
 package com.ly.cc.view.custom_controls.android5p0.recyclerView;
 
+import android.annotation.TargetApi;
 import android.graphics.Outline;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -30,6 +32,7 @@ public class RecyclerViewActivity extends ActionBarActivity {
     @InjectView(R.id.recycler_view)
     RecyclerView recycler_view;
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,20 +59,14 @@ public class RecyclerViewActivity extends ActionBarActivity {
         final SampleRecyclerAdapter adapter = new SampleRecyclerAdapter();
         recycler_view.setAdapter(adapter);
 
-        fab_add.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int firstCompletelyVisibleItemPosition = linearLayoutManager.findFirstCompletelyVisibleItemPosition();
-                adapter.addItem(firstCompletelyVisibleItemPosition);
-            }
+        fab_add.setOnClickListener(v -> {
+            int firstCompletelyVisibleItemPosition = linearLayoutManager.findFirstCompletelyVisibleItemPosition();
+            adapter.addItem(firstCompletelyVisibleItemPosition);
         });
 
-        deleteBar.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int firstCompletelyVisibleItemPosition = linearLayoutManager.findFirstCompletelyVisibleItemPosition();
-                adapter.removeData(firstCompletelyVisibleItemPosition);
-            }
+        deleteBar.setOnClickListener(v -> {
+            int firstCompletelyVisibleItemPosition = linearLayoutManager.findFirstCompletelyVisibleItemPosition();
+            adapter.removeData(firstCompletelyVisibleItemPosition);
         });
 
         recycler_view.setOnScrollListener(new RecyclerView.OnScrollListener() {

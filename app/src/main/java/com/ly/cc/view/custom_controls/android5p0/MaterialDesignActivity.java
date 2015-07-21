@@ -34,21 +34,15 @@ public class MaterialDesignActivity extends AppCompatActivity {
                 "有句话讲，随着技术的发展，每一代人都在做上一代人觉得很浪费的事情。 试想，如果站在百年后的一天看你的现在，你可以明显地看出你的蠢笨。时光无法企及的，思想可以走的远一些。如果你瞬间有5年后的智慧，完成思想的穿越，你就可以升华为灵魂的超越。");
 
 
-        dialog.addCancelButton("取消", new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                T.showShort(MaterialDesignActivity.this, "取消");
-                dialog.dismiss();
-            }
+        dialog.addCancelButton("取消", v -> {
+            T.showShort(MaterialDesignActivity.this, "取消");
+            dialog.dismiss();
         });
 
         // Set accept click listenner
-        dialog.setOnAcceptButtonClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                T.showShort(MaterialDesignActivity.this, "确定");
-                dialog.dismiss();
-            }
+        dialog.setOnAcceptButtonClickListener(v -> {
+            T.showShort(MaterialDesignActivity.this, "确定");
+            dialog.dismiss();
         });
 
         dialog.show();
