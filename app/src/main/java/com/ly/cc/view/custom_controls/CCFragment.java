@@ -23,9 +23,6 @@ import com.ly.cc.view.custom_controls.viewpager.ViewPagerTestActivity;
 import com.ly.cc.view.custom_controls.viewpager.ViewPagerWithTranformAnimActivity;
 import com.ly.cc.view.framework.RxAndroidActivity;
 
-/**
- * Created by xzzz on 2015/1/9.
- */
 public class CCFragment extends ListFragment {
 
     private UniversalAdapter<String> ccAdapter;

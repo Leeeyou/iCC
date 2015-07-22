@@ -1,14 +1,11 @@
 package com.ly.cc.view.framework;
 
 import android.app.Activity;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
-import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 
 import com.ly.cc.R;
@@ -20,7 +17,6 @@ import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.exceptions.OnErrorThrowable;
 import rx.functions.Func0;
-import rx.schedulers.Schedulers;
 
 import static android.os.Process.THREAD_PRIORITY_BACKGROUND;
 
@@ -40,18 +36,14 @@ public class RxAndroidActivity extends Activity {
         backgroundThread.start();
         backgroundHandler = new Handler(backgroundThread.getLooper());
 
-        findViewById(R.id.scheduler_example).setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
-                onRunSchedulerExampleButtonClicked();
-            }
-        });
+        findViewById(R.id.scheduler_example).setOnClickListener(v -> onRunSchedulerExampleButtonClicked());
     }
 
     void onRunSchedulerExampleButtonClicked() {
         sampleObservable()
                 // Run on a background thread
                 .subscribeOn(AndroidSchedulers.handlerThread(backgroundHandler))
-                        // Be notified on the main thread
+                // Be notified on the main thread
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Subscriber<String>() {
                     @Override public void onCompleted() {
@@ -71,16 +63,14 @@ public class RxAndroidActivity extends Activity {
     }
 
     static Observable<String> sampleObservable() {
-        return Observable.defer(new Func0<Observable<String>>() {
-            @Override public Observable<String> call() {
-                try {
-                    // Do some long running operation
-                    Thread.sleep(TimeUnit.SECONDS.toMillis(3));
-                } catch (InterruptedException e) {
-                    throw OnErrorThrowable.from(e);
-                }
-                return Observable.just("one", "two", "three", "four", "five");
+        return Observable.defer(() -> {
+            try {
+                // Do some long running operation
+                Thread.sleep(TimeUnit.SECONDS.toMillis(3));
+            } catch (InterruptedException e) {
+                throw OnErrorThrowable.from(e);
             }
+            return Observable.just("one", "two", "three", "four", "five");
         });
     }
 
