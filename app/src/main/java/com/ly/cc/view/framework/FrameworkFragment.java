@@ -11,6 +11,7 @@ import com.ly.cc.manager.UniversalAdapter;
 import com.ly.cc.manager.ViewHolder;
 import com.ly.cc.utils.Jump;
 import com.ly.cc.utils.T;
+import com.ly.cc.view.custom_controls.toggleBtn.ToggleBtnMainActivity;
 
 /**
  * Created by xzzz on 2015/1/9.
@@ -74,6 +75,9 @@ public class FrameworkFragment extends ListFragment {
                 break;
             case 4://Volley
                 T.showShort(ctx, "Volley");
+                break;
+            case 5://RxAndroid
+                Jump.toActivity(getActivity(), RxAndroidActivity.class);
                 break;
             default:
                 break;
