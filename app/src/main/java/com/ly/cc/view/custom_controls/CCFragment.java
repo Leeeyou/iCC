@@ -102,6 +102,10 @@ public class CCFragment extends ListFragment {
                 i.setClass(ctx, ViewPagerTestActivity.class);
                 startActivity(i);
                 break;
+            case 8://RxAndroid
+                i.setClass(ctx, ViewPagerTestActivity.class);
+                startActivity(i);
+                break;
             default:
                 break;
         }

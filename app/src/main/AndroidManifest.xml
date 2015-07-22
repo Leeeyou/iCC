@@ -166,6 +166,10 @@
             android:name=".view.custom_controls.viewpager.SmartTagLayoutActivity"
             android:label="@string/title_activity_smart_tag_layout" >
         </activity>
+        <activity
+            android:name=".view.framework.RxAndroidActivity"
+            android:label="@string/title_activity_rx_android" >
+        </activity>
     </application>
 
 </manifest>

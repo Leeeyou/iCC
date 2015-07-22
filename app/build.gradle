@@ -68,6 +68,8 @@ dependencies {
 //    //Optional: see how to use the utility.
 //    compile 'com.ogaclejapan.smarttablayout:utils-v13:1.2.1@aar'
 
+//    compile 'io.reactivex:rxjava:1.0.12'
+    compile 'io.reactivex:rxandroid:0.25.0'
 }
 
 apt {

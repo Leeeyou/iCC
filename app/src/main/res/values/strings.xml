@@ -102,6 +102,7 @@
     </string-array>
     <string name="title_activity_view_pager_test">ViewPagerTestActivity</string>
     <string name="title_activity_smart_tag_layout">SmartTagLayoutActivity</string>
+    <string name="title_activity_rx_android">RxAndroidActivity</string>
 
 
 </resources>
