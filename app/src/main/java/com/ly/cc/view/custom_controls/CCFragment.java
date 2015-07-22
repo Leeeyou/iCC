@@ -21,6 +21,7 @@ import com.ly.cc.view.custom_controls.toggleBtn.ToggleBtnMainActivity;
 import com.ly.cc.view.custom_controls.viewpager.JazzyViewPagerTestActivity;
 import com.ly.cc.view.custom_controls.viewpager.ViewPagerTestActivity;
 import com.ly.cc.view.custom_controls.viewpager.ViewPagerWithTranformAnimActivity;
+import com.ly.cc.view.framework.RxAndroidActivity;
 
 /**
  * Created by xzzz on 2015/1/9.
@@ -103,7 +104,7 @@ public class CCFragment extends ListFragment {
                 startActivity(i);
                 break;
             case 8://RxAndroid
-                i.setClass(ctx, ViewPagerTestActivity.class);
+                i.setClass(ctx, RxAndroidActivity.class);
                 startActivity(i);
                 break;
             default:
