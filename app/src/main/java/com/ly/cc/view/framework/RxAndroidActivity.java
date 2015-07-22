@@ -50,7 +50,7 @@ public class RxAndroidActivity extends Activity {
     void onRunSchedulerExampleButtonClicked() {
         sampleObservable()
                 // Run on a background thread
-                .subscribeOn(Schedulers.newThread())
+                .subscribeOn(AndroidSchedulers.handlerThread(backgroundHandler))
                         // Be notified on the main thread
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Subscriber<String>() {
@@ -75,7 +75,7 @@ public class RxAndroidActivity extends Activity {
             @Override public Observable<String> call() {
                 try {
                     // Do some long running operation
-                    Thread.sleep(TimeUnit.SECONDS.toMillis(5));
+                    Thread.sleep(TimeUnit.SECONDS.toMillis(3));
                 } catch (InterruptedException e) {
                     throw OnErrorThrowable.from(e);
                 }
