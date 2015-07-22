@@ -18,9 +18,9 @@ import java.util.concurrent.TimeUnit;
 import rx.Observable;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
-import rx.android.schedulers.HandlerScheduler;
 import rx.exceptions.OnErrorThrowable;
 import rx.functions.Func0;
+import rx.schedulers.Schedulers;
 
 import static android.os.Process.THREAD_PRIORITY_BACKGROUND;
 
@@ -50,7 +50,7 @@ public class RxAndroidActivity extends Activity {
     void onRunSchedulerExampleButtonClicked() {
         sampleObservable()
                 // Run on a background thread
-                .subscribeOn(HandlerScheduler.from(backgroundHandler))
+                .subscribeOn(Schedulers.newThread())
                         // Be notified on the main thread
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Subscriber<String>() {
