@@ -82,6 +82,8 @@ Custom Collection 综合项目，目的是总结在工作中遇到的常用内�
 
  > * Retrofit [参考](https://github.com/bboyfeiyu/android-tech-frontier/tree/master/issue-7/Retrofit%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97)
 
+ > * RxAndroid [参考](https://github.com/ReactiveX/RxAndroid)
+
 
 ## 4、第三方SDK
 
