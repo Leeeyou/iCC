@@ -13,7 +13,7 @@ import com.ly.cc.R;
 import com.ly.cc.custom_controls.listview.circle_refresh.CircleRefreshLayout;
 
 
-public class SwipeRefreshListViewActivity extends Activity {
+public class CircleRefreshListViewActivity extends Activity {
 
     private CircleRefreshLayout mRefreshLayout;
     private ListView mList;

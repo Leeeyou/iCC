@@ -164,7 +164,7 @@
         <activity
             android:name=".view.framework.RxAndroidActivity"
             android:label="@string/title_activity_rx_android"/>
-        <activity android:name=".view.custom_controls.listview.SwipeRefreshListViewActivity" />
+        <activity android:name=".view.custom_controls.listview.CircleRefreshListViewActivity" />
     </application>
 
 </manifest>

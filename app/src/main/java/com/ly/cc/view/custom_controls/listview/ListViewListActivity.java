@@ -57,7 +57,7 @@ public class ListViewListActivity extends ListActivity {
             case 3:
                 Jump.toActivity(ListViewListActivity.this, SwipeListViewActivity.class);
             case 4:
-                Jump.toActivity(ListViewListActivity.this, SwipeRefreshListViewActivity.class);
+                Jump.toActivity(ListViewListActivity.this, CircleRefreshListViewActivity.class);
             default:
                 break;
         }
