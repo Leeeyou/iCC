@@ -146,27 +146,25 @@
             android:label="ProgressBarActivity" />
         <activity
             android:name=".view.custom_controls.viewpager.ViewPagerWithTranformAnimActivity"
-            android:label="@string/title_activity_view_pager_with_tranform_anim"></activity>
+            android:label="@string/title_activity_view_pager_with_tranform_anim"/>
         <activity
             android:name=".view.custom_controls.viewpager.JazzyViewPagerTestActivity"
             android:label="@string/title_activity_jazzy_view_pager_test"
-            android:theme="@style/Base.TextAppearance.AppCompat.Title.Inverse"></activity>
+            android:theme="@style/Base.TextAppearance.AppCompat.Title.Inverse"/>
         <activity
             android:name=".view.custom_controls.android5p0.MaterialDesignActivity"
             android:label="MaterialDesignActivity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".view.custom_controls.viewpager.ViewPagerTestActivity"
-            android:label="@string/title_activity_view_pager_test"></activity>
+            android:label="@string/title_activity_view_pager_test"/>
         <activity
             android:name=".view.custom_controls.viewpager.SmartTagLayoutActivity"
-            android:label="@string/title_activity_smart_tag_layout"></activity>
+            android:label="@string/title_activity_smart_tag_layout"/>
         <activity
             android:name=".view.framework.RxAndroidActivity"
-            android:label="@string/title_activity_rx_android"></activity>
-        <activity
-            android:name=".view.custom_controls.listview.SwipeRefreshListViewActivity"
-            android:label="@string/title_activity_rx_android"></activity>
+            android:label="@string/title_activity_rx_android"/>
+        <activity android:name=".view.custom_controls.listview.SwipeRefreshListViewActivity" />
     </application>
 
 </manifest>
