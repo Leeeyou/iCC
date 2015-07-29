@@ -49,13 +49,15 @@ public class ListViewListActivity extends ListActivity {
                 Jump.toActivity(ListViewListActivity.this, ListViewBothActivity.class);
                 break;
             case 1:
-                Jump.toActivity(ListViewListActivity.this,ListViewHeaderActivity.class);
+                Jump.toActivity(ListViewListActivity.this, ListViewHeaderActivity.class);
                 break;
             case 2:
-                Jump.toActivity(ListViewListActivity.this,HorizontalListViewActivity.class);
+                Jump.toActivity(ListViewListActivity.this, HorizontalListViewActivity.class);
                 break;
             case 3:
-                Jump.toActivity(ListViewListActivity.this,SwipeListViewActivity.class);
+                Jump.toActivity(ListViewListActivity.this, SwipeListViewActivity.class);
+            case 4:
+                Jump.toActivity(ListViewListActivity.this, SwipeRefreshListViewActivity.class);
             default:
                 break;
         }
