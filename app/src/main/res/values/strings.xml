@@ -104,5 +104,10 @@
     <string name="title_activity_smart_tag_layout">SmartTagLayoutActivity</string>
     <string name="title_activity_rx_android">RxAndroidActivity</string>
 
+    <string name="customactivityoncrash_error_activity_error_occurred_explanation">发生了未知的错误，\n我们会尽快反馈到程序员哥哥的.</string>
+    <string name="customactivityoncrash_error_activity_restart_app">&#160;&#160;&#160;&#160;重启&#160;&#160;&#160;&#160;</string>
+    <string name="customactivityoncrash_error_activity_error_details">错误信息</string>
+    <string name="customactivityoncrash_error_activity_error_details_title">错误详细</string>
+    <string name="customactivityoncrash_error_activity_error_details_close">关闭</string>
 
 </resources>

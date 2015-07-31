@@ -69,6 +69,8 @@ dependencies {
 //    compile 'com.ogaclejapan.smarttablayout:utils-v13:1.2.1@aar'
 
     compile 'io.reactivex:rxandroid:0.25.0'
+
+    compile 'cat.ereza:customactivityoncrash:1.2.0'
 }
 
 apt {

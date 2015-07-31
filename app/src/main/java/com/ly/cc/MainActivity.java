@@ -90,6 +90,8 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
         initDatas();
 
         //getSupportActionBar().setDisplayShowHomeEnabled(false);
+
+//        throw new RuntimeException("Boom!");
     }
 
     @TargetApi(19)
