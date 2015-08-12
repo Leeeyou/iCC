@@ -10,6 +10,7 @@ import android.widget.MediaController;
 import android.widget.VideoView;
 
 import com.ly.cc.R;
+import com.ly.cc.utils.L;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -34,11 +35,34 @@ public class PlayVideoByVideoViewActivity extends Activity {
 
         vv_play_video.setMediaController(mc);
 
-        vv_play_video.setVideoURI(Uri.parse("/storage/emulated/0/Download/bfxcr1.mp4"));
-
-        vv_play_video.start();
+        vv_play_video.setVideoURI(Uri.parse("/storage/emulated/0/Download/bfxcr.mp4"));
 
         vv_play_video.requestFocus();
     }
 
+    private int currentPosition;
+    private boolean isPlaying = true;
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        currentPosition = vv_play_video.getCurrentPosition();
+
+        isPlaying = vv_play_video.isPlaying();
+        vv_play_video.pause();
+    }
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+
+        if (currentPosition <= 0) {
+            vv_play_video.start();
+        } else {
+            vv_play_video.seekTo(currentPosition);
+            if (isPlaying) {
+                vv_play_video.start();
+            }
+        }
+    }
 }

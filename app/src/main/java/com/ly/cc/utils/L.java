@@ -10,7 +10,7 @@ public class L {
 
 	public static boolean isDebug = true;// 是否需要打印bug，可以在application的onCreate函数里面初始化
 
-	private static final String TAG = "com.joyshow.joybaby";
+	private static final String TAG = "com.ly.cc";
 
 	public static void d(String msg) {
 		if (isDebug)
