@@ -89,6 +89,10 @@ public class FunctionFragment extends ListFragment {
             case 5://跳转到市场
                 goToMarket();
                 break;
+            case 6://播放视频
+                i.setClass(getActivity(), PlayVideoListActivity.class);
+                startActivity(i);
+                break;
             default:
                 break;
         }

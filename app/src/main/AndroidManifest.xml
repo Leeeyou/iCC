@@ -166,6 +166,7 @@
             android:name=".view.framework.RxAndroidActivity"
             android:label="@string/title_activity_rx_android"/>
         <activity android:name=".view.custom_controls.listview.CircleRefreshListViewActivity" />
+        <activity android:name=".view.function.PlayVideoListActivity" />
     </application>
 
 </manifest>
