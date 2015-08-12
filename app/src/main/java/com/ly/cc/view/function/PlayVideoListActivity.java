@@ -47,7 +47,7 @@ public class PlayVideoListActivity extends ListActivity {
         super.onListItemClick(l, v, position, id);
         switch (position) {
             case 0:
-                Jump.toActivity(PlayVideoListActivity.this, ViewPagerWithTranformAnimActivity.class);
+                Jump.toActivity(PlayVideoListActivity.this, PlayVideoByVideoViewActivity.class);
                 break;
             case 1:
                 Jump.toActivity(PlayVideoListActivity.this,JazzyViewPagerTestActivity.class);

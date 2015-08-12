@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ly.cc">
+    package="com.ly.cc" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -23,7 +23,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/ActionBarTheme">
+        android:theme="@style/ActionBarTheme" >
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="a7f1ab49955fa876cde2ee18efba69d4" />
@@ -31,7 +31,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -147,26 +147,30 @@
             android:label="ProgressBarActivity" />
         <activity
             android:name=".view.custom_controls.viewpager.ViewPagerWithTranformAnimActivity"
-            android:label="@string/title_activity_view_pager_with_tranform_anim"/>
+            android:label="@string/title_activity_view_pager_with_tranform_anim" />
         <activity
             android:name=".view.custom_controls.viewpager.JazzyViewPagerTestActivity"
             android:label="@string/title_activity_jazzy_view_pager_test"
-            android:theme="@style/Base.TextAppearance.AppCompat.Title.Inverse"/>
+            android:theme="@style/Base.TextAppearance.AppCompat.Title.Inverse" />
         <activity
             android:name=".view.custom_controls.android5p0.MaterialDesignActivity"
             android:label="MaterialDesignActivity"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".view.custom_controls.viewpager.ViewPagerTestActivity"
-            android:label="@string/title_activity_view_pager_test"/>
+            android:label="@string/title_activity_view_pager_test" />
         <activity
             android:name=".view.custom_controls.viewpager.SmartTagLayoutActivity"
-            android:label="@string/title_activity_smart_tag_layout"/>
+            android:label="@string/title_activity_smart_tag_layout" />
         <activity
             android:name=".view.framework.RxAndroidActivity"
-            android:label="@string/title_activity_rx_android"/>
+            android:label="@string/title_activity_rx_android" />
         <activity android:name=".view.custom_controls.listview.CircleRefreshListViewActivity" />
         <activity android:name=".view.function.PlayVideoListActivity" />
+        <activity
+            android:name=".view.function.PlayVideoByVideoViewActivity"
+            android:label="@string/title_activity_play_video_by_video_view" >
+        </activity>
     </application>
 
 </manifest>

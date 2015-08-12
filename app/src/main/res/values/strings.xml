@@ -109,5 +109,6 @@
     <string name="customactivityoncrash_error_activity_error_details">错误信息</string>
     <string name="customactivityoncrash_error_activity_error_details_title">错误详细</string>
     <string name="customactivityoncrash_error_activity_error_details_close">关闭</string>
+    <string name="title_activity_play_video_by_video_view">PlayVideoByVideoViewActivity</string>
 
 </resources>
