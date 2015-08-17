@@ -47,9 +47,7 @@ public class PlayVideoByVMediaPlayerActivity extends Activity {
         ButterKnife.inject(this);
 
         mp = new MediaPlayer();
-        mp.setOnCompletionListener(mediaPlayer -> {
-            T.showShort(this, "视频播放完毕");
-        });
+        mp.setOnCompletionListener(mediaPlayer -> T.showShort(this, "视频播放完毕"));
     }
 
     @OnClick(R.id.btn_play)

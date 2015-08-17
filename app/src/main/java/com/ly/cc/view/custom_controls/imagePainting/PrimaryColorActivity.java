@@ -23,20 +23,27 @@ public class PrimaryColorActivity extends Activity implements SeekBar.OnSeekBarC
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.primary_color);
+
         bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.test3);
+
         mImageView = (ImageView) findViewById(R.id.imageview);
         mSeekbarhue = (SeekBar) findViewById(R.id.seekbarHue);
         mSeekbarSaturation = (SeekBar) findViewById(R.id.seekbarSaturation);
         mSeekbarLum = (SeekBar) findViewById(R.id.seekbatLum);
+
         mSeekbarhue.setOnSeekBarChangeListener(this);
         mSeekbarSaturation.setOnSeekBarChangeListener(this);
         mSeekbarLum.setOnSeekBarChangeListener(this);
-        mSeekbarhue.setMax(MAX_VALUE);
-        mSeekbarSaturation.setMax(MAX_VALUE);
+
         mSeekbarLum.setMax(MAX_VALUE);
-        mSeekbarhue.setProgress(MID_VALUE);
-        mSeekbarSaturation.setProgress(MID_VALUE);
         mSeekbarLum.setProgress(MID_VALUE);
+
+        mSeekbarSaturation.setMax(MAX_VALUE);
+        mSeekbarSaturation.setProgress(MID_VALUE);
+
+        mSeekbarhue.setMax(MAX_VALUE);
+        mSeekbarhue.setProgress(MID_VALUE);
+
         mImageView.setImageBitmap(bitmap);
     }
 
