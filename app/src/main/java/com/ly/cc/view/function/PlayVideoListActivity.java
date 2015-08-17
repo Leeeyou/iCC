@@ -50,7 +50,7 @@ public class PlayVideoListActivity extends ListActivity {
                 Jump.toActivity(PlayVideoListActivity.this, PlayVideoByVideoViewActivity.class);
                 break;
             case 1:
-                Jump.toActivity(PlayVideoListActivity.this,JazzyViewPagerTestActivity.class);
+                Jump.toActivity(PlayVideoListActivity.this,PlayVideoByVMediaPlayerActivity.class);
                 break;
             case 2:
                 Jump.toActivity(PlayVideoListActivity.this,SmartTagLayoutActivity.class);
