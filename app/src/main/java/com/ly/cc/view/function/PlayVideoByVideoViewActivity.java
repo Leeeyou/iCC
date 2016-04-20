@@ -35,7 +35,8 @@ public class PlayVideoByVideoViewActivity extends Activity {
 
         vv_play_video.setMediaController(mc);
 
-        vv_play_video.setVideoURI(Uri.parse("/storage/emulated/0/Download/bfxcr.mp4"));
+//        vv_play_video.setVideoURI(Uri.parse("/storage/emulated/0/Download/bfxcr.mp4"));
+        vv_play_video.setVideoURI(Uri.parse("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"));
 
         vv_play_video.requestFocus();
     }

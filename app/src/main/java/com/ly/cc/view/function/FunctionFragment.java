@@ -18,6 +18,8 @@ import com.ly.cc.manager.ViewHolder;
 import com.ly.cc.utils.AppUtil;
 import com.ly.cc.utils.T;
 
+import org.androidannotations.annotations.App;
+
 import java.util.List;
 
 /**
@@ -77,7 +79,7 @@ public class FunctionFragment extends ListFragment {
                 startActivity(i);
                 break;
             case 2://跳转到网页
-                goToWebsite(getActivity(), "https://github.com/LeeeYou");
+                AppUtil.goToWebsite(getActivity(), "https://github.com/LeeeYou");
                 break;
             case 3://通用分享
                 goToShare();
@@ -162,15 +164,4 @@ public class FunctionFragment extends ListFragment {
         T.showShort(ctx, "请先安装邮件客户端");
     }
 
-    /**
-     * 跳转到网站
-     *
-     * @param context
-     * @param url
-     */
-    public static void goToWebsite(Context context, String url) {
-        Uri uriUrl = Uri.parse(url);
-        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
-        context.startActivity(launchBrowser);
-    }
 }

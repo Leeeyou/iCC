@@ -9,6 +9,7 @@ import android.widget.ListView;
 
 import com.ly.cc.manager.UniversalAdapter;
 import com.ly.cc.manager.ViewHolder;
+import com.ly.cc.utils.AppUtil;
 import com.ly.cc.utils.Jump;
 import com.ly.cc.utils.T;
 import com.ly.cc.view.custom_controls.toggleBtn.ToggleBtnMainActivity;
@@ -62,22 +63,24 @@ public class FrameworkFragment extends ListFragment {
         super.onListItemClick(l, v, position, id);
         switch (position) {
             case 0://OKHttp
-                T.showShort(ctx, "OKHttp");
+                AppUtil.goToWebsite(getActivity(), "http://square.github.io/okhttp/");
                 break;
             case 1://ButterKinfe
-                T.showShort(ctx, "ButterKinfe");
+                AppUtil.goToWebsite(getActivity(), "http://jakewharton.github.io/butterknife/");
                 break;
             case 2://EventBus
-                T.showShort(ctx, "EventBus");
+                AppUtil.goToWebsite(getActivity(), "http://greenrobot.org/eventbus/");
                 break;
             case 3://Gson
-                Jump.toActivity(getActivity(), GsonActivity.class);
+                AppUtil.goToWebsite(getActivity(), "https://github.com/google/gson");
+//                Jump.toActivity(getActivity(), GsonActivity.class);
                 break;
             case 4://Volley
-                T.showShort(ctx, "Volley");
+                AppUtil.goToWebsite(getActivity(), "http://blog.csdn.net/guolin_blog/article/details/17482095");
                 break;
             case 5://RxAndroid
-                Jump.toActivity(getActivity(), RxAndroidActivity.class);
+                AppUtil.goToWebsite(getActivity(), "https://github.com/ReactiveX/RxAndroid");
+//                Jump.toActivity(getActivity(), RxAndroidActivity.class);
                 break;
             default:
                 break;

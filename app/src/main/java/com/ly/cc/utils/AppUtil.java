@@ -10,6 +10,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
+import android.net.Uri;
 
 import java.util.List;
 
@@ -227,5 +228,17 @@ public class AppUtil {
         }
 
         return info.packageName;
+    }
+
+    /**
+     * 跳转到网站
+     *
+     * @param context
+     * @param url
+     */
+    public static void goToWebsite(Context context, String url) {
+        Uri uriUrl = Uri.parse(url);
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        context.startActivity(launchBrowser);
     }
 }
