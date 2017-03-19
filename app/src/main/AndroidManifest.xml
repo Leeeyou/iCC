@@ -30,7 +30,7 @@
             android:value="a7f1ab49955fa876cde2ee18efba69d4" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".view.activity.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -39,140 +39,140 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.custom_controls.android5p0.recyclerView.RecyclerViewActivity" />
-        <activity android:name=".view.custom_controls.android5p0.NewControlsActivity" />
+        <activity android:name=".view.activity.custom.android5p0.recyclerView.RecyclerViewActivity" />
+        <activity android:name=".view.activity.custom.android5p0.NewControlsActivity" />
         <activity
-            android:name=".view.custom_controls.listview.ListViewListActivity"
+            android:name=".view.activity.custom.listview.ListViewListActivity"
             android:label="@string/title_activity_list_view_activity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.function.GravitySensorActivity"
+            android:name=".view.activity.function.GravitySensorActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
         <activity
-            android:name=".view.custom_controls.listview.ListViewBothActivity"
+            android:name=".view.activity.custom.listview.ListViewBothActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
         <activity
-            android:name=".view.custom_controls.listview.ListViewHeaderActivity"
+            android:name=".view.activity.custom.listview.ListViewHeaderActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:label="@string/title_activity_list_view_header" />
         <activity
-            android:name=".view.custom_controls.listview.HorizontalListViewActivity"
+            android:name=".view.activity.custom.listview.HorizontalListViewActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:label="@string/title_activity_horizontal_list_view" />
         <activity
-            android:name=".view.custom_controls.listview.swipe.activities.SwipeListViewActivity"
+            android:name=".view.activity.custom.listview.swipe.activities.SwipeListViewActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:label="@string/title_activity_swipe_list_view" />
-        <activity android:name=".view.custom_controls.listview.swipe.activities.SettingsActivity" />
+        <activity android:name=".view.activity.custom.listview.swipe.activities.SettingsActivity" />
         <activity
-            android:name=".view.custom_controls.toggleBtn.ToggleBtnMainActivity"
+            android:name=".view.activity.custom.toggleBtn.ToggleBtnMainActivity"
             android:label="ToggleBtnMainActivity" />
         <activity
-            android:name=".view.custom_controls.timeline.TimelineListActivity"
+            android:name=".view.activity.custom.timeline.TimelineListActivity"
             android:label="@string/title_activity_timeline_list"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.custom_controls.timeline.HorizontalTimelineActivity"
+            android:name=".view.activity.custom.timeline.HorizontalTimelineActivity"
             android:label="HorizontalTimelineActivity"
             android:screenOrientation="landscape" />
-        <activity android:name=".view.custom_controls.timeline.VerticalTimelineActivity" />
+        <activity android:name=".view.activity.custom.timeline.VerticalTimelineActivity" />
         <activity
-            android:name=".view.custom_controls.slidemenu.SlideMenuQQ5Activity"
+            android:name=".view.activity.custom.slidemenu.SlideMenuQQ5Activity"
             android:label="@string/title_activity_slide_menu_qq5"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.custom_controls.imagePainting.ImagePaintingActivity"
+            android:name=".view.activity.custom.imagePainting.ImagePaintingActivity"
             android:label="@string/title_activity_image_painting"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.custom_controls.imagePainting.RoundImageByBitmapShaderActivity"
+            android:name=".view.activity.custom.imagePainting.RoundImageByBitmapShaderActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.custom_controls.imagePainting.RoundImageByXfermodeActivity"
+            android:name=".view.activity.custom.imagePainting.RoundImageByXfermodeActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.framework.GsonActivity"
+            android:name=".view.activity.framework.GsonActivity"
             android:label="@string/title_activity_gson" />
         <activity
-            android:name=".view.custom_controls.imagePainting.ImageColorChangeActivity"
+            android:name=".view.activity.custom.imagePainting.ImageColorChangeActivity"
             android:label="@string/title_activity_image_color_change" />
-        <activity android:name=".view.custom_controls.imagePainting.ImageMatrixChangeActivity" />
+        <activity android:name=".view.activity.custom.imagePainting.ImageMatrixChangeActivity" />
         <activity
-            android:name=".view.custom_controls.imagePainting.ColorMatrixActivity"
+            android:name=".view.activity.custom.imagePainting.ColorMatrixActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.custom_controls.imagePainting.PixelsEffectActivity"
+            android:name=".view.activity.custom.imagePainting.PixelsEffectActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.custom_controls.imagePainting.PrimaryColorActivity"
+            android:name=".view.activity.custom.imagePainting.PrimaryColorActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.custom_controls.imagePainting.ImageMatrixTestActivity"
+            android:name=".view.activity.custom.imagePainting.ImageMatrixTestActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".view.custom_controls.imagePainting.RoundRectXfermodTestActivity" />
-        <activity android:name=".view.custom_controls.imagePainting.BitmapShaderTestActivity" />
-        <activity android:name=".view.custom_controls.imagePainting.ReflectViewTestActivity" />
-        <activity android:name=".view.custom_controls.imagePainting.MeshViewTestActivity" />
+        <activity android:name=".view.activity.custom.imagePainting.RoundRectXfermodTestActivity" />
+        <activity android:name=".view.activity.custom.imagePainting.BitmapShaderTestActivity" />
+        <activity android:name=".view.activity.custom.imagePainting.ReflectViewTestActivity" />
+        <activity android:name=".view.activity.custom.imagePainting.MeshViewTestActivity" />
         <activity
-            android:name=".view.thirdsdk.FaceppTestYourFaceActivity_"
+            android:name=".view.activity.thirdsdk.FaceppTestYourFaceActivity_"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:label="@string/title_activity_facepp_test_your_face" />
-        <activity android:name=".view.custom_controls.flow_view.FlowActivity" />
+        <activity android:name=".view.activity.custom.android5p0.flowlayout.FlowActivity" />
         <activity
-            android:name=".view.custom_controls.imagePainting.ShapeImageViewActivity"
+            android:name=".view.activity.custom.imagePainting.ShapeImageViewActivity"
             android:label="@string/title_activity_shape_image_view" />
         <activity
-            android:name=".view.thirdsdk.amap.NetLocationActivity"
+            android:name=".view.activity.thirdsdk.amap.NetLocationActivity"
             android:label="@string/title_activity_shape_image_view" />
         <activity
-            android:name=".view.thirdsdk.amap.AMapLocationActivity"
+            android:name=".view.activity.thirdsdk.amap.AMapLocationActivity"
             android:label="AMapLocationActivity" />
         <activity
-            android:name=".view.thirdsdk.amap.CurrentWeatherReportActivity"
+            android:name=".view.activity.thirdsdk.amap.CurrentWeatherReportActivity"
             android:label="CurrentWeatherReportActivity" />
         <activity
-            android:name=".view.thirdsdk.amap.FutureWeatherReportActivity"
+            android:name=".view.activity.thirdsdk.amap.FutureWeatherReportActivity"
             android:label="FutureWeatherReportActivity" />
         <activity
-            android:name=".view.thirdsdk.amap.GPSLocationActivity"
+            android:name=".view.activity.thirdsdk.amap.GPSLocationActivity"
             android:label="GPSLocationActivity" />
         <activity
-            android:name=".view.custom_controls.android5p0.recyclerView2.HomeActivity"
+            android:name=".view.activity.custom.android5p0.recyclerView2.HomeActivity"
             android:label="HomeActivity" />
         <activity
-            android:name=".view.custom_controls.android5p0.recyclerView2.StaggeredGridLayoutActivity"
+            android:name=".view.activity.custom.android5p0.recyclerView2.StaggeredGridLayoutActivity"
             android:label="StaggeredGridLayoutActivity" />
         <activity
-            android:name=".view.custom_controls.android5p0.ProgressBarActivity"
+            android:name=".view.activity.custom.android5p0.ProgressBarActivity"
             android:label="ProgressBarActivity" />
         <activity
-            android:name=".view.custom_controls.viewpager.ViewPagerWithTranformAnimActivity"
+            android:name=".view.activity.custom.viewpager.ViewPagerWithTranformAnimActivity"
             android:label="@string/title_activity_view_pager_with_tranform_anim" />
         <activity
-            android:name=".view.custom_controls.viewpager.JazzyViewPagerTestActivity"
+            android:name=".view.activity.custom.viewpager.JazzyViewPagerTestActivity"
             android:label="@string/title_activity_jazzy_view_pager_test"
             android:theme="@style/Base.TextAppearance.AppCompat.Title.Inverse" />
         <activity
-            android:name=".view.custom_controls.android5p0.MaterialDesignActivity"
+            android:name=".view.activity.custom.android5p0.MaterialDesignActivity"
             android:label="MaterialDesignActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.custom_controls.viewpager.ViewPagerTestActivity"
+            android:name=".view.activity.custom.viewpager.ViewPagerTestActivity"
             android:label="@string/title_activity_view_pager_test" />
         <activity
-            android:name=".view.custom_controls.viewpager.SmartTagLayoutActivity"
+            android:name=".view.activity.custom.viewpager.SmartTagLayoutActivity"
             android:label="@string/title_activity_smart_tag_layout" />
         <activity
-            android:name=".view.framework.RxAndroidActivity"
+            android:name=".view.activity.framework.RxAndroidActivity"
             android:label="@string/title_activity_rx_android" />
-        <activity android:name=".view.custom_controls.listview.CircleRefreshListViewActivity" />
-        <activity android:name=".view.function.PlayVideoListActivity" />
+        <activity android:name=".view.activity.custom.listview.CircleRefreshListViewActivity" />
+        <activity android:name=".view.activity.function.PlayVideoListActivity" />
         <activity
-            android:name=".view.function.PlayVideoByVideoViewActivity"
+            android:name=".view.activity.function.PlayVideoByVideoViewActivity"
             android:label="@string/title_activity_play_video_by_video_view" />
         <activity
-            android:name=".view.function.PlayVideoByVMediaPlayerActivity"
+            android:name=".view.activity.function.PlayVideoByVMediaPlayerActivity"
             android:label="PlayVideoByVMediaPlayerActivity" />
     </application>
 

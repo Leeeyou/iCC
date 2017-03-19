@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <com.ly.cc.custom_controls.flow_view.FlowLayout
+    <com.ly.cc.view.custom.flow_view.FlowLayout
         android:padding="20dp"
         android:id="@+id/id_flowlayout"
         android:layout_width="fill_parent"

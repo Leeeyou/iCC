@@ -1,8 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent"  tools:context=".MainActivity">
+    android:layout_height="match_parent"  tools:context=".view.activity.MainActivity">
 
-    <com.ly.cc.custom_controls.listview.circle_refresh.CircleRefreshLayout
+    <com.ly.cc.view.custom.listview.circle_refresh.CircleRefreshLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
         app:AniBackColor="#ff8b90af"
         app:AniForeColor="#ffffffff"
@@ -15,7 +15,7 @@
             android:id="@+id/list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
-    </com.ly.cc.custom_controls.listview.circle_refresh.CircleRefreshLayout>
+    </com.ly.cc.view.custom.listview.circle_refresh.CircleRefreshLayout>
 
     <Button
         android:id="@+id/stop_refresh"

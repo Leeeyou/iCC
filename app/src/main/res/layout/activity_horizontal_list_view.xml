@@ -16,7 +16,7 @@
             android:text="@string/simple_string_list"
             android:textSize="18sp" />
 
-        <com.ly.cc.custom_controls.listview.horizon_listView.HorizontalListView
+        <com.ly.cc.view.custom.listview.horizon_listView.HorizontalListView
             android:id="@+id/hlvSimpleList"
             android:layout_width="match_parent"
             android:layout_height="50dp" />
@@ -29,7 +29,7 @@
             android:text="@string/custom_adapter_list"
             android:textSize="18sp" />
 
-        <com.ly.cc.custom_controls.listview.horizon_listView.HorizontalListView
+        <com.ly.cc.view.custom.listview.horizon_listView.HorizontalListView
             android:id="@+id/hlvCustomList"
             android:layout_width="match_parent"
             android:layout_height="50dp" />
@@ -42,7 +42,7 @@
             android:text="@string/custom_adapter_list_with_dividers"
             android:textSize="18sp" />
 
-        <com.ly.cc.custom_controls.listview.horizon_listView.HorizontalListView
+        <com.ly.cc.view.custom.listview.horizon_listView.HorizontalListView
             android:id="@+id/hlvCustomListWithDividerAndFadingEdge"
             android:layout_width="match_parent"
             android:layout_height="50dp"

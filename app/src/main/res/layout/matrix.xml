@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.ly.cc.custom_controls.image_painting.ImageMatrixView
+    <com.ly.cc.view.custom.image_painting.ImageMatrixView
         android:id="@+id/view"
         android:layout_width="fill_parent"
         android:layout_height="0dp"

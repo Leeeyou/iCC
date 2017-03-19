@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-<com.ly.cc.view.custom_controls.viewpager.ViewPagerWithTranformAnim
+<com.ly.cc.view.activity.custom.viewpager.ViewPagerWithTranformAnim
     android:id="@+id/vp_transform_anim"
     android:layout_width="match_parent"
     android:layout_height="match_parent"/>

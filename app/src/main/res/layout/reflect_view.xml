@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.ly.cc.custom_controls.image_painting.ReflectView
+    <com.ly.cc.view.custom.image_painting.ReflectView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 </LinearLayout><!-- From: file:/F:/android_studio_workspace/MyImooc/app/src/main/res/layout/reflect_view.xml -->

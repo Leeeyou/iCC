@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/header_selector" >
 
-    <com.ly.cc.custom_controls.listview.sticky_headers.UnderlineTextView
+    <com.ly.cc.view.custom.listview.sticky_headers.UnderlineTextView
         android:id="@+id/text_head"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

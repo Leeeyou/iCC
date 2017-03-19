@@ -8,9 +8,9 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.ly.cc.view.custom_controls.toggleBtn.ToggleBtnMainActivity">
+    tools:context=".view.activity.custom.toggleBtn.ToggleBtnMainActivity">
 
-    <com.ly.cc.custom_controls.toggle_button.ToggleButton
+    <com.ly.cc.view.custom.toggle_button.ToggleButton
         android:layout_width="54dp"
         android:id="@+id/toggle_btn"
         android:layout_height="30dp"

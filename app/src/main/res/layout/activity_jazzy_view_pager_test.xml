@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.ly.cc.custom_controls.viewpager.JazzyViewPager
+    <com.ly.cc.view.custom.viewpager.JazzyViewPager
         android:id="@+id/jazzyViewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

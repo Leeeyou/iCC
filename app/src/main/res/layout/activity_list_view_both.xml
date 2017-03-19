@@ -3,9 +3,9 @@
     xmlns:topTitle="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ly.cc.view.custom_controls.listview.ListViewBothActivity">
+    tools:context=".view.activity.custom.listview.ListViewBothActivity">
 
-    <com.ly.cc.custom_controls.topview.TopBarView
+    <com.ly.cc.view.custom.topview.TopBarView
         android:id="@+id/mTopBar"
         android:layout_width="match_parent"
         android:layout_height="48dp"
@@ -17,7 +17,7 @@
         topTitle:rightBackground="@drawable/title_bar_back_style"
         topTitle:rightTextSize="6sp" />
 
-    <com.ly.cc.custom_controls.listview.pull_refresh.PullToRefreshListView
+    <com.ly.cc.view.custom.listview.pull_refresh.PullToRefreshListView
         android:id="@+id/lv_county"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
