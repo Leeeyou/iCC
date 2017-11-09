@@ -111,7 +111,7 @@ public class ViewHolder {
 	}
 
 //	public ViewHolder setImageByUrl(int viewId, String url) {
-////		return setImageByUrl(viewId, url, R.drawable.ic_launcher);
+////		return setImageByUrl(viewId, url, R.mipmap.ic_launcher);
 //	}
 
 //	public ViewHolder setImageByUrl(int viewId, String url, int defaultImageRes) {

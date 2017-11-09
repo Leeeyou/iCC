@@ -34,7 +34,7 @@ public class ImageMatrixView extends View {
     }
 
     private void initView() {
-        mBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher);
+        mBitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
         setImageMatrix(new Matrix());
     }
 

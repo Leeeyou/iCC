@@ -13,7 +13,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_margin="16dp"
-            android:src="@drawable/ic_launcher"
+            android:src="@mipmap/ic_launcher"
             app:siArrowPosition="right"
             app:siSquare="true" />
 
@@ -21,7 +21,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_margin="16dp"
-            android:src="@drawable/ic_launcher"
+            android:src="@mipmap/ic_launcher"
             app:siBorderAlpha="0.5"
             app:siBorderColor="#ff8888"
             app:siBorderWidth="8dp"
@@ -32,7 +32,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_margin="16dp"
-            android:src="@drawable/ic_launcher"
+            android:src="@mipmap/ic_launcher"
             app:siBorderAlpha="0.6"
             app:siBorderColor="#222299"
             app:siBorderWidth="8dp" />
@@ -41,7 +41,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_margin="16dp"
-            android:src="@drawable/ic_launcher"
+            android:src="@mipmap/ic_launcher"
             app:siBorderColor="#889922"
             app:siBorderWidth="8dp" />
 
@@ -49,7 +49,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_margin="16dp"
-            android:src="@drawable/ic_launcher"
+            android:src="@mipmap/ic_launcher"
             app:siBorderColor="#8f1922"
             app:siBorderWidth="8dp" />
 
@@ -57,7 +57,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_margin="16dp"
-            android:src="@drawable/ic_launcher"
+            android:src="@mipmap/ic_launcher"
             app:siBorderColor="#8f1922"
             app:siBorderWidth="8dp" />
 
