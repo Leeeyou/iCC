@@ -14,12 +14,8 @@ import com.ly.cc.view.custom.viewpager.JazzyViewPager;
 import com.ly.cc.view.custom.viewpager.JazzyViewPager.TransitionEffect;
 import com.ly.cc.view.custom.viewpager.OutlineContainer;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
-
 public class JazzyViewPagerTestActivity extends Activity {
 
-    @InjectView(R.id.jazzyViewPager)
     JazzyViewPager jazzyViewPager;
 
     private int[] mImgIds = new int[]{R.drawable.guide_image1, R.drawable.guide_image2, R.drawable.guide_image3, R.drawable.guide_image1, R.drawable.guide_image2, R.drawable.guide_image3};
@@ -29,7 +25,7 @@ public class JazzyViewPagerTestActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jazzy_view_pager_test);
-        ButterKnife.inject(this);
+        jazzyViewPager = findViewById(R.id.jazzyViewPager);
         setupJazziness(JazzyViewPager.TransitionEffect.Tablet);
     }
 

@@ -41,8 +41,6 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * 主界面
@@ -52,22 +50,11 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 
     MyAdapter mAdapter;
 
-    @InjectView(R.id.id_viewpager)
     ViewPager mViewPager;
-
-    @InjectView(R.id.id_indicator_cc)
     ChangeColorIconWithTextView mCC;
-
-    @InjectView(R.id.id_indicator_function)
     ChangeColorIconWithTextView mFunction;
-
-    @InjectView(R.id.id_indicator_framework)
     ChangeColorIconWithTextView mFramework;
-
-    @InjectView(R.id.id_indicator_sdk)
     ChangeColorIconWithTextView mSDK;
-
-    @InjectView(R.id.ll_main_content)
     LinearLayout ll_main_content;
 
     private List<ChangeColorIconWithTextView> mTabIndicator = new ArrayList<ChangeColorIconWithTextView>();
@@ -76,7 +63,13 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.inject(this);
+
+        mViewPager = findViewById(R.id.id_viewpager);
+        mCC = findViewById(R.id.id_indicator_cc);
+        mFunction = findViewById(R.id.id_indicator_function);
+        mFramework = findViewById(R.id.id_indicator_framework);
+        mSDK = findViewById(R.id.id_indicator_sdk);
+        ll_main_content = findViewById(R.id.ll_main_content);
 
 //        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
 //            setTranslucentStatus(true);

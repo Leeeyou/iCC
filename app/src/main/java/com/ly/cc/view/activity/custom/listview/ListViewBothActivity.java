@@ -19,8 +19,6 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.LinkedList;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
 import de.greenrobot.event.EventBus;
 
 public class ListViewBothActivity extends SwipeBackActivity {
@@ -34,17 +32,17 @@ public class ListViewBothActivity extends SwipeBackActivity {
 
     private ListView mListView;
 
-    @InjectView(R.id.lv_county)
     PullToRefreshListView mPullListView;
 
-    @InjectView(R.id.mTopBar)
     TopBarView mTopBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view_both);
-        ButterKnife.inject(this);
+
+        mPullListView = (PullToRefreshListView) findViewById(R.id.lv_county);
+        mTopBar = (TopBarView) findViewById(R.id.mTopBar);
 
         mTopBar.setTopBarClickListener(new TopBarView.TopBarOnClickListener() {
             @Override

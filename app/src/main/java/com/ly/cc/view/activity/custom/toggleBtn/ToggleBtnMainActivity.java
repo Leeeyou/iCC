@@ -12,23 +12,17 @@ import com.ly.cc.R;
 import com.ly.cc.view.custom.toggle_button.ToggleButton;
 import com.ly.cc.utils.T;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
-
 public class ToggleBtnMainActivity extends ActionBarActivity {
 
-    @InjectView(R.id.toggle_btn)
     ToggleButton toggleBtn;
-
-    @InjectView(R.id.root_toggleBtn)
     RelativeLayout root_toggleBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_toggle_btn);
-        ButterKnife.inject(this);
-
+        toggleBtn = findViewById(R.id.toggle_btn);
+        root_toggleBtn = findViewById(R.id.root_toggleBtn);
 
         ObjectAnimator animator = ObjectAnimator.ofFloat(root_toggleBtn, "alpha", 0, 1);
         animator.setDuration(300);

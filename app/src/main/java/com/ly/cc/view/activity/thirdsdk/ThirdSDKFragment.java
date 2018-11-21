@@ -82,7 +82,7 @@ public class ThirdSDKFragment extends ListFragment {
                 Jump.toActivity(getActivity(),AMapLocationActivity.class);
                 break;
             case 10://刷脸神器
-                Jump.toActivity(getActivity(),FaceppTestYourFaceActivity_.class);
+                Jump.toActivity(getActivity(),FaceppTestYourFaceActivity.class);
                 break;
             default:
                 break;

@@ -11,33 +11,18 @@ import android.widget.ProgressBar;
 
 import com.ly.cc.R;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
 import me.zhanghai.android.materialprogressbar.HorizontalProgressDrawable;
 import me.zhanghai.android.materialprogressbar.IndeterminateHorizontalProgressDrawable;
 import me.zhanghai.android.materialprogressbar.IndeterminateProgressDrawable;
 
 public class ProgressBarActivity extends AppCompatActivity {
 
-    @InjectView(R.id.horizontal_progress_library)
     ProgressBar horizontalProgress;
-
-    @InjectView(R.id.indeterminate_horizontal_progress_library)
     ProgressBar indeterminateHorizontalProgress;
-
-    @InjectView(R.id.indeterminate_progress_large_library)
     ProgressBar indeterminateProgressLarge;
-
-    @InjectView(R.id.indeterminate_progress_library)
     ProgressBar indeterminateProgress;
-
-    @InjectView(R.id.indeterminate_progress_small_library)
     ProgressBar indeterminateProgressSmall;
-
-    @InjectView(R.id.horizontal_progress_toolbar)
     ProgressBar toolbarHorizontalProgress;
-
-    @InjectView(R.id.indeterminate_horizontal_progress_toolbar)
     ProgressBar toolbarIndeterminateHorizontalProgress;
 
     @Override
@@ -45,7 +30,14 @@ public class ProgressBarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_progress_bar);
-        ButterKnife.inject(this);
+        horizontalProgress = findViewById(R.id.horizontal_progress_library);
+        indeterminateHorizontalProgress = findViewById(R.id.indeterminate_horizontal_progress_library);
+        indeterminateProgressLarge = findViewById(R.id.indeterminate_progress_large_library);
+        indeterminateProgress = findViewById(R.id.indeterminate_progress_library);
+        indeterminateProgressSmall = findViewById(R.id.indeterminate_progress_small_library);
+        toolbarHorizontalProgress = findViewById(R.id.horizontal_progress_toolbar);
+        toolbarIndeterminateHorizontalProgress = findViewById(R.id.indeterminate_horizontal_progress_toolbar);
+
 
         horizontalProgress.setProgressDrawable(new HorizontalProgressDrawable(this));
 

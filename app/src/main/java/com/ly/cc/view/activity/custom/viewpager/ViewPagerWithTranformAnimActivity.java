@@ -12,12 +12,9 @@ import com.ly.cc.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 public class ViewPagerWithTranformAnimActivity extends Activity {
 
-    @InjectView(R.id.vp_transform_anim)
     ViewPagerWithTranformAnim vp_transform_anim;
 
     private int[] mImgIds = new int[]{R.drawable.guide_image1,R.drawable.guide_image2,R.drawable.guide_image3};
@@ -27,7 +24,7 @@ public class ViewPagerWithTranformAnimActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_pager_with_tranform_anim);
-        ButterKnife.inject(this);
+        vp_transform_anim = findViewById(R.id.vp_transform_anim);
 
 //        vp_transform_anim.setPageTransformer(new zoomo);
 

@@ -1,5 +1,6 @@
 package com.ly.cc.view.activity.function;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -26,9 +27,6 @@ import com.ly.cc.manager.ViewHolder;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
-
 /**
  * Created by liuzhifang on 15/5/13.
  */
@@ -44,14 +42,14 @@ public class GravitySensorActivity extends Activity {
 
     Context ctx;
 
-    @InjectView(android.R.id.list)
     ListView mList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listview);
-        ButterKnife.inject(this);
+
+        mList = findViewById(R.id.list);
 
         ctx = this;
 
@@ -62,6 +60,7 @@ public class GravitySensorActivity extends Activity {
 
     private void initListview(final List<MyContact> mContactList) {
         mList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @SuppressLint("MissingPermission")
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position >= 0 && position < mContactList.size()) {

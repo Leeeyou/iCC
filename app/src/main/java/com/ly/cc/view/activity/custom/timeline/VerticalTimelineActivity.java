@@ -12,12 +12,9 @@ import com.ly.cc.manager.ViewHolder;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 public class VerticalTimelineActivity extends Activity {
 
-    @InjectView(R.id.lv_vertical_timeline)
     ListView lv_vertical_timeline;
 
     UniversalAdapter<VerticalTimelineBean> mAdapter;
@@ -28,8 +25,6 @@ public class VerticalTimelineActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vertical_timeline);
-        ButterKnife.inject(this);
-
         initData();
 
         initUI();
@@ -43,6 +38,8 @@ public class VerticalTimelineActivity extends Activity {
     }
 
     private void initUI() {
+        lv_vertical_timeline = findViewById(R.id.lv_vertical_timeline);
+
         lv_vertical_timeline.setDividerHeight(0);
 
         if (mAdapter == null) {

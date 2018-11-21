@@ -25,28 +25,17 @@ import com.ly.cc.event.ShowAgeEvent;
 import com.ly.cc.utils.FaceppDetect;
 import com.ly.cc.utils.L;
 
-import org.androidannotations.annotations.Click;
-import org.androidannotations.annotations.EActivity;
-import org.androidannotations.annotations.ViewById;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import de.greenrobot.event.EventBus;
 
-@EActivity(R.layout.activity_facepp_test_your_face)
 public class FaceppTestYourFaceActivity extends ActionBarActivity {
 
-    @ViewById
     ImageView iv_photo;
-
-    @ViewById
     TextView tv_tip;
-
-    @ViewById
     FrameLayout id_waiting;
-
-    @ViewById
     TextView tv_age_gender;
 
     private String mImagePath;
@@ -72,37 +61,48 @@ public class FaceppTestYourFaceActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
 
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+
+        iv_photo = findViewById(R.id.iv_photo);
+        tv_tip = findViewById(R.id.tv_tip);
+        id_waiting = findViewById(R.id.id_waiting);
+        tv_age_gender = findViewById(R.id.tv_age_gender);
+
+        findViewById(R.id.btn_get_image).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_PICK);
+                i.setType("image/*");
+                startActivityForResult(i, PICK_IMAGE);
+            }
+        });
+
+        findViewById(R.id.btn_detect).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                id_waiting.setVisibility(View.VISIBLE);
+
+                if (TextUtils.isEmpty(mImagePath)) {
+                    mPhotoBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.t4);
+                }
+
+                FaceppDetect.detect(mPhotoBitmap, new FaceppDetect.CallBack() {
+                    @Override
+                    public void success(JSONObject result) {
+                        EventBus.getDefault().post(new ShowAgeEvent(result));
+                    }
+
+                    @Override
+                    public void error(FaceppParseException e) {
+                        EventBus.getDefault().post(new FaceppParseExceptionEvent(e));
+                    }
+                });
+
+            }
+        });
     }
 
     private final int PICK_IMAGE = 0x110;
 
-    @Click(R.id.btn_get_image)
-    public void onClickGetImage() {
-        Intent i = new Intent(Intent.ACTION_PICK);
-        i.setType("image/*");
-        startActivityForResult(i, PICK_IMAGE);
-    }
-
-    @Click(R.id.btn_detect)
-    public void onClickDetect() {
-        id_waiting.setVisibility(View.VISIBLE);
-
-        if (TextUtils.isEmpty(mImagePath)) {
-            mPhotoBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.t4);
-        }
-
-        FaceppDetect.detect(mPhotoBitmap, new FaceppDetect.CallBack() {
-            @Override
-            public void success(JSONObject result) {
-                EventBus.getDefault().post(new ShowAgeEvent(result));
-            }
-
-            @Override
-            public void error(FaceppParseException e) {
-                EventBus.getDefault().post(new FaceppParseExceptionEvent(e));
-            }
-        });
-    }
 
     public void onEventMainThread(FaceppParseExceptionEvent event) {
         id_waiting.setVisibility(View.GONE);

@@ -15,20 +15,12 @@ import android.widget.ImageButton;
 
 import com.ly.cc.R;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
-
 /**
  * 主界面
  */
 public class RecyclerViewActivity extends ActionBarActivity {
-    @InjectView(R.id.deleteBar)
     FrameLayout deleteBar;
-
-    @InjectView(R.id.fab_add)
     ImageButton fab_add;
-
-    @InjectView(R.id.recycler_view)
     RecyclerView recycler_view;
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
@@ -36,7 +28,10 @@ public class RecyclerViewActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        ButterKnife.inject(this);
+
+        deleteBar = findViewById(R.id.deleteBar);
+        fab_add = findViewById(R.id.fab_add);
+        recycler_view = findViewById(R.id.recycler_view);
 
         ViewOutlineProvider viewOutlineProvider = new ViewOutlineProvider() {
             @Override

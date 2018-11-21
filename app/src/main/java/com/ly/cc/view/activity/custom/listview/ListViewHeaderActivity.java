@@ -11,21 +11,18 @@ import android.widget.TextView;
 
 import com.ly.cc.R;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
 import se.emilsjolander.stickylistheaders.StickyListHeadersAdapter;
 import se.emilsjolander.stickylistheaders.StickyListHeadersListView;
 
 public class ListViewHeaderActivity extends ActionBarActivity {
 
-    @InjectView(R.id.list)
     StickyListHeadersListView stickyList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view_header);
-        ButterKnife.inject(this);
+        stickyList = findViewById(R.id.list);
 
         MyAdapter adapter = new MyAdapter(this);
         stickyList.setAdapter(adapter);
@@ -88,8 +85,8 @@ public class ListViewHeaderActivity extends ActionBarActivity {
             }
             //set header text as first char in name
             String headerText = "" + countries[position].subSequence(0, 1).charAt(0);
-            if(holder.text!=null)
-            holder.text.setText(headerText);
+            if (holder.text != null)
+                holder.text.setText(headerText);
             return convertView;
         }
 
